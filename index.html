@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./css/reset.css">
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="icon" href="./favicon.ico" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
@@ -25,6 +26,7 @@
                 <div class="header-itens_search">
                     <label class="hidden" for="search">Buscar</label>
                     <input id="search"  name="search" type="search" placeholder="Digite aqui o que você procura">
+                    <span class="hidden search-result"></span>
                 </div>
                 <div class="header-itens_session">
                     <div class="header-itens_user">
@@ -53,75 +55,81 @@
                 </ul>
             </nav>
         </header>
-        <main>
-            <img src="./assets/images/main-banner.png" alt="">
-            <section>
-                <div>
+        <main class="container-main">
+            <section class="container-banner">
+            </section>
+            <section class="container-carrossel">
+                <div class="carrossel-header">
                     <h3>Lançamentos</h3>
                     <span>Ver mais</span>
                 </div>
+                <div class="carrossel-produtos">
+                    <div class="carrossel-produto"></div>
+                    <div class="carrossel-produto"></div>
+                    <div class="carrossel-produto"></div>
+                    <div class="carrossel-produto"></div>
+                    <div class="carrossel-produto"></div>
+                </div>
                 <!-- Carrossel -->
             </section>
-            <section>
-                <article>
+            <section class="container-article">
+                <article class="article-info">
                     <img src="./assets/images/article-banner01.png" alt="Imagem Decorativa de uma Caneca Azul Marinho com o logo da Avanti em fundo cinza.">
-                    <div>
-                        <h3>Lorem Ipsum</h3>
-                        <p>
-                            Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet
-                            lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet.
-                            Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor
-                            tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat
-                            interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.
-                        </p>
-                        <p>
-                            Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet
-                            lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet.
-                            Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor
-                            tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat
-                            interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.
-                        </p>
-                    </div>
-                </article>
-            </section>
-            <section>
-                <article>
-                    <div>
+                    <div class="article-text">
                         <h3>LOREM IPSUM</h3>
-                        <ul>
-                            <li>
-                                <img src="./assets/icons/local.svg" alt="Ícone de Localização Azul">
-                                <p>
-                                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                                    ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-                                    sem.
-                                </p>
-                            </li>
-                            <li>
-                                <img src="./assets/icons/local.svg" alt="Ícone de Localização Azul">
-                                <p>
-                                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                                    ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-                                    sem.
-                                </p>
-                            </li>
-                            <li>
-                                <img src="./assets/icons/local.svg" alt="Ícone de Localização Azul">
-                                <p>
-                                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                                    ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-                                    sem.
-                                </p>
-                            </li>
-                        </ul>
+                        <p>
+                            Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet
+                            lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet.
+                            Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor
+                            tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat
+                            interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.
+                        </p>
+                        <p>
+                            Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet
+                            lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet.
+                            Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor
+                            tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat
+                            interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.
+                        </p>
                     </div>
-                    <img src="./assets/images/article-banner02.png" alt="Imagem Decorativa de uma Caneca Azul Marinho com o logo da Avanti">
                 </article>
             </section>
-            <section>
-                <article>
+            <section class="container-article_single">
+                <article class="article-single">
+                    <div class="article-single-info">
+                        <h3 class="article-single_title">LOREM IPSUM</h3>
+                        <div class="article-single_text">
+                            <img src="./assets/icons/local.svg" alt="Ícone de Localização Azul">
+                            <p>
+                                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                                ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+                                sem.
+                            </p>
+                        </div>
+                        <div class="article-single_text">
+                            <img src="./assets/icons/local.svg" alt="Ícone de Localização Azul">
+                            <p>
+                                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                                ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+                                sem.
+                            </p>
+                        </div>
+                        <div class="article-single_text">
+                            <img src="./assets/icons/local.svg" alt="Ícone de Localização Azul">
+                            <p>
+                                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                                ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+                                sem.
+                            </p>
+                        </div>
+                    </div>
+                    <img class="article-single_img" src="./assets/images/article-banner02.png" alt="Imagem Decorativa de uma Caneca Azul Marinho com o logo da Avanti">
+                </article>
+            </section>
+            <section class="container-article">
+                <article class="article-info">
                     <img src="./assets/images/article-banner01.png" alt="Imagem Decorativa de uma Caneca Azul Marinho com o logo da Avanti em fundo cinza.">
-                    <div>
+                    <div class="article-text">
                         <h3>Lorem Ipsum</h3>
                         <p>
                             Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet
@@ -140,79 +148,87 @@
                     </div>
                 </article>
             </section>
-            <section>
-                <div>
+            <section class="container-carrossel">
+                <div class="carrossel-header">
                     <h3>Lançamentos</h3>
                     <span>Ver mais</span>
                 </div>
+                <div class="carrossel-produtos">
+                    <div class="carrossel-produto"></div>
+                    <div class="carrossel-produto"></div>
+                    <div class="carrossel-produto"></div>
+                    <div class="carrossel-produto"></div>
+                    <div class="carrossel-produto"></div>
+                </div>
                 <!-- Carrossel -->
             </section>
-            <section>
-                <img src="./assets/images/contact-banner.png" alt="Imagem decorativa do com o logo da Avanti em uma parede azul marinho.">
-                <span>Entre em contato conosco e verifique a disponibilidade para a sua região</span>
+            <section class="container-contact">
+                <p>Entre em contato conosco e verifique a disponibilidade para sua região!</p>
             </section>
-            <section>
-                <h3>Cadastre-se na nossa newsletter</h3>
-                <form>
+            <section class="container-register">
+                <h3 class="register-title">Cadastre-se na nossa <span>newsletter</span></h3>
+                <form class="register-box">
                     <label for="name"></label>
-                    <input id="name" name="name" type="text" placeholder="Digite seu nome">
+                    <input class="register-box_input" id="name" name="name" type="text" placeholder="Digite seu nome">
                     <label for="email"></label>
-                    <input id="email" name="email" type="email" placeholder="Digite seu e-mail">
-                    <label for="checkbox"></label>
-                    <input id="checkbox" name="checkbox" type="checkbox">
+                    <input class="register-box_input" id="email" name="email" type="email" placeholder="Digite seu e-mail">
+                    <div class="register-box_checkbox">
+                        <input id="checkbox" name="checkbox" type="checkbox">
+                        <label for="checkbox">Estou de acordo com a <u>Política de Privacidade</u></label>
+                    </div>
                     <button>Cadastrar</button>
                 </form>
             </section>
         </main>
-        <footer>
-            <div>
-                <div>
-                    <div>
-                        <img src="./assets/logos/avanti.png" alt="">
-                        <div>
-                            <img src="./assets/icons/social/instagram.svg" alt="Logo do Instagram">
-                            <img src="./assets/icons/social/facebook.svg" alt="Logo do Facebook">
-                            <img src="./assets/icons/social/youtube.svg" alt="Logo do Youtube">
-                            <img src="./assets/icons/social/tiktok.svg" alt="Logo do TikTok">
+        <footer class="container-footer">
+            <div class="container-footer_links">
+                <div class="footer-links">
+                    <div class="footer-links_socials">
+                        <a href="#"><img class="links-socials-title" src="./assets/logos/avanti.png" alt=""></a>
+                        <div class="links-socials-logos">
+                            <a href="www.instagram.com"><img src="./assets/icons/social/instagram.svg" alt="Logo do Instagram"></a>
+                            <a href="www.facebook.com"><img src="./assets/icons/social/facebook.svg" alt="Logo do Facebook"></a>
+                            <a href="www.youtube.com"><img src="./assets/icons/social/youtube.svg" alt="Logo do Youtube"></a>
+                            <a href="www.tiktok.com"><img src="./assets/icons/social/tiktok.svg" alt="Logo do TikTok"></a>
                         </div>
                     </div>
                     <ul>
-                            <li><h4>Institucional</h4></li>
-                            <li><h5>Sobre Nós</h5></li>
-                            <li><h5>Nossas Lojas</h5></li>
-                            <li><h5>Privacidade e Segurança</h5></li>
-                            <li><h5>Termos e Cndições</h5></li>
-                        </ul>
+                        <li><h4>Institucional</h4></li>
+                        <li><h5><a href="#">Sobre Nós</a></h5></li>
+                        <li><h5><a href="#">Nossas Lojas</a></h5></li>
+                        <li><h5><a href="#">Privacidade e Segurança</a></h5></li>
+                        <li><h5><a href="#">Termos e Cndições</a></h5></li>
+                    </ul>
                     <ul>
-                            <li><h4>Central de Ajuda</h4></li>
-                            <li><h5>Fale Conosco</h5></li>
-                            <li><h5>Frete e Entrega</h5></li>
-                            <li><h5>Trocas e Devoluções</h5></li>
-                            <li><h5>Formas de Pagamento</h5></li>
-                            <li><h5>FAQ</h5></li>
-                        </ul>
+                        <li><h4>Central de Ajuda</h4></li>
+                        <li><h5><a href="#">Fale Conosco</a></h5></li>
+                        <li><h5><a href="#">Frete e Entrega</a></h5></li>
+                        <li><h5><a href="#">Trocas e Devoluções</a></h5></li>
+                        <li><h5><a href="#">Formas de Pagamento</a></h5></li>
+                        <li><h5><a href="#">FAQ</a></h5></li>
+                    </ul>
                     <ul>
-                            <li><h4>Atendimento</h4></li>
-                            <li><h5><span>Telefone: </span>(00) 1234-5678</h5></li>
-                            <li><h5><span>Email: </span>exemplo@exemplo.com.br</h5></li>
-                            <li><h5>Horário de atendimento:</h5></li>
-                            <li><p>Segunda a Sábado: 07h00 às 23h00</p></li>
-                            <li><p>Domingos e Feriados: 07h00 às 21h00</p></li>
-                        </ul>
+                        <li><h4>Atendimento</h4></li>
+                        <li><h5><span>Telefone: </span><a href="#">(00) 1234-5678</a></h5></li>
+                        <li><h5><span>Email: </span><a href="#">exemplo@exemplo.com.br</a></h5></li>
+                        <li class="footer-links_item"><h5>Horário de atendimento:</h5></li>
+                        <li><p>Segunda a Sábado: 07h00 às 23h00</p></li>
+                        <li><p>Domingos e Feriados: 07h00 às 21h00</p></li>
+                    </ul>
                 </div>
-                <div>
-                    <img src="./assets/icons/payment/amex.svg" alt="Logo da American Express">
-                    <img src="./assets/icons/payment/mastercard.svg" alt="Logo da MasterCard">
-                    <img src="./assets/icons/payment/visa.svg" alt="Logo da Visa">
-                    <img src="./assets/icons/payment/hipercard.svg" alt="Logo da Hipercard">
-                    <img src="./assets/icons/payment/cielo.svg" alt="Logo da Cielo">
-                    <img src="./assets/icons/payment/diners.svg" alt="Logo da Diners">
-                    <img src="./assets/icons/payment/paypal.svg" alt="Logo da Paypal">
-                    <img src="./assets/icons/payment/pix.svg" alt="Logo do Pix">
-                    <img src="./assets/icons/payment/boleto.svg" alt="Logo de Boleto">
+                <div class="footer-links_logos">
+                    <a href="#"><img src="./assets/icons/payment/amex.svg" alt="Logo da American Express"></a>
+                    <a href="#"><img src="./assets/icons/payment/mastercard.svg" alt="Logo da MasterCard"></a>
+                    <a href="#"><img src="./assets/icons/payment/visa.svg" alt="Logo da Visa"></a>
+                    <a href="#"><img src="./assets/icons/payment/hipercard.svg" alt="Logo da Hipercard"></a>
+                    <a href="#"><img src="./assets/icons/payment/cielo.svg" alt="Logo da Cielo"></a>
+                    <a href="#"><img src="./assets/icons/payment/diners.svg" alt="Logo da Diners"></a>
+                    <a href="#"><img src="./assets/icons/payment/paypal.svg" alt="Logo da Paypal"></a>
+                    <a href="#"><img src="./assets/icons/payment/pix.svg" alt="Logo do Pix"></a>
+                    <a href="#"><img src="./assets/icons/payment/boleto.svg" alt="Logo de Boleto"></a>
                 </div>
             </div>
-            <div>
+            <div class="container-footer_info">
                 <p>
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
                     laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
@@ -221,11 +237,12 @@
                     facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
                     delenit augue duis dolore te feugait nulla facilisi.
                 </p>
-                <div>
-                    <img src="./assets/icons/bottom/encrypt.svg" alt="Logo da Let's Encrypt">
-                    <img src="./assets/icons/bottom/vtexcertified.svg" alt="Logo da VTex Certified">
-                    <img src="./assets/icons/bottom/avanti.svg" alt="Logo da Avanti">
-                    <img src="./assets/icons/bottom/vtex.svg" alt="Logo da VTex">
+                <div class="footer-info_logos">
+                    <a href="#"><img src="./assets/icons/bottom/encrypt.svg" alt="Logo da Let's Encrypt"></a>
+                    <a href="#"><img src="./assets/icons/bottom/vtexcertified.svg" alt="Logo da VTex Certified"></a>
+                    <span>|</span>
+                    <a href=""#><img src="./assets/icons/bottom/avanti.svg" alt="Logo da Avanti"></a>
+                    <a href="#"><img src="./assets/icons/bottom/vtex.svg" alt="Logo da VTex"></a>
                 </div>
             </div>
         </footer>
