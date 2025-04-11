@@ -12,27 +12,36 @@
         <title>Avanti Store</title>
     </head>
     <body>
-        <div>
-            <p>Ganhe <span>R$10,00</span>de desconto no seu primeiro pedido. Utilize o cupom DESCONTO10</p>
+        <div class="banner-promo">
+            <p>Ganhe <span class="background-purple">R$10,00</span> de desconto no seu primeiro pedido. Utilize o cupom <span class="italic-text">DESCONTO10</span></p>
         </div>
-        <header>
-            <div>
-                <h1>
+        <header class="header">
+            <div class="header-itens">
+                <h1 class="header-itens_title">
                     <a href="index.html">
                         <img src="./assets/logos/avanti.png" alt="Logo da Avanti">
                     </a>
                 </h1>
-                <label for="search">Buscar</label>
-                <input id="search"  name="search" type="search" placeholder="Digite aqui o que você procura">
-                <div>
-                    <img src="./assets/icons/user.svg" alt="">
-                    <div>Olá, Nome cliente!</div>
+                <div class="header-itens_search">
+                    <label class="hidden" for="search">Buscar</label>
+                    <input id="search"  name="search" type="search" placeholder="Digite aqui o que você procura">
                 </div>
-                <img src="./assets/icons/cart.svg" alt="">
+                <div class="header-itens_session">
+                    <div class="header-itens_user">
+                        <img src="./assets/icons/user.svg" alt="">
+                        <div>Olá, <br>Nome cliente!</div>
+                    </div>
+                    <div class="header-itens_cart">
+                        <img src="./assets/icons/cart.svg" alt="Ícone de um carrinho de compras">
+                    </div>
+                </div>
             </div>
-            <nav>
-                <div>Todas as categorias</div>
-                <ul>
+            <nav class="header-nav">
+                <div class="header-nav_menu">
+                    <img src="./assets/icons/menu.svg" alt="Ícone de Menu Hamburguer">
+                    <span>Todas as categorias</span>
+                </div>
+                <ul class="header-nav_list">
                     <li>Departamento</li>
                     <li>Departamento</li>
                     <li>Departamento</li>

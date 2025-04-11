@@ -1,14 +1,139 @@
+/* Configurações Gerais */
+
 :root {
     --principal-font: "Nunito", sans-serif;
     --secondary-font: "Nunito Sans", sans-serif;
     --primary-color: #ffffff;
     --secondary-color: #005cff;
     --tertiary-color: #000000;
+    --decorative-color: #6220c1;
     --primary-gray: #f5f5f5;
     --secondary-gray: #dedede;
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    background-color: var(--primary-color);
     font-family: var(--principal-font), sans-serif;
     width: 100%;
+    font-size: 14px;
 }
+
+
+/* Banner Promocional */
+
+.banner-promo {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 4px 0;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: center;
+}
+
+.background-purple {
+    background-color: var(--decorative-color);
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+
+.italic-text {
+    font-style: italic;
+}
+
+
+/* Header */
+
+.header {
+    width: 1260px;
+    margin: 0 auto;
+}
+
+.header-itens {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 17px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.header-itens_search input {
+    width: 594px;
+    font-family: var(--secondary-font), sans-serif;
+    font-weight: 500;
+    text-align: left;
+    padding: 12px 16px 10px 24px;
+    margin: 0 275px 0 72px;
+    background: url("/assets/icons/lupa.svg") no-repeat right 18px center;
+    background-size: 18px 18px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+}
+
+.header-itens_session, .header-itens_user {
+    display: flex;
+    align-items: center;
+}
+
+.header-itens_user {
+    gap: 8px;
+}
+
+.header-itens_session {
+    gap: 24px
+}
+
+.header-itens_user img {
+    width: 20px;
+    height: 24px;
+}
+
+.header-itens_user div {
+    font-family: var(--secondary-font), sans-serif;
+    font-weight: 500;
+    line-height: 14px;
+    width: 87px;
+}
+
+.header-itens_cart img {
+    margin-bottom: 6px;
+}
+
+
+/* Header Navigation */
+
+.header-nav, .header-nav_menu, .header-nav_list {
+    display: flex;
+    justify-content: space-between;
+    line-height: 22px;
+}
+
+.header-nav {
+    padding: 5px 0 18px;
+}
+
+.header-nav_menu {
+    gap: 8px;
+    font-family: var(--secondary-font), sans-serif;
+    font-weight: bold;
+    align-items: start;
+
+}
+
+.header-nav_menu img {
+    width: 20px;
+    height: 20px;
+}
+
+.header-nav_list {
+    gap: 45px;
+}
+
