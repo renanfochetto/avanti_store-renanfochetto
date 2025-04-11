@@ -12,8 +12,6 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
     border: 0;
-    font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
 }
 
@@ -32,12 +30,6 @@ ol, ul {
 
 blockquote, q {
     quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
 }
 
 table {
