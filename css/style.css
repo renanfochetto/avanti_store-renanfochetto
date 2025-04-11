@@ -1,0 +1,14 @@
+:root {
+    --principal-font: "Nunito", sans-serif;
+    --secondary-font: "Nunito Sans", sans-serif;
+    --primary-color: #ffffff;
+    --secondary-color: #005cff;
+    --tertiary-color: #000000;
+    --primary-gray: #f5f5f5;
+    --secondary-gray: #dedede;
+}
+
+body {
+    font-family: var(--principal-font), sans-serif;
+    width: 100%;
+}
