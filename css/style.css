@@ -169,7 +169,7 @@ input[type="checkbox"]:checked::before {
 /* Main - Banner Principal */
 
 .container-banner {
-    background-image: url("/assets/images/main-banner.png");
+    background-image: url("/assets/images/main-banner.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -329,7 +329,7 @@ input[type="checkbox"]:checked::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/assets/images/contact-banner.png");
+    background-image: url("/assets/images/contact-banner.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

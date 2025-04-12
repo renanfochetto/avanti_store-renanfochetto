@@ -1,10 +1,11 @@
-- Metadescrição;
-- Converter imagens;
+- Metadescrição; - OK
+- Converter imagens - OK;
 - Carrossel;
 - Script Busca;
 - Validação de Formulário;
 - HTML e Script Navegação;
 - Acessibilidade;
 - Media Queries - Tablet e Celular;
+- Favicon SVG?;
 - Readme;
 - Conferência final para organização e otimização do código;
