@@ -1,0 +1,10 @@
+- Metadescrição;
+- Converter imagens;
+- Carrossel;
+- Script Busca;
+- Validação de Formulário;
+- HTML e Script Navegação;
+- Acessibilidade;
+- Media Queries - Tablet e Celular;
+- Readme;
+- Conferência final para organização e otimização do código;
