@@ -1,11 +1,10 @@
-- Metadescrição; - OK
-- Converter imagens - OK;
-- Carrossel;
-- Script Busca;
 - Validação de Formulário;
 - HTML e Script Navegação;
 - Acessibilidade;
 - Media Queries - Tablet e Celular;
+- Conferir pequenas decorações em html ( u br, etc); Em CSS seria melhor;
 - Favicon SVG?;
+- Conferir Espaçamento entre as sections;
+- Adicionar Comentários no HTMl;
 - Readme;
 - Conferência final para organização e otimização do código;

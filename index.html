@@ -27,8 +27,8 @@
                 <div class="header-itens_search">
                     <label class="hidden" for="search">Buscar</label>
                     <input id="search"  name="search" type="search" placeholder="Digite aqui o que você procura">
-                    <span class="hidden search-result"></span>
                 </div>
+                <div id="search-result"></div>
                 <div class="header-itens_session">
                     <div class="header-itens_user">
                         <img src="./assets/icons/user.svg" alt="">
@@ -64,14 +64,201 @@
                     <h3>Lançamentos</h3>
                     <span>Ver mais</span>
                 </div>
-                <div class="carrossel-produtos">
-                    <div class="carrossel-produto"></div>
-                    <div class="carrossel-produto"></div>
-                    <div class="carrossel-produto"></div>
-                    <div class="carrossel-produto"></div>
-                    <div class="carrossel-produto"></div>
+                <button class="carrossel-button_prev">
+                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.46654 12L7.89462 10.5814L4.79668 7.48351L13 7.48351L13 5.48109L4.79668 5.48109L7.89462 2.38315L6.46654 0.964598L0.961381 6.4823L6.46654 12Z" fill="#005CFF"/>
+                    </svg>
+                </button>
+                <div class="carrossel-products">
+                    <div class="carrossel-wrapper">
+                        <div class="carrossel-product">
+                            <span class="product-tag">NOVO</span>
+                            <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <div class="product-info">
+                                <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="container-product_price">
+                                    <div class="product-price">
+                                        <p class="product-price_total">R$ 100,00</p>
+                                        <p class="product-price_discount">R$ 79,90</p>
+                                    </div>
+                                    <span class="product-tag_discount">10% OFF</span>
+                                </div>
+                                <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
+                            </div>
+                            <button class="button-action">Comprar</button>
+                        </div>
+                        <div class="carrossel-product">
+                            <span class="product-tag">NOVO</span>
+                            <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <div class="product-info">
+                                <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="container-product_price">
+                                    <div class="product-price">
+                                        <p class="product-price_total">R$ 100,00</p>
+                                        <p class="product-price_discount">R$ 79,90</p>
+                                    </div>
+                                    <span class="product-tag_discount">10% OFF</span>
+                                </div>
+                                <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
+                            </div>
+                            <button class="button-action">Comprar</button>
+                        </div>
+                        <div class="carrossel-product">
+                            <span class="product-tag">NOVO</span>
+                            <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <div class="product-info">
+                                <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="container-product_price">
+                                    <div class="product-price">
+                                        <p class="product-price_total">R$ 100,00</p>
+                                        <p class="product-price_discount">R$ 79,90</p>
+                                    </div>
+                                    <span class="product-tag_discount">10% OFF</span>
+                                </div>
+                                <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
+                            </div>
+                            <button class="button-action">Comprar</button>
+                        </div>
+                        <div class="carrossel-product">
+                            <span class="product-tag">NOVO</span>
+                            <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <div class="product-info">
+                                <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="container-product_price">
+                                    <div class="product-price">
+                                        <p class="product-price_total">R$ 100,00</p>
+                                        <p class="product-price_discount">R$ 79,90</p>
+                                    </div>
+                                    <span class="product-tag_discount">10% OFF</span>
+                                </div>
+                                <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
+                            </div>
+                            <button class="button-action">Comprar</button>
+                        </div>
+                        <div class="carrossel-product">
+                            <span class="product-tag">NOVO</span>
+                            <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <div class="product-info">
+                                <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="container-product_price">
+                                    <div class="product-price">
+                                        <p class="product-price_total">R$ 100,00</p>
+                                        <p class="product-price_discount">R$ 79,90</p>
+                                    </div>
+                                    <span class="product-tag_discount">10% OFF</span>
+                                </div>
+                                <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
+                            </div>
+                            <button class="button-action">Comprar</button>
+                        </div>
+                        <div class="carrossel-product">
+                            <span class="product-tag">NOVO</span>
+                            <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <div class="product-info">
+                                <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="container-product_price">
+                                    <div class="product-price">
+                                        <p class="product-price_total">R$ 100,00</p>
+                                        <p class="product-price_discount">R$ 79,90</p>
+                                    </div>
+                                    <span class="product-tag_discount">10% OFF</span>
+                                </div>
+                                <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
+                            </div>
+                            <button class="button-action">Comprar</button>
+                        </div>
+                        <div class="carrossel-product">
+                            <span class="product-tag">NOVO</span>
+                            <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <div class="product-info">
+                                <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="container-product_price">
+                                    <div class="product-price">
+                                        <p class="product-price_total">R$ 100,00</p>
+                                        <p class="product-price_discount">R$ 79,90</p>
+                                    </div>
+                                    <span class="product-tag_discount">10% OFF</span>
+                                </div>
+                                <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
+                            </div>
+                            <button class="button-action">Comprar</button>
+                        </div>
+                        <div class="carrossel-product">
+                            <span class="product-tag">NOVO</span>
+                            <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <div class="product-info">
+                                <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="container-product_price">
+                                    <div class="product-price">
+                                        <p class="product-price_total">R$ 100,00</p>
+                                        <p class="product-price_discount">R$ 79,90</p>
+                                    </div>
+                                    <span class="product-tag_discount">10% OFF</span>
+                                </div>
+                                <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
+                            </div>
+                            <button class="button-action">Comprar</button>
+                        </div>
+                        <div class="carrossel-product">
+                            <span class="product-tag">NOVO</span>
+                            <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <div class="product-info">
+                                <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="container-product_price">
+                                    <div class="product-price">
+                                        <p class="product-price_total">R$ 100,00</p>
+                                        <p class="product-price_discount">R$ 79,90</p>
+                                    </div>
+                                    <span class="product-tag_discount">10% OFF</span>
+                                </div>
+                                <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
+                            </div>
+                            <button class="button-action">Comprar</button>
+                        </div>
+                        <div class="carrossel-product">
+                            <span class="product-tag">NOVO</span>
+                            <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <div class="product-info">
+                                <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="container-product_price">
+                                    <div class="product-price">
+                                        <p class="product-price_total">R$ 100,00</p>
+                                        <p class="product-price_discount">R$ 79,90</p>
+                                    </div>
+                                    <span class="product-tag_discount">10% OFF</span>
+                                </div>
+                                <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
+                            </div>
+                            <button class="button-action">Comprar</button>
+                        </div>
+                        <div class="carrossel-product">
+                            <span class="product-tag">NOVO</span>
+                            <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <div class="product-info">
+                                <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="container-product_price">
+                                    <div class="product-price">
+                                        <p class="product-price_total">R$ 100,00</p>
+                                        <p class="product-price_discount">R$ 79,90</p>
+                                    </div>
+                                    <span class="product-tag_discount">10% OFF</span>
+                                </div>
+                                <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
+                            </div>
+                            <button class="button-action">Comprar</button>
+                        </div>
+                    </div>
                 </div>
-                <!-- Carrossel -->
+                <button class="carrossel-button_next">
+                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.93385 0L5.50577 1.41855L8.60371 4.51649H0.400391V6.51891H8.60371L5.50577 9.61685L6.93385 11.0354L12.439 5.5177L6.93385 0Z" fill="#005CFF"/>
+                    </svg>
+                </button>
+                <div class="carrossel-indicators">
+                    <span class="indicator active"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                </div>
             </section>
             <section class="container-article">
                 <article class="article-info">
@@ -154,14 +341,201 @@
                     <h3>Lançamentos</h3>
                     <span>Ver mais</span>
                 </div>
-                <div class="carrossel-produtos">
-                    <div class="carrossel-produto"></div>
-                    <div class="carrossel-produto"></div>
-                    <div class="carrossel-produto"></div>
-                    <div class="carrossel-produto"></div>
-                    <div class="carrossel-produto"></div>
+                <button class="carrossel-button_prev">
+                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.46654 12L7.89462 10.5814L4.79668 7.48351L13 7.48351L13 5.48109L4.79668 5.48109L7.89462 2.38315L6.46654 0.964598L0.961381 6.4823L6.46654 12Z" fill="#005CFF"/>
+                    </svg>
+                </button>
+                <div class="carrossel-products">
+                    <div class="carrossel-wrapper">
+                        <div class="carrossel-product">
+                            <span class="product-tag">NOVO</span>
+                            <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <div class="product-info">
+                                <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="container-product_price">
+                                    <div class="product-price">
+                                        <p class="product-price_total">R$ 100,00</p>
+                                        <p class="product-price_discount">R$ 79,90</p>
+                                    </div>
+                                    <span class="product-tag_discount">10% OFF</span>
+                                </div>
+                                <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
+                            </div>
+                            <button class="button-action">Comprar</button>
+                        </div>
+                        <div class="carrossel-product">
+                            <span class="product-tag">NOVO</span>
+                            <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <div class="product-info">
+                                <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="container-product_price">
+                                    <div class="product-price">
+                                        <p class="product-price_total">R$ 100,00</p>
+                                        <p class="product-price_discount">R$ 79,90</p>
+                                    </div>
+                                    <span class="product-tag_discount">10% OFF</span>
+                                </div>
+                                <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
+                            </div>
+                            <button class="button-action">Comprar</button>
+                        </div>
+                        <div class="carrossel-product">
+                            <span class="product-tag">NOVO</span>
+                            <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <div class="product-info">
+                                <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="container-product_price">
+                                    <div class="product-price">
+                                        <p class="product-price_total">R$ 100,00</p>
+                                        <p class="product-price_discount">R$ 79,90</p>
+                                    </div>
+                                    <span class="product-tag_discount">10% OFF</span>
+                                </div>
+                                <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
+                            </div>
+                            <button class="button-action">Comprar</button>
+                        </div>
+                        <div class="carrossel-product">
+                            <span class="product-tag">NOVO</span>
+                            <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <div class="product-info">
+                                <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="container-product_price">
+                                    <div class="product-price">
+                                        <p class="product-price_total">R$ 100,00</p>
+                                        <p class="product-price_discount">R$ 79,90</p>
+                                    </div>
+                                    <span class="product-tag_discount">10% OFF</span>
+                                </div>
+                                <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
+                            </div>
+                            <button class="button-action">Comprar</button>
+                        </div>
+                        <div class="carrossel-product">
+                            <span class="product-tag">NOVO</span>
+                            <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <div class="product-info">
+                                <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="container-product_price">
+                                    <div class="product-price">
+                                        <p class="product-price_total">R$ 100,00</p>
+                                        <p class="product-price_discount">R$ 79,90</p>
+                                    </div>
+                                    <span class="product-tag_discount">10% OFF</span>
+                                </div>
+                                <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
+                            </div>
+                            <button class="button-action">Comprar</button>
+                        </div>
+                        <div class="carrossel-product">
+                            <span class="product-tag">NOVO</span>
+                            <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <div class="product-info">
+                                <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="container-product_price">
+                                    <div class="product-price">
+                                        <p class="product-price_total">R$ 100,00</p>
+                                        <p class="product-price_discount">R$ 79,90</p>
+                                    </div>
+                                    <span class="product-tag_discount">10% OFF</span>
+                                </div>
+                                <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
+                            </div>
+                            <button class="button-action">Comprar</button>
+                        </div>
+                        <div class="carrossel-product">
+                            <span class="product-tag">NOVO</span>
+                            <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <div class="product-info">
+                                <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="container-product_price">
+                                    <div class="product-price">
+                                        <p class="product-price_total">R$ 100,00</p>
+                                        <p class="product-price_discount">R$ 79,90</p>
+                                    </div>
+                                    <span class="product-tag_discount">10% OFF</span>
+                                </div>
+                                <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
+                            </div>
+                            <button class="button-action">Comprar</button>
+                        </div>
+                        <div class="carrossel-product">
+                            <span class="product-tag">NOVO</span>
+                            <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <div class="product-info">
+                                <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="container-product_price">
+                                    <div class="product-price">
+                                        <p class="product-price_total">R$ 100,00</p>
+                                        <p class="product-price_discount">R$ 79,90</p>
+                                    </div>
+                                    <span class="product-tag_discount">10% OFF</span>
+                                </div>
+                                <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
+                            </div>
+                            <button class="button-action">Comprar</button>
+                        </div>
+                        <div class="carrossel-product">
+                            <span class="product-tag">NOVO</span>
+                            <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <div class="product-info">
+                                <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="container-product_price">
+                                    <div class="product-price">
+                                        <p class="product-price_total">R$ 100,00</p>
+                                        <p class="product-price_discount">R$ 79,90</p>
+                                    </div>
+                                    <span class="product-tag_discount">10% OFF</span>
+                                </div>
+                                <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
+                            </div>
+                            <button class="button-action">Comprar</button>
+                        </div>
+                        <div class="carrossel-product">
+                            <span class="product-tag">NOVO</span>
+                            <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <div class="product-info">
+                                <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="container-product_price">
+                                    <div class="product-price">
+                                        <p class="product-price_total">R$ 100,00</p>
+                                        <p class="product-price_discount">R$ 79,90</p>
+                                    </div>
+                                    <span class="product-tag_discount">10% OFF</span>
+                                </div>
+                                <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
+                            </div>
+                            <button class="button-action">Comprar</button>
+                        </div>
+                        <div class="carrossel-product">
+                            <span class="product-tag">NOVO</span>
+                            <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <div class="product-info">
+                                <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="container-product_price">
+                                    <div class="product-price">
+                                        <p class="product-price_total">R$ 100,00</p>
+                                        <p class="product-price_discount">R$ 79,90</p>
+                                    </div>
+                                    <span class="product-tag_discount">10% OFF</span>
+                                </div>
+                                <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
+                            </div>
+                            <button class="button-action">Comprar</button>
+                        </div>
+                    </div>
                 </div>
-                <!-- Carrossel -->
+                <button class="carrossel-button_next">
+                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.93385 0L5.50577 1.41855L8.60371 4.51649H0.400391V6.51891H8.60371L5.50577 9.61685L6.93385 11.0354L12.439 5.5177L6.93385 0Z" fill="#005CFF"/>
+                    </svg>
+                </button>
+                <div class="carrossel-indicators">
+                    <span class="indicator active"></span>
+                    <span class="indicator"></span>
+                    <span class="indicator"></span>
+                </div>
             </section>
             <section class="container-contact">
                 <p>Entre em contato conosco e verifique a disponibilidade para sua região!</p>
@@ -177,7 +551,7 @@
                         <input id="checkbox" name="checkbox" type="checkbox">
                         <label for="checkbox">Estou de acordo com a <u>Política de Privacidade</u></label>
                     </div>
-                    <button>Cadastrar</button>
+                    <button class="button-action">Cadastrar</button>
                 </form>
             </section>
         </main>
