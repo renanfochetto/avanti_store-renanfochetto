@@ -64,6 +64,9 @@ input[type="checkbox"]:checked::before {
     transform: scale(0.85);
 }
 
+.hidden {
+    display: none;
+}
 
 
 /* Banner Promocional */
@@ -102,10 +105,6 @@ input[type="checkbox"]:checked::before {
     margin: 17px 0;
 }
 
-.hidden {
-    display: none;
-}
-
 .header-itens_search input {
     width: 594px;
     font-family: var(--secondary-font), sans-serif;
@@ -113,7 +112,7 @@ input[type="checkbox"]:checked::before {
     text-align: left;
     padding: 12px 12px 10px 24px;
     margin: 0 12px 0 72px;
-    background: url("/assets/icons/lupa.svg") no-repeat right 18px center;
+    background: url("../assets/icons/lupa.svg") no-repeat right 18px center;
     background-size: 18px 18px;
     border: 1px solid var(--decorative-gray);
     border-radius: 10px;
@@ -201,7 +200,7 @@ input[type="checkbox"]:checked::before {
 /* Main - Banner Principal */
 
 .container-banner {
-    background-image: url("/assets/images/main-banner.webp");
+    background-image: url("../assets/images/main-banner.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -538,7 +537,7 @@ input[type="checkbox"]:checked::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/assets/images/contact-banner.webp");
+    background-image: url("../assets/images/contact-banner.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -607,6 +606,10 @@ input[type="checkbox"]:checked::before {
     font-size: 12px;
     color: #656565;
     gap: 8px;
+}
+
+.register-box_checkbox span {
+    text-decoration: underline;
 }
 
 
