@@ -1,10 +1,11 @@
+- Favicon SVG?;
+- Conferir Espaçamento entre as sections;
+- Remover Outline do Input Search Bar;
 - Validação de Formulário;
 - HTML e Script Navegação;
 - Acessibilidade;
 - Media Queries - Tablet e Celular;
 - Conferir pequenas decorações em html ( u br, etc); Em CSS seria melhor;
-- Favicon SVG?;
-- Conferir Espaçamento entre as sections;
-- Adicionar Comentários no HTMl;
+- Adicionar Comentários no HTMl, CSS e Javascript;
 - Readme;
 - Conferência final para organização e otimização do código;
