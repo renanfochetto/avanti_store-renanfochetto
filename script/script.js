@@ -1,4 +1,4 @@
-// Javascript Carrossel
+// Carrossel
 
 document.addEventListener('DOMContentLoaded', () => {
   const carrosseis = document.querySelectorAll('.container-carrossel');
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// Javascript Busca
+// Busca
 
 document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('search');
@@ -102,3 +102,21 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+const menuNav = document.querySelector('.header-nav_menu');
+console.log(menuNav);
+const menuList = document.querySelector('.nav-menu_list');
+console.log(menuList);
+menuNav.addEventListener('click', () => {
+  menuList.classList.toggle('hidden')
+})
+
+const navDepartments = document.querySelectorAll('.nav-department');
+navDepartments.forEach((department) => {
+  const navCategory = department.nextElementSibling;  
+  department.addEventListener('mouseenter', () => {
+    navCategory.classList.remove('hidden');
+  });
+  department.addEventListener('mouseleave', () => {
+    navCategory.classList.add('hidden');
+  })
+})
