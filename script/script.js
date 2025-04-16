@@ -102,21 +102,139 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-const menuNav = document.querySelector('.header-nav_menu');
-console.log(menuNav);
-const menuList = document.querySelector('.nav-menu_list');
-console.log(menuList);
-menuNav.addEventListener('click', () => {
-  menuList.classList.toggle('hidden')
-})
+document.addEventListener('DOMContentLoaded', () => {
+  const menuNav = document.querySelector('.header-nav_menu');
+  const menuList = document.querySelector('.nav-menu_list');
+  const departmentWrapper = document.querySelector('.nav-department_wrapper');
+  const departments = document.querySelectorAll('.nav-department_wrapper li');
+  const categoriesContainer = document.querySelector('.nav-menu_categories .nav-categories_list');
+  const headerNavDepartments = document.querySelectorAll('.header-nav_list li');
+  const navMenuTitle = document.querySelector('.nav-menu_title');
+  const dataPath = './data/menuData.json';
 
-const navDepartments = document.querySelectorAll('.nav-department');
-navDepartments.forEach((department) => {
-  const navCategory = department.nextElementSibling;  
-  department.addEventListener('mouseenter', () => {
-    navCategory.classList.remove('hidden');
-  });
-  department.addEventListener('mouseleave', () => {
-    navCategory.classList.add('hidden');
-  })
-})
+  let menuOpenedByHover = false;
+  let activeDepartment = null;
+
+  const clearCategories = () => {
+    categoriesContainer.innerHTML = '';
+  };
+
+  const clearAllActiveStates = () => {
+    departments.forEach(dep => dep.classList.remove('active'));
+    headerNavDepartments.forEach(item => item.classList.remove('active'));
+    navMenuTitle.classList.remove('active');
+  }
+
+  const renderCategories = (departmentName, data) => {
+    const departmentData = data.find(dep => dep.department === departmentName);
+
+    if (departmentData) {
+      clearCategories();
+
+      const fragment = document.createDocumentFragment();
+      const numColumns = 3;
+      const itemsPerColumn = Math.ceil(departmentData.categories.length / numColumns);
+
+      for (let i = 0; i < numColumns; i++) {
+        const ul = document.createElement('ul');
+        ul.classList.add('categories_column');
+
+        departmentData.categories
+          .slice(i * itemsPerColumn, (i + 1) * itemsPerColumn)
+          .forEach(category => {
+            const li = document.createElement('li');
+            li.textContent = category;
+            ul.appendChild(li);
+          });
+
+        fragment.appendChild(ul);
+      }
+
+      categoriesContainer.appendChild(fragment);
+      categoriesContainer.style.visibility = 'visible';
+      categoriesContainer.style.opacity = '1';
+    } else {
+      console.warn(`Departamento ${departmentName} não encontrado no JSON`);
+    }
+  };
+
+  fetch(dataPath)
+    .then(response => response.json())
+    .then(data => {
+      // Clique em "Todas as categorias"
+      menuNav.addEventListener('click', () => {
+        const isHidden = menuList.classList.contains('hidden');
+
+        if (isHidden) {
+          menuOpenedByHover = false;
+          menuList.classList.remove('hidden');
+          departmentWrapper.style.display = 'block';
+          clearCategories();
+          navMenuTitle.classList.add('active');
+          headerNavDepartments.forEach(item => item.classList.remove('active'));
+        } else {
+          menuList.classList.add('hidden');
+          clearAllActiveStates();
+        }
+      });
+
+      // Hover nos departamentos laterais (continua funcionando)
+      departments.forEach(department => {
+        department.addEventListener('mouseover', () => {
+          const departmentName = department.getAttribute('data-department');
+          departments.forEach(dep => dep.classList.remove('active'));
+          department.classList.add('active');
+          renderCategories(departmentName, data);
+        });
+      });
+
+      // Clique nos departamentos do header
+      headerNavDepartments.forEach(headerItem => {
+        headerItem.addEventListener('click', (e) => {
+          e.stopPropagation(); // Impede conflito com clique fora
+
+          const departmentName = headerItem.getAttribute('data-department');
+
+          // Se clicou em algo sem data-department (ex: "Todas as categorias"), não faz nada
+          if (!departmentName) return;
+
+          const isHidden = menuList.classList.contains('hidden');
+          const isSameDepartment = departmentName === activeDepartment;
+
+          if (isHidden || !isSameDepartment) {
+            // Atualiza menu
+            menuOpenedByHover = false;
+            menuList.classList.remove('hidden');
+            departmentWrapper.style.display = 'none';
+            renderCategories(departmentName, data);
+            activeDepartment = departmentName;
+
+            // Atualiza classes ativas
+            headerNavDepartments.forEach(item => item.classList.remove('active'));
+            headerItem.classList.add('active');
+            navMenuTitle.classList.remove('active');
+          } else {
+            menuList.classList.add('hidden');
+            activeDepartment = null;
+            clearAllActiveStates();
+          }
+        });
+      });
+
+      // Fechar ao clicar fora
+      document.addEventListener('click', (e) => {
+        const isClickInsideMenu =
+          menuList.contains(e.target) ||
+          menuNav.contains(e.target) ||
+          e.target.closest('.header-nav_list');
+
+        if (!isClickInsideMenu) {
+          menuList.classList.add('hidden');
+          menuOpenedByHover = false;
+          activeDepartment = null;
+          clearAllActiveStates();
+        }
+      });
+    })
+    .catch(error => console.error('Erro ao carregar o JSON:', error));
+});

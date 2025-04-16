@@ -1,0 +1,114 @@
+[
+  {
+    "department": "departamento1",
+    "categories": [ "Categoria1", "Categoria2", "Categoria3", "Categoria4", "Categoria5", "Categoria6", "Categoria7", "Categoria8",
+                    "Categoria9", "Categoria10", "Categoria11", "Categoria12", "Categoria13", "Categoria14", "Categoria15", "Categoria16",
+                    "Categoria17", "Categoria18", "Categoria19", "Categoria20", "Categoria21", "Categoria22", "Categoria23", "Categoria24"
+    ]
+  },
+  {
+    "department": "departamento2",
+    "categories": [ "Categoria25", "Categoria26", "Categoria27", "Categoria28", "Categoria29", "Categoria30", "Categoria31", "Categoria32",
+      "Categoria33", "Categoria34", "Categoria35", "Categoria36", "Categoria37", "Categoria38", "Categoria39", "Categoria40",
+      "Categoria41", "Categoria42", "Categoria43", "Categoria44", "Categoria45", "Categoria46", "Categoria47", "Categoria48"
+    ]
+  },
+  {
+    "department": "departamento3",
+    "categories": [ "Categoria1", "Categoria2", "Categoria3", "Categoria4", "Categoria5", "Categoria6", "Categoria7", "Categoria8",
+      "Categoria9", "Categoria10", "Categoria11", "Categoria12", "Categoria13", "Categoria14", "Categoria15", "Categoria16",
+      "Categoria17", "Categoria18", "Categoria19", "Categoria20", "Categoria21", "Categoria22", "Categoria23", "Categoria24"
+    ]
+  },
+  {
+    "department": "departamento4",
+    "categories": [ "Categoria1", "Categoria2", "Categoria3", "Categoria4", "Categoria5", "Categoria6", "Categoria7", "Categoria8",
+      "Categoria9", "Categoria10", "Categoria11", "Categoria12", "Categoria13", "Categoria14", "Categoria15", "Categoria16",
+      "Categoria17", "Categoria18", "Categoria19", "Categoria20", "Categoria21", "Categoria22", "Categoria23", "Categoria24"
+    ]
+  },
+  {
+    "department": "departamento5",
+    "categories": [ "Categoria1", "Categoria2", "Categoria3", "Categoria4", "Categoria5", "Categoria6", "Categoria7", "Categoria8",
+      "Categoria9", "Categoria10", "Categoria11", "Categoria12", "Categoria13", "Categoria14", "Categoria15", "Categoria16",
+      "Categoria17", "Categoria18", "Categoria19", "Categoria20", "Categoria21", "Categoria22", "Categoria23", "Categoria24"
+    ]
+  },
+  {
+    "department": "departamento6",
+    "categories": [ "Categoria1", "Categoria2", "Categoria3", "Categoria4", "Categoria5", "Categoria6", "Categoria7", "Categoria8",
+      "Categoria9", "Categoria10", "Categoria11", "Categoria12", "Categoria13", "Categoria14", "Categoria15", "Categoria16",
+      "Categoria17", "Categoria18", "Categoria19", "Categoria20", "Categoria21", "Categoria22", "Categoria23", "Categoria24"
+    ]
+  },
+  {
+    "department": "departamento7",
+    "categories": [ "Categoria1", "Categoria2", "Categoria3", "Categoria4", "Categoria5", "Categoria6", "Categoria7", "Categoria8",
+      "Categoria9", "Categoria10", "Categoria11", "Categoria12", "Categoria13", "Categoria14", "Categoria15", "Categoria16",
+      "Categoria17", "Categoria18", "Categoria19", "Categoria20", "Categoria21", "Categoria22", "Categoria23", "Categoria24"
+    ]
+  },
+  {
+    "department": "departamento8",
+    "categories": [ "Categoria1", "Categoria2", "Categoria3", "Categoria4", "Categoria5", "Categoria6", "Categoria7", "Categoria8",
+      "Categoria9", "Categoria10", "Categoria11", "Categoria12", "Categoria13", "Categoria14", "Categoria15", "Categoria16",
+      "Categoria17", "Categoria18", "Categoria19", "Categoria20", "Categoria21", "Categoria22", "Categoria23", "Categoria24"
+    ]
+  },
+  {
+    "department": "departamento9",
+    "categories": [ "Categoria1", "Categoria2", "Categoria3", "Categoria4", "Categoria5", "Categoria6", "Categoria7", "Categoria8",
+      "Categoria9", "Categoria10", "Categoria11", "Categoria12", "Categoria13", "Categoria14", "Categoria15", "Categoria16",
+      "Categoria17", "Categoria18", "Categoria19", "Categoria20", "Categoria21", "Categoria22", "Categoria23", "Categoria24"
+    ]
+  },
+  {
+    "department": "departamento10",
+    "categories": [ "Categoria1", "Categoria2", "Categoria3", "Categoria4", "Categoria5", "Categoria6", "Categoria7", "Categoria8",
+      "Categoria9", "Categoria10", "Categoria11", "Categoria12", "Categoria13", "Categoria14", "Categoria15", "Categoria16",
+      "Categoria17", "Categoria18", "Categoria19", "Categoria20", "Categoria21", "Categoria22", "Categoria23", "Categoria24"
+    ]
+  },
+  {
+    "department": "departamento11",
+    "categories": [ "Categoria1", "Categoria2", "Categoria3", "Categoria4", "Categoria5", "Categoria6", "Categoria7", "Categoria8",
+      "Categoria9", "Categoria10", "Categoria11", "Categoria12", "Categoria13", "Categoria14", "Categoria15", "Categoria16",
+      "Categoria17", "Categoria18", "Categoria19", "Categoria20", "Categoria21", "Categoria22", "Categoria23", "Categoria24"
+    ]
+  },
+  {
+    "department": "departamento12",
+    "categories": [ "Categoria1", "Categoria2", "Categoria3", "Categoria4", "Categoria5", "Categoria6", "Categoria7", "Categoria8",
+      "Categoria9", "Categoria10", "Categoria11", "Categoria12", "Categoria13", "Categoria14", "Categoria15", "Categoria16",
+      "Categoria17", "Categoria18", "Categoria19", "Categoria20", "Categoria21", "Categoria22", "Categoria23", "Categoria24"
+    ]
+  },
+  {
+    "department": "departamento13",
+    "categories": [ "Categoria1", "Categoria2", "Categoria3", "Categoria4", "Categoria5", "Categoria6", "Categoria7", "Categoria8",
+      "Categoria9", "Categoria10", "Categoria11", "Categoria12", "Categoria13", "Categoria14", "Categoria15", "Categoria16",
+      "Categoria17", "Categoria18", "Categoria19", "Categoria20", "Categoria21", "Categoria22", "Categoria23", "Categoria24"
+    ]
+  },
+  {
+    "department": "departamento14",
+    "categories": [ "Categoria1", "Categoria2", "Categoria3", "Categoria4", "Categoria5", "Categoria6", "Categoria7", "Categoria8",
+      "Categoria9", "Categoria10", "Categoria11", "Categoria12", "Categoria13", "Categoria14", "Categoria15", "Categoria16",
+      "Categoria17", "Categoria18", "Categoria19", "Categoria20", "Categoria21", "Categoria22", "Categoria23", "Categoria24"
+    ]
+  },
+  {
+    "department": "departamento15",
+    "categories": [ "Categoria1", "Categoria2", "Categoria3", "Categoria4", "Categoria5", "Categoria6", "Categoria7", "Categoria8",
+      "Categoria9", "Categoria10", "Categoria11", "Categoria12", "Categoria13", "Categoria14", "Categoria15", "Categoria16",
+      "Categoria17", "Categoria18", "Categoria19", "Categoria20", "Categoria21", "Categoria22", "Categoria23", "Categoria24"
+    ]
+  },
+  {
+    "department": "departamento16",
+    "categories": [ "Categoria1", "Categoria2", "Categoria3", "Categoria4", "Categoria5", "Categoria6", "Categoria7", "Categoria8",
+      "Categoria9", "Categoria10", "Categoria11", "Categoria12", "Categoria13", "Categoria14", "Categoria15", "Categoria16",
+      "Categoria17", "Categoria18", "Categoria19", "Categoria20", "Categoria21", "Categoria22", "Categoria23", "Categoria24"
+    ]
+  }
+]

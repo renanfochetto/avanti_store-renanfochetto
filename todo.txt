@@ -4,3 +4,12 @@
 - Adicionar Comentários no HTML;
 - Conferência final para organização e otimização do código;
 - Readme;
+
+
+MENU
+- Corrigir border radius banner;
+- Corrigir botão banner;
+- Incluir efeito hover sobre categorias;
+- Incluir abertura do menu apenas com o hover em todas as categorias;
+- inserir fechamento do menu com o mouse fora da div e do span de todas as categorias;
+- zerar os dados e a div de categorias ao fechar o menu;
