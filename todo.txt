@@ -13,3 +13,5 @@ MENU
 - Incluir abertura do menu apenas com o hover em todas as categorias;
 - inserir fechamento do menu com o mouse fora da div e do span de todas as categorias;
 - zerar os dados e a div de categorias ao fechar o menu;
+
+-CENTRALIZAR A DIV COM A RESPOSTA DA BUSCA;

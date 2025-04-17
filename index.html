@@ -19,6 +19,12 @@
         </div>
         <header class="header">
             <div class="header-itens">
+                <div class="header-itens_menu">
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="1" y1="12.4998" x2="22.7185" y2="12.4998" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="1" y1="23.1921" x2="22.7185" y2="23.1921" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="1" y1="1.80762" x2="22.7185" y2="1.80762" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                    </svg>                </div>
                 <h1 class="header-itens_title">
                     <a href="https://www.penseavanti.com.br">
                         <img src="./assets/logos/avanti.png" alt="Logo da Avanti">
@@ -175,6 +181,11 @@
         </header>
         <main class="container-main">
             <section class="container-banner">
+                <div class="menu-indicators">
+                    <span class="menu-indicator"></span>
+                    <span class="menu-indicator active"></span>
+                    <span class="menu-indicator"></span>
+                </div>
             </section>
             <section class="container-carrossel">
                 <div class="carrossel-header">
@@ -453,7 +464,7 @@
                     </div>
                 </article>
             </section>
-            <section class="container-carrossel">
+            <section class="container-carrossel none">
                 <div class="carrossel-header">
                     <h3>Lançamentos</h3>
                     <span>Ver mais</span>
@@ -685,14 +696,24 @@
                         </div>
                     </div>
                     <ul>
-                        <li><h4>Institucional</h4></li>
+                        <li>
+                            <h4>Institucional</h4>
+                            <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.5 3.17937e-09L12 1.5285L6 7.5L3.23978e-09 1.5285L1.5 2.22556e-08L6 4.5L10.5 3.17937e-09Z" fill="#005CFF"/>
+                            </svg>
+                        </li>
                         <li><h5><a href="#">Sobre Nós</a></h5></li>
                         <li><h5><a href="#">Nossas Lojas</a></h5></li>
                         <li><h5><a href="#">Privacidade e Segurança</a></h5></li>
                         <li><h5><a href="#">Termos e Cndições</a></h5></li>
                     </ul>
                     <ul>
-                        <li><h4>Central de Ajuda</h4></li>
+                        <li>
+                            <h4>Central de Ajuda</h4>
+                            <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.5 3.17937e-09L12 1.5285L6 7.5L3.23978e-09 1.5285L1.5 2.22556e-08L6 4.5L10.5 3.17937e-09Z" fill="#005CFF"/>
+                            </svg>
+                        </li>
                         <li><h5><a href="#">Fale Conosco</a></h5></li>
                         <li><h5><a href="#">Frete e Entrega</a></h5></li>
                         <li><h5><a href="#">Trocas e Devoluções</a></h5></li>
@@ -700,7 +721,12 @@
                         <li><h5><a href="#">FAQ</a></h5></li>
                     </ul>
                     <ul>
-                        <li><h4>Atendimento</h4></li>
+                        <li>
+                            <h4>Atendimento</h4>
+                            <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.5 3.17937e-09L12 1.5285L6 7.5L3.23978e-09 1.5285L1.5 2.22556e-08L6 4.5L10.5 3.17937e-09Z" fill="#005CFF"/>
+                            </svg>
+                        </li>
                         <li><h5><span>Telefone: </span><a href="#">(00) 1234-5678</a></h5></li>
                         <li><h5><span>Email: </span><a href="#">exemplo@exemplo.com.br</a></h5></li>
                         <li class="footer-links_item"><h5>Horário de atendimento:</h5></li>
@@ -721,13 +747,17 @@
                 </div>
             </div>
             <div class="container-footer_info">
-                <p>
+                <p class="info-large">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
                     laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
                     ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
                     dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
                     facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
                     delenit augue duis dolore te feugait nulla facilisi.
+                </p>
+                <p class="info-small">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.
                 </p>
                 <div class="footer-info_logos">
                     <a href="#"><img src="./assets/icons/bottom/encrypt.svg" alt="Logo da Let's Encrypt"></a>
