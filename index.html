@@ -3,59 +3,101 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- METATAGS PARA SEO -->
         <meta name="description" content="Este é um projeto desenvolvido para participação no processo seletivo do Programa de Estágio Innovation Class da empresa Avanti.">
+        <meta name="keywords" content="Avanti, Estágio, Frontend, HTML, CSS, JavaScript">
+        <meta name="author" content="Renan Daniel Fochetto">
+        <!-- RESET CSS -->
         <link rel="stylesheet" href="./css/reset.css">
+        <!-- CSS -->
         <link rel="stylesheet" href="./css/style.css">
+        <!-- FAVICON -->
         <link rel="icon" href="./favicon.ico" type="image/x-icon">
+        <!-- FONTES -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <!-- SCRIPTS -->
         <script src="script/script.js" defer></script>
+        <!-- TÍTULO DA PÁGINA -->
         <title>Avanti Store</title>
     </head>
     <body>
-        <div class="banner-promo">
-            <p>Ganhe <span class="background-purple">R$10,00</span> de desconto no seu primeiro pedido. Utilize o cupom <span class="italic-text">DESCONTO10</span></p>
-        </div>
+        <!-- BANNER PROMOCIONAL -->
+        <aside class="banner-promo" role="note" aria-label="Banner promocional">
+            <p>
+                Ganhe <span class="background-purple">R$10,00</span> de desconto no seu primeiro pedido.
+                Utilize o cupom <span class="italic-text" aria-label="Código do cupom">DESCONTO10</span>
+            </p>
+        </aside>
+        <!-- HEADER -->
         <header class="header">
             <div class="header-itens">
+                <!-- MENU HAMBURGUER - 400PX -->
                 <div class="header-itens_menu">
                     <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line x1="1" y1="12.4998" x2="22.7185" y2="12.4998" stroke="black" stroke-width="2" stroke-linecap="round"/>
                         <line x1="1" y1="23.1921" x2="22.7185" y2="23.1921" stroke="black" stroke-width="2" stroke-linecap="round"/>
                         <line x1="1" y1="1.80762" x2="22.7185" y2="1.80762" stroke="black" stroke-width="2" stroke-linecap="round"/>
-                    </svg>                </div>
+                    </svg>
+                </div>
+                <!-- LOGO -->
                 <h1 class="header-itens_title">
                     <a href="https://www.penseavanti.com.br">
                         <img src="./assets/logos/avanti.png" alt="Logo da Avanti">
                     </a>
                 </h1>
+                <!-- BUSCADOR -->
                 <div class="header-itens_search">
                     <label class="hidden" for="search">Buscar</label>
                     <input id="search"  name="search" type="search" placeholder="Digite aqui o que você procura">
                 </div>
+                <!-- RESULTADO DA BUSCA -->
                 <div id="search-result"></div>
+                <!-- SESSÃO -->
                 <div class="header-itens_session">
+                    <!-- USER -->
                     <div class="header-itens_user">
-                        <img src="./assets/icons/user.svg" alt="">
+                        <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_15_460)">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5713 13.7138H6C4.4087 13.7138 2.88258 14.346 1.75736 15.4712C0.632145 16.5964 0 18.1225 0 19.7138V21.4276C-6.13331e-08 22.1097 0.27087 22.7638 0.753046 23.2462C1.23522 23.7286 1.88922 23.9997 2.57127 24H18C18.6819 24 19.336 23.7291 19.8182 23.2469C20.3004 22.7647 20.5713 22.1107 20.5713 21.4287V19.7138C20.5713 18.1225 19.9391 16.5964 18.8139 15.4712C17.6887 14.346 16.1626 13.7138 14.5713 13.7138ZM6 15.4287H14.5713C15.708 15.4287 16.7982 15.8803 17.6021 16.6841C18.4059 17.4879 18.8574 18.5781 18.8574 19.7149V21.4287C18.8576 21.5414 18.8355 21.6529 18.7925 21.757C18.7494 21.8611 18.6863 21.9557 18.6066 22.0354C18.527 22.115 18.4324 22.1782 18.3283 22.2212C18.2242 22.2642 18.1126 22.2863 18 22.2862H2.57127C2.34386 22.2862 2.12576 22.1958 1.96495 22.035C1.80415 21.8742 1.71382 21.6561 1.71382 21.4287V19.7138C1.71411 18.5772 2.16582 17.4873 2.9696 16.6837C3.77339 15.8802 4.86342 15.4287 6 15.4287ZM10.2862 0C9.09949 0 7.93946 0.351895 6.95276 1.01118C5.96607 1.67047 5.19702 2.60754 4.7429 3.7039C4.28877 4.80026 4.16996 6.00666 4.40147 7.17054C4.63298 8.33443 5.20443 9.40353 6.04355 10.2426C6.88266 11.0818 7.95175 11.6532 9.11564 11.8847C10.2795 12.1162 11.4859 11.9974 12.5823 11.5433C13.6786 11.0892 14.6157 10.3201 15.275 9.33342C15.9343 8.34673 16.2862 7.18669 16.2862 6C16.2862 4.4087 15.654 2.88258 14.5288 1.75736C13.4036 0.632141 11.8775 0 10.2862 0ZM10.2862 1.71382C11.1339 1.71382 11.9626 1.9652 12.6675 2.43617C13.3723 2.90714 13.9217 3.57655 14.2461 4.35975C14.5705 5.14295 14.6554 6.00476 14.49 6.83619C14.3246 7.66763 13.9164 8.43135 13.317 9.03079C12.7175 9.63022 11.9538 10.0384 11.1224 10.2038C10.2909 10.3692 9.42912 10.2843 8.64592 9.95991C7.86273 9.6355 7.19332 9.08613 6.72235 8.38127C6.25138 7.67642 6 6.84773 6 6C6.00029 4.86332 6.45197 3.77328 7.25572 2.96953C8.05947 2.16578 9.1495 1.71411 10.2862 1.71382Z" fill="#005CFF"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_15_460">
+                                    <rect width="20.5713" height="24" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
                         <div>Olá, <br>Nome cliente!</div>
                     </div>
+                    <!-- CARRINHO -->
                     <div class="header-itens_cart">
-                        <img src="./assets/icons/cart.svg" alt="Ícone de um carrinho de compras">
+                        <svg width="39" height="32" viewBox="0 0 39 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.197 28.6616C13.2052 27.7663 12.8568 26.9048 12.2286 26.2669C11.6004 25.6289 10.7443 25.2674 9.84896 25.2618C8.95383 25.2564 8.09324 25.6074 7.45722 26.2375C6.82126 26.8677 6.4623 27.7251 6.45949 28.6202C6.45669 29.5156 6.81047 30.3751 7.44254 31.0092C8.07442 31.643 8.93291 31.9996 9.82827 31.9996C10.7163 31.9996 11.5685 31.6488 12.1995 31.0238C12.8304 30.3986 13.1889 29.5496 13.197 28.6616ZM8.34458 28.6616C8.33639 28.2565 8.49096 27.865 8.7736 27.5747C9.05623 27.2843 9.44345 27.1193 9.84855 27.1165C10.2539 27.1139 10.6432 27.2737 10.9297 27.5602C11.2162 27.8467 11.376 28.2361 11.3732 28.6412C11.3704 29.0465 11.2055 29.4337 10.9151 29.7163C10.6249 29.9987 10.2334 30.1533 9.82831 30.1451C9.43486 30.1451 9.05736 29.9888 8.77925 29.7107C8.50092 29.4324 8.34458 29.0551 8.34458 28.6616Z" fill="black"/>
+                            <path d="M22.4999 28.662C22.4999 27.7766 22.1483 26.9276 21.5222 26.3017C20.8964 25.6757 20.0474 25.324 19.162 25.324C18.2768 25.324 17.4278 25.6757 16.8017 26.3017C16.1758 26.9276 15.824 27.7766 15.824 28.662C15.824 29.5472 16.1758 30.3962 16.8017 31.0223C17.4278 31.6482 18.2768 32 19.162 32C20.0474 32 20.8964 31.6482 21.5222 31.0223C22.1483 30.3962 22.4999 29.5472 22.4999 28.662ZM17.6785 28.662C17.6865 28.2709 17.8452 27.8982 18.1218 27.6218C18.3984 27.3452 18.7712 27.1863 19.162 27.1785C19.5555 27.1785 19.933 27.3348 20.2111 27.6129C20.4894 27.8911 20.6457 28.2686 20.6457 28.662C20.6541 29.058 20.5006 29.4403 20.2206 29.7203C19.9405 30.0004 19.5581 30.1541 19.162 30.1455C18.7686 30.1455 18.3913 29.9892 18.1132 29.7111C17.8348 29.4327 17.6785 29.0555 17.6785 28.662Z" fill="black"/>
+                            <path d="M24.3853 13.0232H6.39755L5.68653 9.37611C5.64169 9.19695 5.54898 9.03332 5.41834 8.90268C5.28769 8.77203 5.12406 8.67933 4.94491 8.63448L1.69964 8.0164V8.01619C1.45409 7.97048 1.20034 8.02244 0.992542 8.16085C0.784716 8.29947 0.639195 8.51376 0.587018 8.75801C0.54196 8.9999 0.594563 9.24977 0.733836 9.45264C0.872888 9.65551 1.08697 9.79478 1.32885 9.83983L3.98683 10.3342L6.24296 21.7079V21.7081C6.39905 22.4801 6.816 23.1747 7.42376 23.6757C8.03174 24.1765 8.79337 24.4531 9.58094 24.4588H19.7184C20.4553 24.4618 21.1731 24.2253 21.764 23.7851C22.355 23.3446 22.7868 22.7241 22.9944 22.017L25.2816 14.1667C25.3527 13.8893 25.296 13.5943 25.127 13.3632C24.9455 13.1411 24.6717 13.0157 24.3852 13.0232H24.3853ZM21.2019 21.5226C21.1178 21.849 20.9251 22.137 20.6554 22.3392C20.3857 22.5414 20.0554 22.6458 19.7184 22.6352H9.58098C9.22462 22.6352 8.87945 22.5121 8.60328 22.2868C8.32733 22.0615 8.13783 21.7479 8.06646 21.3988L6.76838 14.8775H23.1489L21.2019 21.5226Z" fill="black"/>
+                            <ellipse cx="28.5" cy="10.6521" rx="10.5" ry="10.4997" fill="#005CFF"/>
+                            <path d="M26.596 14.1524C26.34 14.1524 26.152 14.0964 26.032 13.9844C25.92 13.8644 25.864 13.6924 25.864 13.4684C25.864 13.3324 25.9 13.2004 25.972 13.0724C26.044 12.9444 26.148 12.8084 26.284 12.6644L28.696 10.0964C29.064 9.71238 29.328 9.36438 29.488 9.05238C29.648 8.73238 29.728 8.41238 29.728 8.09238C29.728 7.69238 29.6 7.38838 29.344 7.18038C29.096 6.97238 28.732 6.86838 28.252 6.86838C27.98 6.86838 27.708 6.90838 27.436 6.98838C27.164 7.06038 26.888 7.18838 26.608 7.37238C26.464 7.46838 26.328 7.50838 26.2 7.49238C26.08 7.47638 25.972 7.42438 25.876 7.33638C25.788 7.24838 25.728 7.14038 25.696 7.01238C25.664 6.88438 25.668 6.75638 25.708 6.62838C25.756 6.49238 25.852 6.37638 25.996 6.28038C26.34 6.04838 26.724 5.87238 27.148 5.75238C27.58 5.63238 28.012 5.57238 28.444 5.57238C29.052 5.57238 29.564 5.66438 29.98 5.84838C30.396 6.03238 30.712 6.30038 30.928 6.65238C31.144 7.00438 31.252 7.43238 31.252 7.93638C31.252 8.27238 31.196 8.60038 31.084 8.92038C30.98 9.24038 30.816 9.56438 30.592 9.89238C30.376 10.2204 30.092 10.5684 29.74 10.9364L27.484 13.2884V12.8804H31.012C31.228 12.8804 31.392 12.9324 31.504 13.0364C31.616 13.1404 31.672 13.2964 31.672 13.5044C31.672 13.7124 31.616 13.8724 31.504 13.9844C31.392 14.0964 31.228 14.1524 31.012 14.1524H26.596Z" fill="white"/>
+                        </svg>
                     </div>
                 </div>
             </div>
+            <!-- NAVEGAÇÃO HEADER -->
             <nav class="header-nav">
                 <div class="header-nav_menu">
+                    <!-- MENU HAMBURGUER -->
                     <div class="nav-menu_title">
                         <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px">
                             <path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z"/>
                         </svg>
                         <span>Todas as categorias</span>
                     </div>
+                    <!-- MENU COMPLETO -->
                     <div class="hidden nav-menu_list">
+                        <!-- CONTAINER MENU -->
                         <div class="nav-menu_wrapper">
                             <div class="nav-department_wrapper">
+                                <!-- LISTA DE DEPARTAMENTOS -->
                                 <ul>
                                     <li data-department="departamento1">
                                         <span>Departamento 1</span>
@@ -155,10 +197,13 @@
                                     </li>
                                 </ul>
                             </div>
+                            <!-- MENU CATEGORIAS -->
                             <div class="nav-menu_categories">
+                                <!-- LISTA DE CATEGORIAS -->
                                 <div class="nav-categories_list">
                                     <ul></ul>
                                 </div>
+                                <!-- BANNER LATERAL -->
                                 <div class="nav-categories_banner">
                                     <p>Confira os produtos <span>Que acabaram De chegar</span></p>
                                     <button class="button-nav">VER TODOS</button>
@@ -167,6 +212,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- NAVEGAÇÃO DEPARTAMENTOS -->
                 <ul class="header-nav_list">
                     <li data-department="departamento1">Departamento</li>
                     <li data-department="departamento2">Departamento</li>
@@ -179,32 +225,43 @@
                 </ul>
             </nav>
         </header>
+        <!-- CONTEÚDO PRINCIPAL -->
         <main class="container-main">
+            <!-- BANNER PRINCIPAL -->
             <section class="container-banner">
+                <!-- INDICADORES LOCALIZAÇÃO -->
                 <div class="menu-indicators">
                     <span class="menu-indicator"></span>
                     <span class="menu-indicator active"></span>
                     <span class="menu-indicator"></span>
                 </div>
             </section>
+            <!-- CARROSSEL DE PRODUTOS -->
             <section class="container-carrossel">
+                <!-- HEADER CARROSSEL -->
                 <div class="carrossel-header">
                     <h3>Lançamentos</h3>
                     <span>Ver mais</span>
                 </div>
+                <!-- BOTÃO ANTERIOR -->
                 <button class="carrossel-button_prev">
                     <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6.46654 12L7.89462 10.5814L4.79668 7.48351L13 7.48351L13 5.48109L4.79668 5.48109L7.89462 2.38315L6.46654 0.964598L0.961381 6.4823L6.46654 12Z" fill="#005CFF"/>
                     </svg>
                 </button>
+                <!-- CONTAINER PRODUTOS -->
                 <div class="carrossel-products">
                     <div class="carrossel-wrapper">
+                        <!-- PRODUTO - CARROSSEL -->
                         <div class="carrossel-product">
                             <span class="product-tag">NOVO</span>
+                            <!-- IMAGEM DO PRODUTO -->
                             <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <!-- INFORMAÇÕES DO PRODUTO -->
                             <div class="product-info">
                                 <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
                                 <div class="container-product_price">
+                                    <!-- PREÇO DO PRODUTO -->
                                     <div class="product-price">
                                         <p class="product-price_total">R$ 100,00</p>
                                         <p class="product-price_discount">R$ 79,90</p>
@@ -213,14 +270,19 @@
                                 </div>
                                 <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
                             </div>
+                            <!-- BOTÃO DE COMPRA -->
                             <button class="button-action">Comprar</button>
                         </div>
+                        <!-- PRODUTO - CARROSSEL -->
                         <div class="carrossel-product">
                             <span class="product-tag">NOVO</span>
+                            <!-- IMAGEM DO PRODUTO -->
                             <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <!-- INFORMAÇÕES DO PRODUTO -->
                             <div class="product-info">
                                 <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
                                 <div class="container-product_price">
+                                    <!-- PREÇO DO PRODUTO -->
                                     <div class="product-price">
                                         <p class="product-price_total">R$ 100,00</p>
                                         <p class="product-price_discount">R$ 79,90</p>
@@ -229,14 +291,19 @@
                                 </div>
                                 <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
                             </div>
+                            <!-- BOTÃO DE COMPRA -->
                             <button class="button-action">Comprar</button>
                         </div>
+                        <!-- PRODUTO - CARROSSEL -->
                         <div class="carrossel-product">
                             <span class="product-tag">NOVO</span>
+                            <!-- IMAGEM DO PRODUTO -->
                             <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <!-- INFORMAÇÕES DO PRODUTO -->
                             <div class="product-info">
                                 <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
                                 <div class="container-product_price">
+                                    <!-- PREÇO DO PRODUTO -->
                                     <div class="product-price">
                                         <p class="product-price_total">R$ 100,00</p>
                                         <p class="product-price_discount">R$ 79,90</p>
@@ -245,14 +312,19 @@
                                 </div>
                                 <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
                             </div>
+                            <!-- BOTÃO DE COMPRA -->
                             <button class="button-action">Comprar</button>
                         </div>
+                        <!-- PRODUTO - CARROSSEL -->
                         <div class="carrossel-product">
                             <span class="product-tag">NOVO</span>
+                            <!-- IMAGEM DO PRODUTO -->
                             <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <!-- INFORMAÇÕES DO PRODUTO -->
                             <div class="product-info">
                                 <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
                                 <div class="container-product_price">
+                                    <!-- PREÇO DO PRODUTO -->
                                     <div class="product-price">
                                         <p class="product-price_total">R$ 100,00</p>
                                         <p class="product-price_discount">R$ 79,90</p>
@@ -261,14 +333,19 @@
                                 </div>
                                 <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
                             </div>
+                            <!-- BOTÃO DE COMPRA -->
                             <button class="button-action">Comprar</button>
                         </div>
+                        <!-- PRODUTO - CARROSSEL -->
                         <div class="carrossel-product">
                             <span class="product-tag">NOVO</span>
+                            <!-- IMAGEM DO PRODUTO -->
                             <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <!-- INFORMAÇÕES DO PRODUTO -->
                             <div class="product-info">
                                 <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
                                 <div class="container-product_price">
+                                    <!-- PREÇO DO PRODUTO -->
                                     <div class="product-price">
                                         <p class="product-price_total">R$ 100,00</p>
                                         <p class="product-price_discount">R$ 79,90</p>
@@ -277,14 +354,19 @@
                                 </div>
                                 <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
                             </div>
+                            <!-- BOTÃO DE COMPRA -->
                             <button class="button-action">Comprar</button>
                         </div>
+                        <!-- PRODUTO - CARROSSEL -->
                         <div class="carrossel-product">
                             <span class="product-tag">NOVO</span>
+                            <!-- IMAGEM DO PRODUTO -->
                             <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <!-- INFORMAÇÕES DO PRODUTO -->
                             <div class="product-info">
                                 <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
                                 <div class="container-product_price">
+                                    <!-- PREÇO DO PRODUTO -->
                                     <div class="product-price">
                                         <p class="product-price_total">R$ 100,00</p>
                                         <p class="product-price_discount">R$ 79,90</p>
@@ -293,14 +375,19 @@
                                 </div>
                                 <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
                             </div>
+                            <!-- BOTÃO DE COMPRA -->
                             <button class="button-action">Comprar</button>
                         </div>
+                        <!-- PRODUTO - CARROSSEL -->
                         <div class="carrossel-product">
                             <span class="product-tag">NOVO</span>
+                            <!-- IMAGEM DO PRODUTO -->
                             <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <!-- INFORMAÇÕES DO PRODUTO -->
                             <div class="product-info">
                                 <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
                                 <div class="container-product_price">
+                                    <!-- PREÇO DO PRODUTO -->
                                     <div class="product-price">
                                         <p class="product-price_total">R$ 100,00</p>
                                         <p class="product-price_discount">R$ 79,90</p>
@@ -309,14 +396,19 @@
                                 </div>
                                 <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
                             </div>
+                            <!-- BOTÃO DE COMPRA -->
                             <button class="button-action">Comprar</button>
                         </div>
+                        <!-- PRODUTO - CARROSSEL -->
                         <div class="carrossel-product">
                             <span class="product-tag">NOVO</span>
+                            <!-- IMAGEM DO PRODUTO -->
                             <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <!-- INFORMAÇÕES DO PRODUTO -->
                             <div class="product-info">
                                 <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
                                 <div class="container-product_price">
+                                    <!-- PREÇO DO PRODUTO -->
                                     <div class="product-price">
                                         <p class="product-price_total">R$ 100,00</p>
                                         <p class="product-price_discount">R$ 79,90</p>
@@ -325,14 +417,19 @@
                                 </div>
                                 <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
                             </div>
+                            <!-- BOTÃO DE COMPRA -->
                             <button class="button-action">Comprar</button>
                         </div>
+                        <!-- PRODUTO - CARROSSEL -->
                         <div class="carrossel-product">
                             <span class="product-tag">NOVO</span>
+                            <!-- IMAGEM DO PRODUTO -->
                             <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <!-- INFORMAÇÕES DO PRODUTO -->
                             <div class="product-info">
                                 <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
                                 <div class="container-product_price">
+                                    <!-- PREÇO DO PRODUTO -->
                                     <div class="product-price">
                                         <p class="product-price_total">R$ 100,00</p>
                                         <p class="product-price_discount">R$ 79,90</p>
@@ -341,14 +438,19 @@
                                 </div>
                                 <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
                             </div>
+                            <!-- BOTÃO DE COMPRA -->
                             <button class="button-action">Comprar</button>
                         </div>
+                        <!-- PRODUTO - CARROSSEL -->
                         <div class="carrossel-product">
                             <span class="product-tag">NOVO</span>
+                            <!-- IMAGEM DO PRODUTO -->
                             <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <!-- INFORMAÇÕES DO PRODUTO -->
                             <div class="product-info">
                                 <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
                                 <div class="container-product_price">
+                                    <!-- PREÇO DO PRODUTO -->
                                     <div class="product-price">
                                         <p class="product-price_total">R$ 100,00</p>
                                         <p class="product-price_discount">R$ 79,90</p>
@@ -357,14 +459,19 @@
                                 </div>
                                 <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
                             </div>
+                            <!-- BOTÃO DE COMPRA -->
                             <button class="button-action">Comprar</button>
                         </div>
+                        <!-- PRODUTO - CARROSSEL -->
                         <div class="carrossel-product">
                             <span class="product-tag">NOVO</span>
+                            <!-- IMAGEM DO PRODUTO -->
                             <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <!-- INFORMAÇÕES DO PRODUTO -->
                             <div class="product-info">
                                 <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
                                 <div class="container-product_price">
+                                    <!-- PREÇO DO PRODUTO -->
                                     <div class="product-price">
                                         <p class="product-price_total">R$ 100,00</p>
                                         <p class="product-price_discount">R$ 79,90</p>
@@ -373,24 +480,52 @@
                                 </div>
                                 <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
                             </div>
+                            <!-- BOTÃO DE COMPRA -->
+                            <button class="button-action">Comprar</button>
+                        </div>
+                        <!-- PRODUTO - CARROSSEL -->
+                        <div class="carrossel-product">
+                            <span class="product-tag">NOVO</span>
+                            <!-- IMAGEM DO PRODUTO -->
+                            <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <!-- INFORMAÇÕES DO PRODUTO -->
+                            <div class="product-info">
+                                <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="container-product_price">
+                                    <!-- PREÇO DO PRODUTO -->
+                                    <div class="product-price">
+                                        <p class="product-price_total">R$ 100,00</p>
+                                        <p class="product-price_discount">R$ 79,90</p>
+                                    </div>
+                                    <span class="product-tag_discount">10% OFF</span>
+                                </div>
+                                <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
+                            </div>
+                            <!-- BOTÃO DE COMPRA -->
                             <button class="button-action">Comprar</button>
                         </div>
                     </div>
                 </div>
+                <!-- BOTÃO PRÓXIMO -->
                 <button class="carrossel-button_next">
                     <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6.93385 0L5.50577 1.41855L8.60371 4.51649H0.400391V6.51891H8.60371L5.50577 9.61685L6.93385 11.0354L12.439 5.5177L6.93385 0Z" fill="#005CFF"/>
                     </svg>
                 </button>
+                <!-- INDICADORES LOCALIZAÇÃO -->
                 <div class="carrossel-indicators">
                     <span class="indicator active"></span>
                     <span class="indicator"></span>
                     <span class="indicator"></span>
                 </div>
             </section>
+            <!-- CONTAINER ARTIGO -->
             <section class="container-article">
+                <!-- ARTIGO -->
                 <article class="article-info">
+                    <!-- FOTO DO ARTIGO -->
                     <img src="./assets/images/article-banner01.webp" alt="Imagem Decorativa de uma Caneca Azul Marinho com o logo da Avanti em fundo cinza.">
+                    <!-- TEXTO DO ARTIGO -->
                     <div class="article-text">
                         <h3>LOREM IPSUM</h3>
                         <p>
@@ -410,28 +545,41 @@
                     </div>
                 </article>
             </section>
+            <!-- CONTAINER ARTIGO ÚNICO -->
             <section class="container-article_single">
+                <!-- ARTIGO ÚNICO -->
                 <article class="article-single">
+                    <!-- CONTAINER INFO -->
                     <div class="article-single-info">
+                        <!-- TÍTULO DO ARTIGO -->
                         <h3 class="article-single_title">LOREM IPSUM</h3>
+                        <!-- INFO -->
                         <div class="article-single_text">
+                            <!-- ÍCONE -->
                             <img src="./assets/icons/local.svg" alt="Ícone de Localização Azul">
+                            <!-- DESCRIÇÃO -->
                             <p>
                                 Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
                                 ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
                                 sem.
                             </p>
                         </div>
+                        <!-- INFO -->
                         <div class="article-single_text">
+                            <!-- ÍCONE -->
                             <img src="./assets/icons/local.svg" alt="Ícone de Localização Azul">
+                            <!-- DESCRIÇÃO -->
                             <p>
                                 Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
                                 ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
                                 sem.
                             </p>
                         </div>
+                        <!-- INFO -->
                         <div class="article-single_text">
+                            <!-- ÍCONE -->
                             <img src="./assets/icons/local.svg" alt="Ícone de Localização Azul">
+                            <!-- DESCRIÇÃO -->
                             <p>
                                 Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
                                 ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
@@ -439,14 +587,19 @@
                             </p>
                         </div>
                     </div>
+                    <!-- IMAGEM DO ARTIGO ÚNICO -->
                     <img class="article-single_img" src="./assets/images/article-banner02.webp" alt="Imagem Decorativa de uma Caneca Azul Marinho com o logo da Avanti">
                 </article>
             </section>
+            <!-- CONTAINER ARTIGO -->
             <section class="container-article">
+                <!-- ARTIGO -->
                 <article class="article-info">
+                    <!-- FOTO DO ARTIGO -->
                     <img src="./assets/images/article-banner01.webp" alt="Imagem Decorativa de uma Caneca Azul Marinho com o logo da Avanti em fundo cinza.">
+                    <!-- TEXTO DO ARTIGO -->
                     <div class="article-text">
-                        <h3>Lorem Ipsum</h3>
+                        <h3>LOREM IPSUM</h3>
                         <p>
                             Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet
                             lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet.
@@ -464,24 +617,32 @@
                     </div>
                 </article>
             </section>
+            <!-- CARROSSEL DE PRODUTOS -->
             <section class="container-carrossel none">
+                <!-- HEADER CARROSSEL -->
                 <div class="carrossel-header">
                     <h3>Lançamentos</h3>
                     <span>Ver mais</span>
                 </div>
+                <!-- BOTÃO ANTERIOR -->
                 <button class="carrossel-button_prev">
                     <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6.46654 12L7.89462 10.5814L4.79668 7.48351L13 7.48351L13 5.48109L4.79668 5.48109L7.89462 2.38315L6.46654 0.964598L0.961381 6.4823L6.46654 12Z" fill="#005CFF"/>
                     </svg>
                 </button>
+                <!-- CONTAINER PRODUTOS -->
                 <div class="carrossel-products">
                     <div class="carrossel-wrapper">
+                        <!-- PRODUTO - CARROSSEL -->
                         <div class="carrossel-product">
                             <span class="product-tag">NOVO</span>
+                            <!-- IMAGEM DO PRODUTO -->
                             <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <!-- INFORMAÇÕES DO PRODUTO -->
                             <div class="product-info">
                                 <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
                                 <div class="container-product_price">
+                                    <!-- PREÇO DO PRODUTO -->
                                     <div class="product-price">
                                         <p class="product-price_total">R$ 100,00</p>
                                         <p class="product-price_discount">R$ 79,90</p>
@@ -490,14 +651,19 @@
                                 </div>
                                 <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
                             </div>
+                            <!-- BOTÃO DE COMPRA -->
                             <button class="button-action">Comprar</button>
                         </div>
+                        <!-- PRODUTO - CARROSSEL -->
                         <div class="carrossel-product">
                             <span class="product-tag">NOVO</span>
+                            <!-- IMAGEM DO PRODUTO -->
                             <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <!-- INFORMAÇÕES DO PRODUTO -->
                             <div class="product-info">
                                 <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
                                 <div class="container-product_price">
+                                    <!-- PREÇO DO PRODUTO -->
                                     <div class="product-price">
                                         <p class="product-price_total">R$ 100,00</p>
                                         <p class="product-price_discount">R$ 79,90</p>
@@ -506,14 +672,19 @@
                                 </div>
                                 <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
                             </div>
+                            <!-- BOTÃO DE COMPRA -->
                             <button class="button-action">Comprar</button>
                         </div>
+                        <!-- PRODUTO - CARROSSEL -->
                         <div class="carrossel-product">
                             <span class="product-tag">NOVO</span>
+                            <!-- IMAGEM DO PRODUTO -->
                             <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <!-- INFORMAÇÕES DO PRODUTO -->
                             <div class="product-info">
                                 <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
                                 <div class="container-product_price">
+                                    <!-- PREÇO DO PRODUTO -->
                                     <div class="product-price">
                                         <p class="product-price_total">R$ 100,00</p>
                                         <p class="product-price_discount">R$ 79,90</p>
@@ -522,14 +693,19 @@
                                 </div>
                                 <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
                             </div>
+                            <!-- BOTÃO DE COMPRA -->
                             <button class="button-action">Comprar</button>
                         </div>
+                        <!-- PRODUTO - CARROSSEL -->
                         <div class="carrossel-product">
                             <span class="product-tag">NOVO</span>
+                            <!-- IMAGEM DO PRODUTO -->
                             <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <!-- INFORMAÇÕES DO PRODUTO -->
                             <div class="product-info">
                                 <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
                                 <div class="container-product_price">
+                                    <!-- PREÇO DO PRODUTO -->
                                     <div class="product-price">
                                         <p class="product-price_total">R$ 100,00</p>
                                         <p class="product-price_discount">R$ 79,90</p>
@@ -538,14 +714,19 @@
                                 </div>
                                 <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
                             </div>
+                            <!-- BOTÃO DE COMPRA -->
                             <button class="button-action">Comprar</button>
                         </div>
+                        <!-- PRODUTO - CARROSSEL -->
                         <div class="carrossel-product">
                             <span class="product-tag">NOVO</span>
+                            <!-- IMAGEM DO PRODUTO -->
                             <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <!-- INFORMAÇÕES DO PRODUTO -->
                             <div class="product-info">
                                 <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
                                 <div class="container-product_price">
+                                    <!-- PREÇO DO PRODUTO -->
                                     <div class="product-price">
                                         <p class="product-price_total">R$ 100,00</p>
                                         <p class="product-price_discount">R$ 79,90</p>
@@ -554,14 +735,19 @@
                                 </div>
                                 <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
                             </div>
+                            <!-- BOTÃO DE COMPRA -->
                             <button class="button-action">Comprar</button>
                         </div>
+                        <!-- PRODUTO - CARROSSEL -->
                         <div class="carrossel-product">
                             <span class="product-tag">NOVO</span>
+                            <!-- IMAGEM DO PRODUTO -->
                             <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <!-- INFORMAÇÕES DO PRODUTO -->
                             <div class="product-info">
                                 <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
                                 <div class="container-product_price">
+                                    <!-- PREÇO DO PRODUTO -->
                                     <div class="product-price">
                                         <p class="product-price_total">R$ 100,00</p>
                                         <p class="product-price_discount">R$ 79,90</p>
@@ -570,14 +756,19 @@
                                 </div>
                                 <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
                             </div>
+                            <!-- BOTÃO DE COMPRA -->
                             <button class="button-action">Comprar</button>
                         </div>
+                        <!-- PRODUTO - CARROSSEL -->
                         <div class="carrossel-product">
                             <span class="product-tag">NOVO</span>
+                            <!-- IMAGEM DO PRODUTO -->
                             <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <!-- INFORMAÇÕES DO PRODUTO -->
                             <div class="product-info">
                                 <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
                                 <div class="container-product_price">
+                                    <!-- PREÇO DO PRODUTO -->
                                     <div class="product-price">
                                         <p class="product-price_total">R$ 100,00</p>
                                         <p class="product-price_discount">R$ 79,90</p>
@@ -586,14 +777,19 @@
                                 </div>
                                 <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
                             </div>
+                            <!-- BOTÃO DE COMPRA -->
                             <button class="button-action">Comprar</button>
                         </div>
+                        <!-- PRODUTO - CARROSSEL -->
                         <div class="carrossel-product">
                             <span class="product-tag">NOVO</span>
+                            <!-- IMAGEM DO PRODUTO -->
                             <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <!-- INFORMAÇÕES DO PRODUTO -->
                             <div class="product-info">
                                 <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
                                 <div class="container-product_price">
+                                    <!-- PREÇO DO PRODUTO -->
                                     <div class="product-price">
                                         <p class="product-price_total">R$ 100,00</p>
                                         <p class="product-price_discount">R$ 79,90</p>
@@ -602,14 +798,19 @@
                                 </div>
                                 <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
                             </div>
+                            <!-- BOTÃO DE COMPRA -->
                             <button class="button-action">Comprar</button>
                         </div>
+                        <!-- PRODUTO - CARROSSEL -->
                         <div class="carrossel-product">
                             <span class="product-tag">NOVO</span>
+                            <!-- IMAGEM DO PRODUTO -->
                             <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <!-- INFORMAÇÕES DO PRODUTO -->
                             <div class="product-info">
                                 <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
                                 <div class="container-product_price">
+                                    <!-- PREÇO DO PRODUTO -->
                                     <div class="product-price">
                                         <p class="product-price_total">R$ 100,00</p>
                                         <p class="product-price_discount">R$ 79,90</p>
@@ -618,14 +819,19 @@
                                 </div>
                                 <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
                             </div>
+                            <!-- BOTÃO DE COMPRA -->
                             <button class="button-action">Comprar</button>
                         </div>
+                        <!-- PRODUTO - CARROSSEL -->
                         <div class="carrossel-product">
                             <span class="product-tag">NOVO</span>
+                            <!-- IMAGEM DO PRODUTO -->
                             <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <!-- INFORMAÇÕES DO PRODUTO -->
                             <div class="product-info">
                                 <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
                                 <div class="container-product_price">
+                                    <!-- PREÇO DO PRODUTO -->
                                     <div class="product-price">
                                         <p class="product-price_total">R$ 100,00</p>
                                         <p class="product-price_discount">R$ 79,90</p>
@@ -634,14 +840,19 @@
                                 </div>
                                 <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
                             </div>
+                            <!-- BOTÃO DE COMPRA -->
                             <button class="button-action">Comprar</button>
                         </div>
+                        <!-- PRODUTO - CARROSSEL -->
                         <div class="carrossel-product">
                             <span class="product-tag">NOVO</span>
+                            <!-- IMAGEM DO PRODUTO -->
                             <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <!-- INFORMAÇÕES DO PRODUTO -->
                             <div class="product-info">
                                 <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
                                 <div class="container-product_price">
+                                    <!-- PREÇO DO PRODUTO -->
                                     <div class="product-price">
                                         <p class="product-price_total">R$ 100,00</p>
                                         <p class="product-price_discount">R$ 79,90</p>
@@ -650,51 +861,105 @@
                                 </div>
                                 <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
                             </div>
+                            <!-- BOTÃO DE COMPRA -->
+                            <button class="button-action">Comprar</button>
+                        </div>
+                        <!-- PRODUTO - CARROSSEL -->
+                        <div class="carrossel-product">
+                            <span class="product-tag">NOVO</span>
+                            <!-- IMAGEM DO PRODUTO -->
+                            <img class="product-image" src="./assets/images/produto-carrossel.webp" alt="Foto de uma pessoa com uma camiseta branca">
+                            <!-- INFORMAÇÕES DO PRODUTO -->
+                            <div class="product-info">
+                                <h3 class="product-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit</h3>
+                                <div class="container-product_price">
+                                    <!-- PREÇO DO PRODUTO -->
+                                    <div class="product-price">
+                                        <p class="product-price_total">R$ 100,00</p>
+                                        <p class="product-price_discount">R$ 79,90</p>
+                                    </div>
+                                    <span class="product-tag_discount">10% OFF</span>
+                                </div>
+                                <p class="product-price_installment">Ou em até <span>10x de R$ 7,90</span></p>
+                            </div>
+                            <!-- BOTÃO DE COMPRA -->
                             <button class="button-action">Comprar</button>
                         </div>
                     </div>
                 </div>
+                <!-- BOTÃO PRÓXIMO -->
                 <button class="carrossel-button_next">
                     <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6.93385 0L5.50577 1.41855L8.60371 4.51649H0.400391V6.51891H8.60371L5.50577 9.61685L6.93385 11.0354L12.439 5.5177L6.93385 0Z" fill="#005CFF"/>
                     </svg>
                 </button>
+                <!-- INDICADORES LOCALIZAÇÃO -->
                 <div class="carrossel-indicators">
                     <span class="indicator active"></span>
                     <span class="indicator"></span>
                     <span class="indicator"></span>
                 </div>
             </section>
+            <!-- CONTAINER CONTATO -->
             <section class="container-contact">
                 <p>Entre em contato conosco e verifique a disponibilidade para sua região!</p>
             </section>
+            <!-- CONTAINER REGISTRO -->
             <section class="container-register">
+                <!-- TÍTULO -->
                 <h3 class="register-title">Cadastre-se na nossa <span>newsletter</span></h3>
+                <!-- FORMULÁRIO DE REGISTRO -->
                 <form class="register-box">
+                    <!-- NOME -->
                     <label for="name"></label>
                     <input class="register-box_input" id="name" name="name" type="text" placeholder="Digite seu nome" required>
+                    <!-- E-MAIL -->
                     <label for="email"></label>
                     <input class="register-box_input" id="email" name="email" type="email" placeholder="Digite seu e-mail" required>
+                    <!-- CHECKBOX PRIVACIDADE -->
                     <div class="register-box_checkbox">
                         <input id="checkbox" name="checkbox" type="checkbox" required>
                         <label for="checkbox">Estou de acordo com a <span>Política de Privacidade</span></label>
                     </div>
+                    <!-- BOTÃO CADASTRO -->
                     <button class="button-action">Cadastrar</button>
                 </form>
             </section>
         </main>
+        <!-- FOOTER -->
         <footer class="container-footer">
+            <!-- FOOTER LINKS -->
             <div class="container-footer_links">
                 <div class="footer-links">
+                    <!-- CONTAINER LINKS -->
                     <div class="footer-links_socials">
+                        <!-- LOGO AVANTI -->
                         <a href="https://www.penseavanti.com.br"><img class="links-socials-title" src="./assets/logos/avanti.png" alt=""></a>
+                        <!-- CONTAINER REDES SOCIAIS-->
                         <div class="links-socials-logos">
-                            <a href="https://www.instagram.com/penseavanti/"><img src="./assets/icons/social/instagram.svg" alt="Logo do Instagram"></a>
-                            <a href="https://www.facebook.com/penseavanti/"><img src="./assets/icons/social/facebook.svg" alt="Logo do Facebook"></a>
-                            <a href="https://www.youtube.com/penseavanti"><img src="./assets/icons/social/youtube.svg" alt="Logo do Youtube"></a>
-                            <a href="https://www.tiktok.com"><img src="./assets/icons/social/tiktok.svg" alt="Logo do TikTok"></a>
+                            <a href="https://www.instagram.com/penseavanti/">
+                                <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.59087 19.5032C4.11694 19.5486 2.68482 19.0094 1.60687 18.0032C1.0723 17.4678 0.65366 16.8281 0.377018 16.124C0.100377 15.4198 -0.0283432 14.6662 -0.00112679 13.9102V6.05815C-0.0460495 5.31712 0.0667904 4.575 0.329937 3.88081C0.593084 3.18662 1.00055 2.55618 1.5254 2.03113C2.05026 1.50609 2.68055 1.0984 3.37465 0.835002C4.06874 0.571605 4.81083 0.458498 5.55187 0.503154H13.4449C14.1867 0.477537 14.926 0.60366 15.6175 0.873796C16.3089 1.14393 16.9379 1.55239 17.4659 2.07415C17.9744 2.60225 18.3721 3.22684 18.6354 3.91109C18.8987 4.59533 19.0223 5.32537 18.9989 6.05815V13.9492C19.0276 14.6962 18.9031 15.4413 18.6331 16.1385C18.3631 16.8357 17.9533 17.4703 17.4289 18.0032C16.3375 19.0124 14.8926 19.5513 13.4069 19.5032H5.59087ZM2.79887 3.26215C2.44703 3.63531 2.1741 4.07563 1.99643 4.55674C1.81876 5.03786 1.74 5.54988 1.76487 6.06215V13.9152C1.73785 14.4319 1.81552 14.9487 1.9932 15.4347C2.17088 15.9207 2.44492 16.3657 2.79887 16.7432C3.5664 17.4283 4.57094 17.7871 5.59887 17.7432H13.4149C14.4428 17.787 15.4473 17.4283 16.2149 16.7432C16.5833 16.3795 16.8723 15.9433 17.0635 15.4622C17.2548 14.9811 17.3441 14.4655 17.3259 13.9482V6.05815C17.3452 5.03917 16.9701 4.05213 16.2789 3.30315C15.9058 2.95116 15.4655 2.67814 14.9844 2.50046C14.5032 2.32279 13.9912 2.24411 13.4789 2.26915H5.59087C4.5656 2.21849 3.56191 2.57547 2.79887 3.26215ZM4.59887 9.96215C4.59887 8.99302 4.88625 8.04566 5.42467 7.23986C5.96309 6.43406 6.72837 5.80601 7.62372 5.43514C8.51908 5.06427 9.50431 4.96724 10.4548 5.15631C11.4053 5.34537 12.2784 5.81205 12.9637 6.49733C13.649 7.18261 14.1157 8.0557 14.3047 9.00621C14.4938 9.95672 14.3968 10.9419 14.0259 11.8373C13.655 12.7327 13.027 13.4979 12.2212 14.0364C11.4154 14.5748 10.468 14.8622 9.49887 14.8622C8.20072 14.8593 6.95653 14.3425 6.03832 13.4248C5.1201 12.5072 4.60257 11.2633 4.59887 9.96515V9.96215ZM6.36187 9.96215C6.36148 10.5836 6.54546 11.1913 6.89053 11.7082C7.23561 12.225 7.72626 12.6279 8.3004 12.8659C8.87454 13.1038 9.50636 13.166 10.1159 13.0447C10.7254 12.9235 11.2853 12.6241 11.7246 12.1845C12.1639 11.7449 12.463 11.1848 12.5839 10.5752C12.7048 9.9656 12.6421 9.33382 12.4038 8.75983C12.1655 8.18584 11.7623 7.69545 11.2452 7.3507C10.7281 7.00596 10.1204 6.82236 9.49887 6.82315C8.66671 6.82658 7.86962 7.15874 7.28128 7.74727C6.69294 8.33579 6.36103 9.13299 6.35787 9.96515L6.36187 9.96215ZM13.4869 4.94215C13.4879 4.72268 13.5538 4.50841 13.6765 4.32639C13.7991 4.14436 13.9729 4.00274 14.1759 3.91939C14.379 3.83604 14.6021 3.81469 14.8173 3.85804C15.0325 3.90139 15.23 4.0075 15.3849 4.16297C15.5398 4.31844 15.6452 4.51632 15.6878 4.73163C15.7303 4.94694 15.7082 5.17003 15.6241 5.37277C15.54 5.5755 15.3978 5.74879 15.2153 5.87077C15.0329 5.99275 14.8184 6.05795 14.5989 6.05815C14.4524 6.05868 14.3073 6.03027 14.1719 5.97456C14.0364 5.91885 13.9133 5.83694 13.8096 5.73352C13.7059 5.6301 13.6237 5.50722 13.5676 5.37193C13.5115 5.23664 13.4827 5.0916 13.4829 4.94515L13.4869 4.94215Z" fill="#005CFF"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.facebook.com/penseavanti/">
+                                <svg width="11" height="24" viewBox="0 0 11 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.3889 8.05966H6.8519V5.73966C6.83272 5.60184 6.84422 5.46148 6.88557 5.32861C6.92693 5.19575 6.99711 5.07366 7.09111 4.97106C7.18511 4.86846 7.30061 4.78788 7.42936 4.73509C7.55811 4.6823 7.69693 4.65859 7.8359 4.66566H10.3359V0.83566L6.8939 0.82666C3.0779 0.82666 2.2099 3.68266 2.2099 5.51066V8.06366H0.00289917V12.0067H2.2099V23.1737H6.8519V12.0067H9.9839L10.3889 8.05966Z" fill="#005CFF"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.youtube.com/penseavanti">
+                                <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.11393 20.3651C3.75465 20.2223 3.43391 19.9972 3.17755 19.7079C2.92118 19.4185 2.73635 19.073 2.63793 18.6991C2.20484 16.754 2.0114 14.7632 2.06193 12.7711C2.0117 10.7814 2.20479 8.79297 2.63693 6.8501C2.73342 6.47679 2.91614 6.13132 3.1704 5.84145C3.42466 5.55158 3.74338 5.32541 4.10093 5.1811C7.48793 3.8871 12.8349 3.8501 13.4339 3.8501H13.4719C14.0999 3.8501 19.4469 3.8871 22.8219 5.1761C23.181 5.31904 23.5015 5.54425 23.7577 5.8336C24.0138 6.12295 24.1985 6.46837 24.2969 6.8421C24.73 8.78721 24.9234 10.778 24.8729 12.7701C24.9234 14.7612 24.7303 16.7509 24.2979 18.6951C24.2008 19.0676 24.0178 19.4123 23.7636 19.7014C23.5094 19.9905 23.191 20.2161 22.8339 20.3601C19.4469 21.6541 14.0999 21.6911 13.5009 21.6911C12.8359 21.6921 7.48793 21.6501 4.11393 20.3651ZM4.69493 6.6991C4.57751 6.74801 4.47305 6.8235 4.38976 6.91963C4.30647 7.01576 4.24662 7.12991 4.21493 7.2531C3.81696 9.06435 3.641 10.9173 3.69093 12.7711C3.64097 14.6259 3.81727 16.4799 4.21593 18.2921C4.24841 18.417 4.30975 18.5326 4.39503 18.6295C4.48031 18.7264 4.58714 18.802 4.70693 18.8501C7.84993 20.0501 13.2069 20.0651 13.4339 20.0651C13.7269 20.0651 19.0849 20.0511 22.2399 18.8461C22.3573 18.7972 22.4618 18.7217 22.5451 18.6256C22.6284 18.5294 22.6882 18.4153 22.7199 18.2921C23.118 16.4805 23.2939 14.6272 23.2439 12.7731C23.294 10.9176 23.1177 9.06292 22.7189 7.2501C22.686 7.12574 22.6244 7.0108 22.5392 6.91445C22.4539 6.81809 22.3473 6.74298 22.2279 6.6951C19.0849 5.4951 13.7279 5.4801 13.5009 5.4801H13.4339C13.2079 5.4791 7.84993 5.4931 4.69493 6.6991ZM11.4539 16.7501C11.324 16.6805 11.2155 16.5769 11.1397 16.4505C11.064 16.3241 11.024 16.1795 11.0239 16.0321V9.5121C11.0237 9.36463 11.0636 9.21988 11.1393 9.09331C11.215 8.96674 11.3236 8.86312 11.4536 8.79349C11.5836 8.72387 11.7301 8.69088 11.8774 8.69803C12.0247 8.70518 12.1673 8.75221 12.2899 8.8341L17.1779 12.0931C17.2895 12.1674 17.381 12.2681 17.4443 12.3863C17.5076 12.5045 17.5407 12.6365 17.5407 12.7706C17.5407 12.9047 17.5076 13.0367 17.4443 13.1549C17.381 13.2731 17.2895 13.3738 17.1779 13.4481L12.2899 16.7071C12.1672 16.7887 12.0247 16.8356 11.8775 16.8426C11.7302 16.8497 11.5839 16.8166 11.4539 16.7471V16.7501ZM12.6539 14.5101L15.2539 12.7731L12.6539 11.0371V14.5101Z" fill="#005CFF"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.tiktok.com">
+                                <svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.3203 4.99049C16.1787 4.9171 16.0408 4.83666 15.9073 4.74949C15.5185 4.49311 15.162 4.19095 14.8453 3.84949C14.2231 3.15433 13.8075 2.2992 13.6453 1.38049C13.5866 1.09104 13.5705 0.794596 13.5973 0.500488H9.99928V14.4455C9.99928 14.6325 9.99928 14.8175 9.99128 15.0005C9.99128 15.0235 9.99128 15.0445 9.99128 15.0685C9.99235 15.0788 9.99235 15.0892 9.99128 15.0995V15.1075C9.95333 15.608 9.79294 16.0914 9.52423 16.5153C9.25551 16.9393 8.88671 17.2906 8.45028 17.5385C7.99564 17.7972 7.4814 17.933 6.95828 17.9325C6.14606 17.9325 5.3671 17.6098 4.79277 17.0355C4.21844 16.4612 3.89578 15.6822 3.89578 14.87C3.89578 14.0578 4.21844 13.2788 4.79277 12.7045C5.3671 12.1301 6.14606 11.8075 6.95828 11.8075C7.27647 11.8071 7.59272 11.857 7.89528 11.9555V8.28349C6.97723 8.16493 6.04457 8.2379 5.15612 8.49779C4.26767 8.75768 3.44272 9.19886 2.73328 9.79349C2.11216 10.3323 1.58968 10.9753 1.18928 11.6935C0.683377 12.6243 0.408982 13.6632 0.389285 14.7225C0.381008 15.5367 0.511888 16.3464 0.776283 17.1165V17.1255C1.01443 17.7651 1.34421 18.3667 1.75528 18.9115C2.20074 19.4769 2.72706 19.9735 3.31728 20.3855V20.3765L3.32628 20.3855C4.41982 21.1064 5.69952 21.4935 7.00928 21.4995C7.95264 21.4995 8.88477 21.2948 9.74128 20.8995C10.5869 20.5006 11.3421 19.933 11.9603 19.2315C12.4744 18.6353 12.8833 17.9559 13.1693 17.2225C13.4333 16.4832 13.5801 15.7071 13.6043 14.9225V7.52249C13.6483 7.54849 14.2303 7.93449 14.2303 7.93449C14.9016 8.32972 15.625 8.62896 16.3793 8.82349C17.1041 8.98955 17.8424 9.08996 18.5853 9.12349V5.54349C17.7957 5.55332 17.0165 5.36307 16.3203 4.99049Z" fill="#005CFF"/>
+                                </svg>
+                            </a>
                         </div>
                     </div>
+                    <!-- CONTAINER LISTAS - INSTITUCIONAL-->
                     <ul>
                         <li>
                             <h4>Institucional</h4>
@@ -707,6 +972,7 @@
                         <li><h5><a href="#">Privacidade e Segurança</a></h5></li>
                         <li><h5><a href="#">Termos e Cndições</a></h5></li>
                     </ul>
+                    <!--CONTAINER LISTAS - CENTRAL DE AJUDA-->
                     <ul>
                         <li>
                             <h4>Central de Ajuda</h4>
@@ -720,6 +986,7 @@
                         <li><h5><a href="#">Formas de Pagamento</a></h5></li>
                         <li><h5><a href="#">FAQ</a></h5></li>
                     </ul>
+                    <!-- CONTAINER LISTAS - ATENDIMENTO -->
                     <ul>
                         <li>
                             <h4>Atendimento</h4>
@@ -734,19 +1001,74 @@
                         <li><p>Domingos e Feriados: 07h00 às 21h00</p></li>
                     </ul>
                 </div>
+                <!-- CONTAINER LINKS PARCERIAS -->
                 <div class="footer-links_logos">
-                    <a href="https://www.americanexpress.com"><img src="./assets/icons/payment/amex.svg" alt="Logo da American Express"></a>
-                    <a href="https://www.mastercard.com.br"><img src="./assets/icons/payment/mastercard.svg" alt="Logo da MasterCard"></a>
-                    <a href="https://www.visa.com.br"><img src="./assets/icons/payment/visa.svg" alt="Logo da Visa"></a>
-                    <a href="https://www.hipercard.com.br"><img src="./assets/icons/payment/hipercard.svg" alt="Logo da Hipercard"></a>
-                    <a href="https://www.cielo.com.br"><img src="./assets/icons/payment/cielo.svg" alt="Logo da Cielo"></a>
-                    <a href="https://www.dinersclub.com"><img src="./assets/icons/payment/diners.svg" alt="Logo da Diners"></a>
-                    <a href="https://www.paypal.com.br"><img src="./assets/icons/payment/paypal.svg" alt="Logo da Paypal"></a>
-                    <a href="#"><img src="./assets/icons/payment/pix.svg" alt="Logo do Pix"></a>
-                    <a href="#"><img src="./assets/icons/payment/boleto.svg" alt="Logo de Boleto"></a>
+                    <a href="https://www.americanexpress.com">
+                        <svg width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.83838 19.2504C1.46875 19.2504 0.355469 18.1674 0.355469 16.835V3.33321C0.355469 2.00169 1.46875 0.917969 2.83838 0.917969H24.6519C26.0208 0.917969 27.1348 2.00169 27.1348 3.33321V16.835C27.1348 18.1674 26.0208 19.2504 24.6519 19.2504H2.83838ZM1.93384 3.64834V16.5199C1.93384 17.2789 2.56763 17.8951 3.3479 17.8951H24.1423C24.9216 17.8951 25.5562 17.2789 25.5562 16.5199V3.64834C25.5562 2.89032 24.9216 2.27312 24.1423 2.27312H3.3479C2.56763 2.27312 1.93384 2.89032 1.93384 3.64834ZM23.2864 12.7363L21.9238 11.0116L20.5603 12.7363H16.1973V7.43204H20.6973L21.7878 9.02349L23.1514 7.43204H24.6509L22.6069 10.0837L24.6509 12.7363H23.2864ZM17.2908 11.6753H19.8799L21.1077 10.0855L20.0168 8.62607H17.2908V9.55318H19.7441V10.6142H17.2908V11.6753ZM13.6086 12.7363V8.89133L12.1084 12.7363H11.0176L9.51733 8.75835V12.7363H7.20068L6.79297 11.543H4.47461L4.06519 12.7363H2.83765L4.88232 7.43204H6.38257L8.2915 12.471V7.43204H10.1995L11.563 11.0116L12.9265 7.43204H14.6995V12.7363H13.6086ZM4.88232 10.349H6.24683L5.56445 8.49309L4.88232 10.349Z" fill="#303030"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.mastercard.com.br">
+                        <svg width="27" height="17" viewBox="0 0 27 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.4583 14.9666C12.081 16.02 10.3437 16.6484 8.45547 16.6484C3.98157 16.6484 0.355469 13.1213 0.355469 8.7695C0.355469 4.41773 3.98157 0.890625 8.45547 0.890625C10.3437 0.890625 12.081 1.51899 13.4583 2.5724C14.8357 1.51945 16.5715 0.890625 18.4554 0.890625C22.9221 0.890625 26.5554 4.42474 26.5554 8.7695C26.5554 13.1143 22.9221 16.6484 18.4554 16.6484C16.5715 16.6484 14.8357 16.0195 13.4583 14.9666ZM18.4554 14.7032C21.8196 14.7032 24.5556 12.041 24.5556 8.7695C24.5556 5.49801 21.8196 2.83583 18.4554 2.83583C17.1198 2.83583 15.8831 3.25562 14.8772 3.96665C15.9295 5.29607 16.5555 6.96175 16.5555 8.7695C16.5555 10.5772 15.9295 12.2429 14.8772 13.5723C15.8831 14.2834 17.1198 14.7032 18.4554 14.7032Z" fill="#303030"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.visa.com.br">
+                        <svg width="34" height="11" viewBox="0 0 34 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24.7001 1.21683C24.1611 1.02137 23.3154 0.808594 22.2688 0.808594C19.5925 0.808594 17.7013 2.12392 17.6898 4.00631C17.6678 5.38985 19.0305 6.16969 20.0604 6.63596C21.1185 7.11343 21.4723 7.4107 21.4671 7.83421C21.4618 8.48679 20.6214 8.77795 19.8479 8.77795C18.773 8.77795 18.1901 8.63543 17.291 8.26892L16.9571 8.1152L16.5762 10.2898C17.2303 10.5494 18.4025 10.7774 19.6124 10.7988C22.4634 10.7988 24.3223 9.49466 24.3432 7.484C24.3652 6.38144 23.6357 5.5446 22.0814 4.85436C21.1437 4.40946 20.5565 4.10608 20.5565 3.64999C20.5565 3.24684 21.0578 2.82333 22.1045 2.82333C23.0035 2.80704 23.6367 2.99843 24.1318 3.18881L24.3882 3.29978L24.7639 1.20564L24.7001 1.21683ZM31.6571 0.98879H29.5638C28.9097 0.98879 28.424 1.15881 28.1351 1.79L24.1119 10.6603H26.9577L27.5312 9.20757L31.0029 9.21266C31.0898 9.55167 31.3347 10.6593 31.3347 10.6593H33.8477L31.6571 0.98879ZM13.8361 0.909381H16.5458L14.8503 10.585H12.1405L13.8361 0.90429V0.909381ZM6.9461 6.2379L7.22346 7.58479L9.87772 0.98879H12.7507L8.47628 10.6441H5.61584L3.27138 2.46803C3.22219 2.3255 3.16253 2.22878 3.01496 2.1453C2.22475 1.74215 1.33616 1.41332 0.355469 1.18528L0.387914 0.982681H4.75969C5.34894 1.00406 5.8283 1.18528 5.99158 1.80018L6.9461 6.24299L6.9461 6.2379ZM28.3037 7.22949L29.389 4.52043C29.3723 4.54588 29.6119 3.96355 29.748 3.59705L29.9333 4.42881L30.5612 7.22338H28.3037V7.22949Z" fill="#303030"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.hipercard.com.br">
+                        <svg width="36" height="16" viewBox="0 0 36 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.1208 15.5676L0.355469 15.5726V15.5387C0.355469 15.52 0.379013 15.3989 0.407806 15.2695C0.436707 15.1402 0.481392 14.9343 0.507355 14.8122C0.533203 14.69 0.577515 14.4826 0.605652 14.3509C0.675018 14.0293 0.743576 13.7077 0.811272 13.3858C0.837868 13.2589 0.88224 13.0513 0.910011 12.9246C0.945328 12.7623 0.980278 12.6 1.01496 12.4376C1.04498 12.2966 1.09058 12.0814 1.11632 11.9592C1.14201 11.837 1.18306 11.6488 1.20724 11.5407C1.23149 11.4327 1.26241 11.2866 1.27591 11.2162C1.2895 11.1456 1.33333 10.9381 1.37337 10.7549C1.40708 10.6014 1.43983 10.4476 1.47156 10.2937C1.48553 10.2232 1.52989 10.0156 1.5702 9.83238C1.61044 9.64926 1.65465 9.44161 1.6684 9.37117C1.68215 9.30075 1.72668 9.09304 1.76723 8.90996C1.80781 8.72666 1.85164 8.52288 1.86454 8.45723C1.87755 8.39144 1.91298 8.22231 1.94342 8.0814C1.97371 7.94041 2.0313 7.67515 2.07117 7.49197C2.11115 7.30873 2.17933 6.98972 2.22272 6.78297C2.26629 6.57625 2.31831 6.33028 2.33832 6.23632C2.39729 5.96001 2.4567 5.6839 2.51669 5.40781C2.54623 5.27157 2.59435 5.04861 2.62362 4.91229C2.65283 4.77609 2.69791 4.56459 2.72375 4.44253C2.7495 4.32035 2.79359 4.11665 2.82158 3.98984C2.84962 3.86293 2.8979 3.63998 2.92877 3.49433C2.95971 3.34873 3.01151 3.12579 3.04389 2.99891C3.07621 2.87206 3.12193 2.71834 3.14558 2.65726C3.16912 2.59616 3.23425 2.46378 3.29023 2.36306L3.39196 2.17992L3.48449 2.06405C3.53527 2.00037 3.62611 1.8998 3.68625 1.84046C3.74641 1.78112 3.84782 1.69189 3.91177 1.64213C3.97557 1.59232 4.06809 1.52511 4.11723 1.49284C4.16635 1.46052 4.26285 1.40392 4.33172 1.36701C4.40049 1.3302 4.49709 1.28201 4.54622 1.25988C4.59534 1.23775 4.69585 1.19726 4.76954 1.16998C4.84317 1.14286 4.98404 1.09722 5.08225 1.06864C5.1805 1.04011 5.36509 0.997054 5.49234 0.973114C5.6195 0.94901 5.82051 0.916891 5.93909 0.901693L6.15454 0.873997L20.9289 0.868684L35.7034 0.863281V0.897211C35.7034 0.915852 35.6798 1.03694 35.6508 1.16634C35.6142 1.33001 35.5784 1.49388 35.5432 1.6578C35.513 1.79877 35.4689 2.00256 35.4452 2.11053C35.4117 2.26425 35.3786 2.41797 35.3457 2.5718C35.3145 2.71751 35.2667 2.94051 35.2394 3.06722C35.212 3.19413 35.1676 3.40172 35.1408 3.52859C35.1141 3.65539 35.0694 3.86293 35.0418 3.98981C35.0094 4.1378 34.9777 4.28584 34.9463 4.43399C34.9215 4.55143 34.8765 4.76278 34.8465 4.90375C34.8164 5.04466 34.7681 5.26762 34.7391 5.39921C34.7101 5.5307 34.6662 5.73444 34.6412 5.85189C34.6162 5.96927 34.5712 6.18073 34.5413 6.32164C34.5113 6.4626 34.4631 6.68552 34.4341 6.81711C34.4052 6.9487 34.3622 7.14855 34.3382 7.26131C34.2722 7.57458 34.2055 7.8878 34.1387 8.20091C34.1143 8.31362 34.0713 8.51362 34.0428 8.645C34.0062 8.81303 33.97 8.98097 33.9341 9.14912C33.9029 9.29481 33.8583 9.50214 33.835 9.61032C33.8116 9.71833 33.768 9.92207 33.7379 10.0629C33.7027 10.2282 33.6673 10.3934 33.6316 10.5585C33.6032 10.69 33.5588 10.8976 33.5326 11.0198C33.5067 11.1419 33.4613 11.3533 33.4321 11.4895C33.4028 11.6257 33.355 11.8486 33.3258 11.9849C33.2966 12.1212 33.253 12.3249 33.2287 12.4377C33.1957 12.5914 33.1629 12.7451 33.1301 12.8988C33.0951 13.0636 33.0589 13.2281 33.0219 13.3925L32.9681 13.6297L32.904 13.7938C32.8688 13.8842 32.8158 14.0042 32.7862 14.0605C32.7567 14.1169 32.6966 14.2164 32.6526 14.2816C32.6086 14.3468 32.5474 14.4302 32.5164 14.4671C32.4854 14.5041 32.3924 14.5994 32.3094 14.6789L32.1589 14.8235L32.0137 14.922C31.934 14.9762 31.848 15.0314 31.8228 15.0445C31.7975 15.0577 31.7014 15.1046 31.6092 15.1488C31.5169 15.1929 31.3868 15.2491 31.3199 15.2735C31.2528 15.2982 31.1202 15.3399 31.0249 15.3663C30.9297 15.3929 30.8277 15.4189 30.7982 15.4243C30.7687 15.4298 30.6664 15.4499 30.5708 15.4693C30.4752 15.4886 30.2822 15.5176 30.1419 15.5335L29.8868 15.5625L15.1208 15.5676ZM9.86745 11.9165H10.2517L10.2625 11.8894C10.2685 11.8745 10.2734 11.8396 10.2734 11.8119C10.2734 11.7839 10.2861 11.6827 10.3016 11.5868C10.317 11.4909 10.3533 11.2702 10.3823 11.0964C10.4112 10.9225 10.4545 10.6613 10.4785 10.5156C10.5012 10.3777 10.523 10.2396 10.5436 10.1013C10.5555 10.0191 10.5698 9.9518 10.5756 9.9518C10.5814 9.9518 10.6063 9.98813 10.6309 10.0326L10.6754 10.1133L10.7746 10.2087L10.8737 10.3041L10.9955 10.3508L11.1175 10.3975L11.2628 10.4155L11.4083 10.4335L11.5927 10.4227L11.7771 10.4119L11.9768 10.3625L12.1766 10.313L12.2837 10.2663C12.3428 10.2406 12.4473 10.1845 12.5161 10.1416L12.6412 10.0638L12.7579 9.95222C12.8221 9.89111 12.9126 9.79272 12.959 9.73396C13.0054 9.67508 13.0434 9.62264 13.0434 9.6174C13.0434 9.61214 13.0663 9.57576 13.094 9.53644C13.1219 9.4972 13.179 9.38809 13.2208 9.29419C13.2626 9.20018 13.3279 9.03109 13.3662 8.91834L13.4354 8.71335L13.4712 8.53579C13.4909 8.43807 13.5162 8.27671 13.5276 8.17697L13.548 7.99582L13.5361 7.84208L13.5243 7.68836L13.4871 7.53454L13.4498 7.38081L13.3894 7.26573L13.329 7.15052L13.2125 7.03241L13.0959 6.91419L12.9579 6.84605L12.82 6.7778L12.668 6.74303L12.5161 6.70831L12.3642 6.69769L12.2124 6.68702L12.0431 6.7056L11.8739 6.72409L11.7358 6.75781L11.5978 6.79144L11.4777 6.84464C11.4117 6.87374 11.3157 6.92335 11.2644 6.9548C11.213 6.98619 11.16 7.02232 11.1466 7.03511C11.1332 7.04781 11.1011 7.0715 11.0753 7.08758L11.0284 7.11695L11.0612 6.96682C11.0793 6.88431 11.0943 6.80727 11.0947 6.79544L11.0954 6.77409H10.4402L10.3828 7.12007C10.3511 7.31043 10.3013 7.6044 10.2719 7.77357C10.2071 8.14667 10.1415 8.51964 10.0752 8.89251C10.046 9.0569 9.99771 9.31838 9.96785 9.47335C9.93804 9.62842 9.89437 9.85518 9.87076 9.97746C9.84722 10.0996 9.80274 10.3301 9.77219 10.4899C9.73607 10.6778 9.69956 10.8658 9.66269 11.0536C9.62786 11.2304 9.59227 11.4068 9.55582 11.5832C9.5266 11.7241 9.4984 11.8568 9.49294 11.878L9.48314 11.9164L9.86745 11.9165ZM11.5216 9.94129L11.3724 9.94989L11.2749 9.93338L11.1774 9.91702L11.0784 9.87377L10.9792 9.83047L10.9101 9.76733L10.8409 9.70423L10.8009 9.61881C10.7789 9.57179 10.7507 9.49194 10.7383 9.44135L10.7155 9.34937L10.7246 9.20215L10.7338 9.05499L10.7798 8.82427C10.8145 8.64803 10.8482 8.4715 10.8808 8.29475C10.9111 8.13032 10.9569 7.88929 10.9826 7.75932L11.0294 7.52287L11.1319 7.44136C11.1883 7.39659 11.2775 7.33647 11.3303 7.30795L11.4262 7.25593L11.5512 7.21893L11.6763 7.18187L11.8372 7.17286L11.9981 7.16379L12.129 7.19055L12.2599 7.21721L12.3525 7.25792L12.4448 7.29863L12.5223 7.37311L12.5999 7.4476L12.6415 7.52648C12.6647 7.56983 12.6969 7.6548 12.7134 7.71512L12.7433 7.82491L12.7342 8.14958L12.725 8.47415L12.6791 8.66602C12.6539 8.77155 12.6059 8.93301 12.5724 9.0248L12.5115 9.19173L12.4368 9.32676C12.3958 9.40105 12.3327 9.50152 12.2963 9.54995C12.26 9.59839 12.2022 9.66117 12.1678 9.68933C12.1262 9.72323 12.0834 9.75597 12.0398 9.78747L11.9742 9.83416L11.8226 9.88339L11.671 9.93271L11.5216 9.94129ZM15.2325 10.4108L15.429 10.4131L15.6256 10.3959C15.7338 10.3865 15.9106 10.3668 16.0188 10.3523C16.1269 10.3378 16.3137 10.3051 16.4339 10.2799L16.6523 10.2339L16.6632 10.1569C16.6692 10.1146 16.6937 9.98861 16.7177 9.87673L16.7614 9.67367L16.7516 9.66445L16.7421 9.6553L16.6752 9.68605C16.6384 9.70303 16.524 9.74353 16.421 9.77601L16.2336 9.83504L16.0367 9.87153L15.8401 9.90797L15.5273 9.90859L15.2145 9.90907L15.1072 9.87631C15.0483 9.85841 14.9616 9.82552 14.9146 9.80324L14.829 9.76283L14.7585 9.70183L14.6879 9.64083L14.6328 9.54879L14.5777 9.45665L14.5432 9.34134L14.5086 9.22584L14.5084 9.0122L14.5081 8.79856L14.5387 8.60803L14.5695 8.41751L14.8383 8.40554L15.1071 8.39351L16.1013 8.39966L17.0953 8.40574L17.1252 8.28399C17.1418 8.21704 17.1671 8.07867 17.1814 7.97649L17.2074 7.79071L17.2081 7.63448L17.2086 7.47821L17.1804 7.36145L17.152 7.24484L17.1052 7.16759C17.0795 7.12511 17.0341 7.06353 17.0044 7.0307C16.9748 6.99794 16.9217 6.95173 16.8866 6.92804C16.8515 6.90435 16.7826 6.86453 16.7335 6.83953L16.644 6.7941L16.488 6.75818L16.3319 6.72231L16.1396 6.70472L15.9471 6.68707L15.7684 6.69816L15.5897 6.70935L15.3752 6.7487L15.1609 6.78812L15.0267 6.83928C14.953 6.86739 14.8405 6.91878 14.7765 6.95345C14.7128 6.98806 14.6242 7.04443 14.58 7.07869C14.5357 7.11294 14.4591 7.17957 14.4098 7.22674C14.3605 7.27389 14.2873 7.35848 14.2475 7.41492C14.2077 7.47134 14.1465 7.57118 14.1117 7.63702C14.0768 7.70283 14.0314 7.79503 14.0107 7.84204C13.9901 7.88898 13.9526 7.98509 13.9274 8.05557C13.9021 8.12606 13.8625 8.26062 13.8393 8.35457C13.812 8.46847 13.7884 8.58305 13.7686 8.69824L13.7401 8.87124L13.7404 9.12541L13.7407 9.37956L13.7679 9.49064C13.7827 9.5517 13.8113 9.64399 13.8313 9.69568C13.8512 9.74727 13.8882 9.82426 13.9134 9.86644C13.9386 9.9087 13.9923 9.9769 14.0328 10.0178C14.0734 10.0587 14.1467 10.1208 14.1959 10.1558C14.245 10.1906 14.3325 10.2398 14.3902 10.2651L14.4953 10.3107L14.6418 10.3446C14.7224 10.3631 14.8439 10.3853 14.9121 10.3937C14.9802 10.402 15.1243 10.4098 15.2325 10.4108ZM15.569 8.00429C15.0743 8.00429 14.6695 8.00097 14.6695 7.99674C14.6695 7.99252 14.6907 7.93302 14.7164 7.86436C14.7421 7.79565 14.7875 7.69347 14.8171 7.63724L14.8709 7.53491L14.9891 7.42257L15.1073 7.31008L15.2235 7.25703C15.2874 7.22776 15.3718 7.19597 15.4111 7.18634C15.4504 7.17666 15.563 7.16385 15.6613 7.15791L15.8401 7.14687L15.9774 7.16373L16.1145 7.18061L16.2142 7.22433L16.3139 7.26795L16.3686 7.32434C16.3987 7.35536 16.4345 7.40101 16.4483 7.42579L16.4733 7.47088L16.4897 7.57097L16.5063 7.67108L16.4874 7.83766L16.4684 8.00423L15.569 8.00429ZM20.9153 10.4109L21.112 10.4131L21.3353 10.3878C21.4581 10.3739 21.6215 10.3509 21.6985 10.3366C21.7915 10.3186 21.8841 10.2977 21.9755 10.2737C22.0509 10.2533 22.1191 10.2314 22.127 10.2248C22.135 10.2182 22.1563 10.1407 22.1744 10.0525C22.1924 9.9643 22.2152 9.84592 22.2249 9.78955C22.2346 9.73316 22.2396 9.68414 22.236 9.68034C22.2325 9.67668 22.2193 9.68143 22.2068 9.69095C22.1942 9.70048 22.1066 9.73571 22.0119 9.76929L21.8398 9.83041L21.5948 9.8757L21.3498 9.92115L21.1414 9.91443L20.933 9.90757L20.8146 9.8683L20.6963 9.82901L20.6049 9.75263L20.5134 9.67612L20.4528 9.5705L20.3921 9.46498L20.3632 9.32365L20.3343 9.18242L20.3345 8.99908L20.3347 8.81579L20.3698 8.59362L20.4049 8.37155L20.442 8.25186C20.4624 8.18612 20.4855 8.10935 20.4934 8.08112C20.5012 8.05292 20.534 7.97219 20.5662 7.90175C20.5984 7.83131 20.656 7.72241 20.694 7.65969L20.7631 7.54579L20.8481 7.46162L20.9331 7.37743L21.0231 7.32418L21.113 7.27088L21.2286 7.23683C21.2922 7.21814 21.4044 7.19383 21.4781 7.18291L21.6122 7.16287L21.8087 7.17234L22.0053 7.18181L22.2377 7.22626L22.47 7.27067L22.5645 7.3043C22.6165 7.32289 22.6612 7.33802 22.6641 7.33802C22.6667 7.33802 22.6793 7.27457 22.6918 7.19701C22.7042 7.11955 22.7263 6.99202 22.741 6.91373C22.7556 6.83527 22.7641 6.76776 22.7598 6.76369C22.7554 6.75953 22.6856 6.74901 22.6047 6.74016C22.5235 6.73138 22.3034 6.7157 22.1152 6.70529L21.7732 6.68654L21.5319 6.70425L21.2906 6.72195L21.1118 6.75777L20.9332 6.79369L20.8181 6.83772C20.7547 6.86193 20.662 6.90566 20.6121 6.93475C20.5641 6.96265 20.517 6.9917 20.4706 7.02194C20.4427 7.04073 20.3585 7.11409 20.2831 7.18493L20.1463 7.31373L20.0697 7.42074C20.0278 7.47962 19.9551 7.60222 19.9082 7.69341L19.8231 7.85916L19.7578 8.03849C19.7219 8.13713 19.6718 8.29855 19.6465 8.39721L19.6005 8.57664L19.5837 8.73895L19.567 8.90127L19.5671 9.1148L19.5673 9.32838L19.5842 9.45254L19.601 9.57684L19.6546 9.70469L19.7081 9.83244L19.77 9.92474L19.8317 10.0172L19.93 10.1096L20.0284 10.202L20.1323 10.2547L20.2364 10.3072L20.373 10.3435C20.448 10.3634 20.5567 10.3863 20.6142 10.3944C20.6717 10.4024 20.807 10.4099 20.9153 10.4109ZM23.8549 10.4047L24.0961 10.3981L24.248 10.3609L24.3999 10.3236L24.4983 10.2793C24.5522 10.2548 24.6407 10.2067 24.6948 10.1721C24.7489 10.1376 24.8325 10.0719 24.8808 10.0264C24.9289 9.98059 25.0005 9.90266 25.0396 9.8531C25.0788 9.80354 25.1132 9.76525 25.1161 9.76789C25.1191 9.7707 25.1101 9.84972 25.096 9.94347C25.0822 10.0373 25.0707 10.1621 25.0705 10.2208L25.0701 10.3276H25.7261L25.7361 10.0841L25.7462 9.84068L25.7929 9.52463C25.8186 9.35076 25.8603 9.09325 25.8854 8.95234C25.9105 8.81135 25.9539 8.57311 25.9823 8.42272C26.0104 8.27243 26.0551 8.03792 26.0815 7.90169L26.1295 7.65402L26.1311 7.44001L26.1327 7.22605L26.0822 7.12721L26.0315 7.0283L25.9629 6.96537L25.8943 6.90232L25.7817 6.84782L25.6689 6.79312L25.5011 6.7574L25.3331 6.72163L25.1019 6.70493L24.8707 6.68811L24.573 6.70576C24.4091 6.71544 24.1786 6.73455 24.0606 6.74824L23.8462 6.77307L23.7 6.77365L23.5539 6.77421L23.5327 6.87254C23.521 6.92648 23.4885 7.05485 23.4605 7.15777C23.4324 7.26067 23.4121 7.34724 23.4153 7.35021C23.4184 7.35339 23.4966 7.33627 23.5889 7.31257C23.6814 7.28879 23.8776 7.24974 24.0251 7.2257L24.293 7.18202L24.5343 7.17259L24.7755 7.16298L24.931 7.18899L25.0863 7.21512L25.19 7.26401L25.2938 7.313L25.3518 7.3957L25.4099 7.47848L25.4091 7.60892L25.4082 7.73943L25.3775 7.88259L25.3467 8.02574L24.7036 8.02798L24.0606 8.03016L23.8502 8.08539C23.7344 8.11574 23.6062 8.15598 23.5654 8.17487C23.5245 8.19377 23.4835 8.20929 23.4744 8.20929C23.4654 8.20929 23.3965 8.24567 23.3215 8.29044L23.185 8.37149L23.0776 8.47411C23.0184 8.53042 22.9428 8.61502 22.9097 8.66207C22.8765 8.70903 22.8225 8.80703 22.7899 8.88013L22.7305 9.01272L22.7031 9.16197L22.6757 9.31105V9.62422L22.7018 9.75456L22.7279 9.88476L22.7762 9.96988C22.8029 10.0166 22.8517 10.0851 22.8848 10.1221L22.945 10.1891L23.0518 10.2512L23.1587 10.3134L23.2811 10.3464C23.3483 10.3645 23.4508 10.3866 23.5087 10.3954L23.614 10.4112L23.8549 10.4047ZM24.0783 9.92688L23.9353 9.93415L23.8406 9.9111C23.7885 9.89838 23.7095 9.87018 23.6651 9.84826L23.5841 9.80854L23.5399 9.75832C23.5155 9.73062 23.4785 9.67648 23.4574 9.63786L23.4191 9.56752L23.4116 9.40319L23.404 9.239L23.4343 9.13943C23.451 9.08461 23.49 8.9895 23.5213 8.92812L23.5778 8.81641L23.6861 8.71365L23.7944 8.61075L23.9095 8.55776L24.0245 8.50486L24.1674 8.47233L24.3104 8.43985H25.2039L25.2321 8.45104L25.2603 8.46217L25.2366 8.59627C25.2236 8.66998 25.1924 8.8034 25.1673 8.89257C25.1422 8.9819 25.098 9.11302 25.069 9.18429C25.04 9.2553 25.0163 9.31819 25.0163 9.32396C25.0163 9.32973 24.9869 9.38153 24.9509 9.43906L24.8857 9.54389L24.7785 9.64541C24.7197 9.70106 24.665 9.74675 24.657 9.74675C24.649 9.74675 24.613 9.76604 24.5768 9.7895L24.5109 9.83219L24.366 9.87602L24.221 9.91984L24.0783 9.92688ZM29.8951 10.4108L30.0648 10.4128L30.2257 10.3878C30.3142 10.3742 30.4267 10.3521 30.4758 10.3387C30.525 10.3254 30.6135 10.291 30.6724 10.2621L30.7797 10.2096L30.872 10.132L30.9642 10.0543L31.0613 9.93041C31.1147 9.86238 31.1631 9.79513 31.1689 9.78101L31.1792 9.75539L31.1701 9.84083C31.1638 9.89798 31.1555 9.95498 31.1455 10.0117C31.1368 10.0587 31.1244 10.149 31.118 10.2123L31.1061 10.3277H31.8073V10.097L31.8606 9.66138C31.89 9.42171 31.9335 9.10277 31.9571 8.95244C31.9808 8.80209 32.0175 8.58689 32.0386 8.47415C32.0595 8.3614 32.0968 8.15764 32.1213 8.02141C32.1458 7.88524 32.19 7.64689 32.2195 7.49185C32.2491 7.33678 32.2965 7.09081 32.3247 6.94511C32.3529 6.79952 32.3969 6.57271 32.4223 6.44121C32.4478 6.30967 32.4934 6.07894 32.5236 5.92867C32.5552 5.77183 32.588 5.61524 32.6218 5.45881C32.6456 5.35078 32.6651 5.25662 32.6651 5.24959V5.23674H31.9L31.8888 5.34351C31.8826 5.40233 31.8534 5.59629 31.8237 5.7749C31.7887 5.98572 31.753 6.19639 31.7165 6.407C31.6954 6.52846 31.6744 6.64995 31.6539 6.77151L31.6442 6.82845L31.6141 6.81622C31.5974 6.8094 31.5074 6.78551 31.4141 6.76311L31.2443 6.72235L31.0121 6.70508L30.7797 6.6878L30.583 6.70529L30.3865 6.72283L30.2078 6.76604L30.0291 6.8092L29.8593 6.88836L29.6894 6.96755L29.5643 7.05604L29.4394 7.14453L29.3313 7.25531C29.2719 7.31627 29.1861 7.41694 29.1405 7.47925L29.0579 7.59227L28.9607 7.7855C28.9073 7.8918 28.8423 8.03266 28.8163 8.09835C28.7903 8.1642 28.7443 8.30991 28.7141 8.42235L28.6595 8.62676L28.6325 8.89236L28.6056 9.15764L28.6258 9.37122L28.6461 9.58481L28.67 9.66165C28.6832 9.70401 28.7109 9.77939 28.7317 9.82905L28.7693 9.91964L28.8382 10.0086L28.907 10.0977L28.9856 10.1592L29.0641 10.2207L29.1713 10.2716C29.2304 10.2995 29.3292 10.3358 29.3912 10.3519C29.453 10.3681 29.5535 10.3877 29.6146 10.3953C29.6754 10.4025 29.8017 10.4097 29.8951 10.4108ZM30.1998 9.92614L30.0648 9.93285L29.9739 9.91735C29.9237 9.9087 29.8436 9.88553 29.7956 9.86592L29.7087 9.8303L29.6353 9.77289L29.5622 9.71547L29.5078 9.61579L29.4534 9.51615L29.4284 9.40512L29.4037 9.29408L29.4058 9.07195L29.4079 8.8499L29.4366 8.65331L29.4654 8.45698L29.5102 8.32033C29.5349 8.24515 29.5552 8.17419 29.5552 8.1627C29.5554 8.15114 29.5797 8.08977 29.6093 8.02605C29.644 7.95245 29.6806 7.87966 29.7192 7.80778C29.75 7.7514 29.8076 7.66354 29.8471 7.61253C29.8868 7.56152 29.9572 7.48462 30.0038 7.44162C30.0504 7.39877 30.1245 7.34246 30.1685 7.31659L30.2485 7.26957L30.389 7.22309L30.5295 7.17645L30.8244 7.17633H31.1194L31.2891 7.22138C31.3824 7.24621 31.4816 7.27484 31.5094 7.28525L31.56 7.30404L31.55 7.35089C31.5447 7.37664 31.5233 7.49002 31.5028 7.60274C31.4824 7.71554 31.4418 7.93084 31.4128 8.08112C31.3839 8.23142 31.3395 8.45827 31.3141 8.58508C31.2888 8.712 31.2521 8.87342 31.2324 8.94385C31.2124 9.01626 31.1919 9.0885 31.1712 9.16081C31.1569 9.2096 31.1232 9.29419 31.0963 9.34869C31.0692 9.40313 31.0218 9.48237 30.991 9.52468C30.9602 9.56696 30.9081 9.62561 30.8752 9.65482C30.8424 9.68419 30.7713 9.73625 30.7171 9.77055L30.6189 9.83306L30.4767 9.87612L30.3348 9.91922L30.1998 9.92614ZM3.89893 10.3277H4.33305L4.36425 10.1441C4.38132 10.043 4.41483 9.84893 4.43858 9.71277L4.53684 9.149C4.56714 8.97512 4.61263 8.71757 4.63784 8.57664C4.663 8.43573 4.70311 8.2171 4.72676 8.09085C4.75058 7.96447 4.77451 7.85692 4.78002 7.85161L4.79009 7.84204H7.12508L7.13808 7.85443L7.15108 7.86681L7.13082 7.96541C7.11972 8.0197 7.08677 8.1871 7.05771 8.33738C7.02854 8.48773 6.97962 8.74146 6.9488 8.90121C6.91646 9.06931 6.88361 9.23734 6.85016 9.40518C6.82662 9.52265 6.77887 9.76851 6.74414 9.9518C6.70946 10.1351 6.68111 10.2946 6.68122 10.3064L6.68143 10.3277H7.55336L7.57264 10.2209C7.5833 10.1622 7.60038 10.0565 7.61065 9.98604C7.62081 9.91557 7.64559 9.76565 7.66555 9.65294C7.6855 9.54015 7.72533 9.31715 7.75412 9.15743C7.78286 8.99768 7.83112 8.72479 7.86119 8.55099C7.89128 8.37713 7.9359 8.12345 7.96048 7.98727C7.99146 7.81615 8.02379 7.64538 8.05735 7.47474C8.08614 7.32897 8.13414 7.08311 8.16405 6.92799C8.19397 6.77303 8.23865 6.5385 8.26339 6.40696C8.28827 6.27547 8.3335 6.03715 8.36399 5.8774C8.39444 5.71764 8.43303 5.53122 8.44951 5.46308L8.47965 5.33913H7.59679L7.5848 5.42039C7.57821 5.46491 7.55692 5.59006 7.53743 5.69796C7.5179 5.80613 7.48252 5.99822 7.45871 6.12507C7.43489 6.25199 7.39144 6.49404 7.362 6.66328C7.33321 6.82898 7.30548 6.99478 7.27883 7.16078L7.24903 7.35073L6.60105 7.36329L5.95301 7.37581L5.4103 7.36354C5.11177 7.35673 4.86588 7.34981 4.86383 7.3483C4.86174 7.34657 4.87192 7.2802 4.88631 7.20066C4.90537 7.09816 4.92559 6.99587 4.9471 6.89384C4.97451 6.76292 5.0011 6.63199 5.02697 6.50082C5.05196 6.37401 5.0802 6.21644 5.08989 6.15065C5.09941 6.08488 5.11959 5.97537 5.13453 5.90711C5.14951 5.83903 5.17797 5.69557 5.19777 5.58838C5.21752 5.4811 5.23862 5.38114 5.24462 5.36622L5.25542 5.33909H4.37967L4.35174 5.48864C4.33627 5.57089 4.31567 5.68813 4.30598 5.74913C4.29629 5.81024 4.26364 6.00625 4.23346 6.18478C4.20338 6.36334 4.15875 6.62857 4.13451 6.77415L4.03646 7.36354C4.00195 7.56875 3.96561 7.77384 3.92739 7.97853C3.89561 8.14661 3.86323 8.3146 3.83015 8.48252C3.80688 8.59988 3.76261 8.82292 3.73173 8.97794C3.6993 9.14042 3.66592 9.30272 3.63151 9.46487C3.60725 9.57752 3.5805 9.70824 3.57211 9.75524C3.56354 9.80225 3.53587 9.9377 3.51056 10.0564C3.48524 10.1749 3.46453 10.2845 3.46453 10.2999V10.3276L3.89893 10.3277ZM8.70565 10.3277H9.09002L9.10086 10.3006C9.10686 10.2857 9.11174 10.2467 9.11174 10.2141C9.11174 10.1813 9.13593 10.0109 9.16542 9.8353C9.23284 9.43541 9.30194 9.03583 9.37279 8.63641C9.40308 8.46816 9.43508 8.30017 9.46857 8.13241C9.49706 7.9915 9.54078 7.77238 9.56572 7.64553C9.59055 7.51867 9.63962 7.27738 9.67463 7.10923C9.70958 6.9411 9.74259 6.7968 9.74794 6.78858L9.75768 6.77359L9.36893 6.77812L8.98024 6.78275L8.94782 7.00498C8.93004 7.12709 8.89109 7.36927 8.86133 7.54301C8.83158 7.71689 8.78656 7.98218 8.7612 8.13241C8.73064 8.31215 8.698 8.49149 8.66326 8.67055C8.63468 8.81621 8.5909 9.03911 8.56592 9.16602C8.54099 9.29298 8.49619 9.51582 8.46643 9.66143C8.43662 9.80715 8.39669 9.99928 8.37764 10.0885C8.35854 10.1779 8.33805 10.2682 8.3321 10.2892L8.32128 10.3277H8.70565ZM17.6959 10.3277H18.0775L18.0889 10.1734C18.0952 10.0885 18.1168 9.9175 18.1369 9.7932C18.157 9.66904 18.1982 9.42135 18.2283 9.24289C18.2665 9.02225 18.308 8.80205 18.353 8.58249C18.3913 8.39783 18.4347 8.21422 18.4494 8.17462C18.464 8.1349 18.476 8.09195 18.476 8.0791C18.476 8.06618 18.5046 7.99601 18.5397 7.92319C18.5747 7.85035 18.6401 7.73881 18.6849 7.67524L18.7664 7.55978L18.8754 7.46326L18.9844 7.36677L19.1189 7.30539L19.2534 7.24401L19.4589 7.24505L19.6644 7.24615L19.7654 7.27493C19.8209 7.29087 19.8713 7.30387 19.8772 7.30387C19.8829 7.30387 19.8877 7.28566 19.8877 7.26349C19.8877 7.24136 19.9079 7.12881 19.9325 7.01341C19.957 6.89812 19.9771 6.79888 19.9771 6.793C19.9771 6.78702 19.9188 6.76514 19.8475 6.74442C19.7763 6.72376 19.6778 6.70211 19.6287 6.69628L19.5392 6.68571L19.4231 6.70535C19.3593 6.71612 19.2643 6.73996 19.2121 6.75838C19.1598 6.77665 19.0735 6.81831 19.0204 6.85072C18.9673 6.88336 18.8846 6.94672 18.8367 6.99153C18.7887 7.03648 18.7082 7.12709 18.6575 7.19284C18.6182 7.24395 18.579 7.29519 18.5401 7.34656L18.5144 7.38071L18.53 7.31242C18.5385 7.27472 18.5623 7.15171 18.5828 7.03907C18.6033 6.92632 18.6245 6.82054 18.6297 6.80413L18.6392 6.77421H17.9578V6.81539C17.9578 6.83808 17.9375 6.97446 17.9131 7.11855C17.8885 7.2628 17.8479 7.50366 17.823 7.65406C17.798 7.80435 17.7537 8.06581 17.7245 8.2349C17.6934 8.41449 17.6606 8.59387 17.626 8.77294C17.5587 9.11491 17.49 9.45659 17.4197 9.79798C17.3896 9.9437 17.3536 10.1157 17.3397 10.1803C17.3257 10.2447 17.3144 10.3042 17.3144 10.3126V10.3276L17.6959 10.3277ZM26.7531 10.3277H27.1433V10.0994L27.1882 9.81631C27.2131 9.66076 27.2538 9.41408 27.279 9.26852C27.3041 9.12286 27.3354 8.93837 27.3485 8.85842C27.3617 8.77857 27.3965 8.6057 27.426 8.47411C27.4555 8.34255 27.4921 8.20028 27.5077 8.15801C27.5232 8.1158 27.536 8.07139 27.5362 8.05948C27.5364 8.04754 27.5695 7.97078 27.6099 7.88894L27.6836 7.74L27.7808 7.61663L27.878 7.49326L27.9842 7.41684C28.0427 7.37473 28.1367 7.31903 28.1931 7.2929L28.2959 7.24536L28.5192 7.24683L28.7426 7.24833L28.8306 7.27536L28.9186 7.30237L28.9333 7.29351L28.9481 7.28477L28.9489 7.23027C28.9493 7.20024 28.9683 7.08873 28.9914 6.98232L29.0331 6.78889L28.9862 6.77135C28.9411 6.7553 28.8957 6.74054 28.8498 6.7269L28.7605 6.69993L28.5997 6.7004L28.4389 6.70076L28.3078 6.74491L28.1767 6.78894L28.0783 6.84574L27.9798 6.90252L27.8518 7.03064L27.7238 7.15875L27.6551 7.25817C27.6174 7.31278 27.5841 7.35505 27.5811 7.35204C27.5782 7.34911 27.5989 7.23521 27.6269 7.09899C27.6548 6.96271 27.6782 6.83392 27.6786 6.81279L27.6793 6.77438H27.0182V6.78526C27.0182 6.79122 27.0017 6.90086 26.9815 7.02876C26.9614 7.15667 26.9209 7.40352 26.8917 7.57739C26.8565 7.7853 26.8209 7.9931 26.7848 8.20091C26.7534 8.3806 26.7206 8.55993 26.6861 8.73912C26.6613 8.86591 26.6173 9.08883 26.5882 9.23453C26.5592 9.38018 26.5114 9.61469 26.4821 9.7556L26.3959 10.1699L26.363 10.3278L26.7531 10.3277ZM9.46183 6.15891L9.57021 6.15927L9.65648 6.13122L9.74276 6.10311L9.81911 6.02904L9.89544 5.95511L9.93557 5.85641L9.97582 5.75777L9.97721 5.61259L9.9787 5.46746L9.94297 5.41066L9.90726 5.35392L9.84507 5.31721L9.78273 5.28031H9.51407L9.42261 5.31947L9.33121 5.35861L9.27811 5.413L9.22503 5.46746L9.18328 5.56141L9.14159 5.65532L9.13373 5.80171L9.1259 5.94804L9.16466 6.02081L9.20345 6.09347L9.27843 6.12601L9.35324 6.15844L9.46183 6.15891Z" fill="#303030"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.cielo.com.br">
+                        <svg width="33" height="13" viewBox="0 0 33 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.40683 3.50373C5.77078 3.38546 6.15988 3.32191 6.56503 3.32191C8.33173 3.32191 9.80673 4.5425 10.1446 6.16491L12.649 5.668C12.0744 2.91094 9.56921 0.835938 6.56503 0.835938C5.87665 0.835938 5.21536 0.945065 4.59668 1.14613L5.40683 3.50373Z" fill="#303030"/>
+                            <path d="M2.45191 11.3985L4.14547 9.53605C3.38948 8.8846 2.91251 7.93383 2.91251 6.87456C2.91251 5.8153 3.38883 4.86579 4.14434 4.21513L2.45045 2.35254C1.16658 3.4588 0.356445 5.0749 0.356445 6.87456C0.356445 8.67423 1.16691 10.2921 2.45191 11.3985Z" fill="#303030"/>
+                            <path d="M10.1443 7.58691C9.80511 9.20852 8.33154 10.4268 6.56537 10.4268C6.16006 10.4268 5.76981 10.3632 5.40601 10.2443L4.59473 12.603C5.21356 12.8039 5.87616 12.9127 6.56537 12.9127C9.56662 12.9127 12.0713 10.8412 12.6483 8.0865L10.1443 7.58691Z" fill="#303030"/>
+                            <path d="M14.8393 9.61445C14.7573 9.48513 14.6459 9.27839 14.5786 9.12622C14.182 8.23064 14.163 7.30384 14.498 6.4141C14.8662 5.43843 15.5696 4.6914 16.4785 4.31103C17.6212 3.83272 18.885 3.92703 19.9801 4.55908C20.6758 4.94734 21.169 5.54676 21.5435 6.39439C21.5911 6.50288 21.6331 6.6188 21.674 6.7172L14.8393 9.61445ZM17.1215 5.74878C16.3101 6.08798 15.8918 6.82837 15.9777 7.69651L19.4151 6.25751C18.824 5.58192 18.0549 5.358 17.1215 5.74878ZM19.8439 8.87973C19.8431 8.88035 19.8427 8.88099 19.842 8.88162L19.7708 8.83495C19.5657 9.15871 19.2457 9.42095 18.8418 9.59127C18.0735 9.91628 17.3615 9.83271 16.8501 9.39651L16.8031 9.46606C16.8031 9.46606 16.8024 9.46463 16.8016 9.46463L15.9296 10.7336C16.146 10.88 16.3785 11.0039 16.6227 11.103C17.586 11.4922 18.5715 11.4742 19.5425 11.0634C20.2449 10.7674 20.7959 10.3159 21.1726 9.74376L19.8439 8.87973Z" fill="#303030"/>
+                            <path d="M24.0632 2.44238V9.49752L25.1908 9.94208L24.55 11.3964L23.3053 10.8922C23.0259 10.7746 22.8357 10.5945 22.6918 10.3912C22.5541 10.184 22.4512 9.89966 22.4512 9.51677V2.44238H24.0632Z" fill="#303030"/>
+                            <path d="M26.9847 7.69999C26.9855 7.09915 27.2581 6.56043 27.6897 6.19427L26.5327 4.93945C25.748 5.61409 25.2539 6.59985 25.2529 7.69824C25.2516 8.79695 25.7451 9.78381 26.5291 10.4602L27.6847 9.2041C27.2553 8.83637 26.9843 8.29941 26.9847 7.69999Z" fill="#303030"/>
+                            <path d="M29.0403 9.7024C28.8125 9.70177 28.5931 9.66517 28.3885 9.59895L27.8359 11.1969C28.2136 11.3202 28.618 11.3874 29.0385 11.3881C30.8704 11.3898 32.4 10.1255 32.7544 8.44476L31.0562 8.10742C30.863 9.01879 30.0338 9.7032 29.0403 9.7024Z" fill="#303030"/>
+                            <path d="M29.0452 4.01563C28.6252 4.01515 28.2208 4.08154 27.8438 4.20377L28.3915 5.80315C28.5967 5.73722 28.816 5.7008 29.0436 5.7008C30.0393 5.70175 30.8693 6.39041 31.0577 7.30397L32.7562 6.96886C32.4069 5.28588 30.8785 4.01689 29.0452 4.01563Z" fill="#303030"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.dinersclub.com">
+                        <svg width="31" height="20" viewBox="0 0 31 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.69678 19.0892C4.54688 19.0892 0.356445 15.0139 0.356445 10.0035C0.356445 4.99412 4.54688 0.917969 9.69678 0.917969H20.9626C26.1128 0.917969 30.3032 4.99412 30.3032 10.0035C30.3032 15.0139 26.1128 19.0892 20.9626 19.0892H9.69678ZM0.894287 10.006C0.894287 14.7268 4.84302 18.5675 9.69678 18.5675C14.55 18.5675 18.4985 14.7268 18.4985 10.006C18.4985 5.28538 14.55 1.44386 9.69678 1.44386C4.84302 1.44386 0.894287 5.28538 0.894287 10.006ZM11.7629 4.81625C13.905 5.62343 15.4243 7.63995 15.4243 10.006C15.4243 12.3724 13.9031 14.3906 11.7629 15.196V4.81625ZM3.97144 10.006V10.0035C3.97144 7.63734 5.49048 5.61916 7.63159 4.81376V15.196C5.49316 14.3906 3.97144 12.3742 3.97144 10.006Z" fill="#303030"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.paypal.com.br">
+                        <svg width="34" height="10" viewBox="0 0 34 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.0906 9.25385H12.8979C12.7452 9.25385 12.6611 9.11806 12.7697 8.96875L14.0621 7.18274L12.7444 3.42971C12.675 3.23437 12.764 3.07556 12.9828 3.07556H14.0441C14.2474 3.07556 14.3585 3.15496 14.4025 3.29948L15.1578 5.68741L16.8477 3.30506C16.9587 3.14861 17.0363 3.07391 17.2298 3.07391H18.3589C18.5638 3.07391 18.6226 3.2566 18.4977 3.43048L14.445 9.08467C14.3784 9.19192 14.2594 9.2562 14.1326 9.25619C14.1187 9.25619 14.1047 9.25543 14.0906 9.25385ZM24.2853 5.67949C24.402 4.15156 25.4903 2.95955 27.1044 2.92703C27.7991 2.9111 28.2971 3.11286 28.4923 3.56235C28.5478 3.68936 28.6074 3.66713 28.6294 3.54091L28.6719 3.29868C28.6988 3.1446 28.7494 3.08821 28.8531 3.08821H30.0027C30.1569 3.08821 30.2068 3.18513 30.1741 3.38289L29.5291 7.32011C29.4859 7.58542 29.4001 7.65446 29.2238 7.65446H28.1772C28.0367 7.65446 27.9771 7.57662 27.9967 7.42974L28.0351 7.14858C28.0506 7.03108 27.9412 7.08033 27.8334 7.1756L27.8384 7.17796C27.4187 7.55125 27.0464 7.78947 26.2136 7.78947C25.0658 7.78947 24.1955 6.86112 24.2853 5.67949ZM25.8789 5.36979C25.7785 6.03048 26.2626 6.56966 26.9574 6.56966C27.6522 6.56966 28.3021 6.03048 28.4024 5.36979C28.5029 4.70904 28.0188 4.16986 27.324 4.16986C26.6292 4.16986 25.9794 4.70904 25.8789 5.36979ZM6.10533 5.67949C6.22206 4.15156 7.31037 2.95955 8.92435 2.92703C9.61918 2.9111 10.1172 3.11286 10.3123 3.56235C10.3678 3.68936 10.4274 3.66713 10.4495 3.54091L10.4919 3.29868C10.5188 3.1446 10.5695 3.08821 10.6731 3.08821H11.8243C11.9786 3.08821 12.0284 3.18513 11.9957 3.38289L11.3508 7.32011C11.3075 7.58542 11.2218 7.65446 11.0454 7.65446H9.9988C9.85841 7.65446 9.79882 7.57662 9.81835 7.42974L9.85673 7.14858C9.87224 7.03108 9.76283 7.08033 9.6551 7.1756L9.65833 7.17796C9.23869 7.55125 8.86636 7.78947 8.03365 7.78947C6.8858 7.78947 6.01554 6.86112 6.10533 5.67949ZM7.69978 5.36979C7.59935 6.03048 8.08347 6.56966 8.77821 6.56966C9.47383 6.56966 10.1229 6.03048 10.2233 5.36979C10.3237 4.70904 9.8396 4.16986 9.14479 4.16986C8.45006 4.16986 7.80014 4.70904 7.69978 5.36979ZM31.7849 7.66082H30.5766C30.534 7.66267 30.4929 7.64595 30.4643 7.61522C30.4357 7.58448 30.4227 7.54303 30.4288 7.50201L31.4902 0.961564C31.5111 0.869663 31.5942 0.803839 31.691 0.80276H32.8993C32.9418 0.800889 32.983 0.817543 33.0116 0.848273C33.0402 0.879027 33.0532 0.920535 33.0471 0.961564L31.9857 7.50201C31.9655 7.59457 31.8821 7.6611 31.7848 7.66239L31.7849 7.66082ZM18.7582 7.64016C18.5703 7.64016 18.505 7.52344 18.5467 7.26215L19.5206 1.19106C19.5688 0.892467 19.684 0.78125 19.8937 0.78125H22.7137V0.782881C23.7807 0.782881 24.7653 1.34587 24.6306 2.74914C24.4674 4.41679 23.5489 5.33957 22.0998 5.34357H20.8343C20.6523 5.34357 20.564 5.48807 20.5167 5.78433L20.2718 7.29867C20.235 7.52739 20.1142 7.64016 19.9362 7.64016H18.7582ZM22.0075 2.10668L21.1045 2.11063L20.7951 4.03242H21.7544C22.3544 4.01019 22.7528 3.60601 22.7929 2.87701C22.8173 2.42838 22.5069 2.10668 22.0129 2.10667C22.0111 2.10667 22.0093 2.10667 22.0075 2.10668ZM0.579018 7.64016C0.391191 7.64016 0.325862 7.52344 0.367524 7.26215L1.33985 1.19264C1.38807 0.894038 1.50314 0.782881 1.71299 0.782881H4.53292H4.53531C5.60237 0.782881 6.58697 1.34587 6.45229 2.74914C6.28902 4.41679 5.37056 5.33957 3.92141 5.34357H2.65511C2.47302 5.34357 2.38484 5.48807 2.33753 5.78433L2.09264 7.29867C2.0559 7.52739 1.93503 7.64016 1.75706 7.64016H0.579018ZM3.82914 2.10668L2.92616 2.11063L2.61675 4.03242H3.57608C4.1761 4.01019 4.57455 3.60601 4.61454 2.87701C4.6389 2.42838 4.3286 2.10668 3.83456 2.10667C3.83273 2.10667 3.83096 2.10667 3.82914 2.10668Z" fill="#303030"/>
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.55286 21.7742L5.10242 17.4453H5.79504C6.71399 17.4453 7.57874 17.097 8.22864 16.4653L11.7552 13.0347C12.0018 12.7949 12.432 12.7941 12.6786 13.0347L16.1925 16.4526C16.8424 17.0847 17.7069 17.4328 18.6261 17.4328H19.0494L14.5861 21.7742C13.8912 22.4501 12.9803 22.788 12.0695 22.788C11.1586 22.788 10.2477 22.4501 9.55286 21.7742ZM1.39807 13.8421C0.00793457 12.4899 0.00793457 10.2979 1.39807 8.94615L4.10583 6.31224C4.16272 6.33306 4.22278 6.34787 4.28699 6.34787H5.79504C6.42883 6.34787 7.04944 6.59786 7.49744 7.0339L11.0245 10.4646C11.3534 10.7841 11.785 10.9443 12.2169 10.9443C12.6488 10.9443 13.0807 10.7841 13.4095 10.4643L16.9237 7.04624C17.3715 6.61036 17.9921 6.36022 18.6261 6.36022H19.8522C19.92 6.36022 19.9845 6.34571 20.0438 6.32258L22.7408 8.94615C24.131 10.2979 24.131 12.4899 22.7408 13.8421L20.0441 16.4654C19.9845 16.4422 19.92 16.4278 19.8522 16.4278H18.6261C17.9921 16.4278 17.3715 16.1778 16.9237 15.7416L13.4095 12.3241C12.7726 11.7039 11.6617 11.7042 11.0243 12.3237L7.49744 15.7543C7.04944 16.1902 6.42883 16.4403 5.79504 16.4403H4.28699C4.22278 16.4403 4.16248 16.4551 4.10583 16.4759L1.39807 13.8421ZM11.7552 9.75387L8.22864 6.32286C7.57874 5.69101 6.71399 5.34276 5.79504 5.34276H5.10266L9.55286 1.01396C10.9427 -0.337987 13.1964 -0.337987 14.5861 1.01396L19.0494 5.35525H18.6261C17.7069 5.35525 16.8424 5.70336 16.1925 6.33538L12.6786 9.75357C12.5514 9.87774 12.3844 9.9396 12.2172 9.93959C12.0497 9.93959 11.8824 9.87753 11.7552 9.75387Z" fill="#303030"/>
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg width="37" height="24" viewBox="0 0 37 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M34.1327 24H2.86635C1.47975 23.9981 0.356415 22.9047 0.355469 21.556L0.355484 2.44235C0.357376 1.09423 1.48042 0.00184044 2.86635 0L34.1327 2.96845e-05C35.5186 0.00184044 36.6416 1.09426 36.6436 2.44235L36.6436 21.556C36.6426 22.9047 35.5193 23.9982 34.1327 24ZM2.86636 1.39832C2.27454 1.39832 1.79475 1.86499 1.79475 2.44066L1.79474 21.556C1.79475 22.1317 2.27452 22.5983 2.86636 22.5983H34.1327C34.7246 22.5983 35.2043 22.1317 35.2043 21.556V2.44235C35.2043 1.86668 34.7246 1.39998 34.1327 1.39998L2.86636 1.39832Z" fill="#303030"/>
+                            <rect x="30.6064" y="3.62793" width="2.308" height="16.8315" fill="#303030"/>
+                            <rect x="27.1533" y="3.62793" width="2.308" height="14.5865" fill="#303030"/>
+                            <rect x="9.84961" y="3.62793" width="2.308" height="14.5865" fill="#303030"/>
+                            <rect x="21.3721" y="3.62793" width="2.308" height="14.5865" fill="#303030"/>
+                            <rect x="15.6104" y="3.62793" width="3.37963" height="14.5865" fill="#303030"/>
+                            <rect x="7.57812" y="3.62793" width="1.10805" height="14.5865" fill="#303030"/>
+                            <rect x="13.3389" y="3.62793" width="1.10805" height="14.5865" fill="#303030"/>
+                            <rect x="24.8457" y="3.62793" width="1.10805" height="14.5865" fill="#303030"/>
+                            <rect x="4.06836" y="3.62793" width="2.308" height="16.8315" fill="#303030"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
+            <!-- FOOTER INFO -->
             <div class="container-footer_info">
+                <!-- CONTAINER INFO -->
                 <p class="info-large">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
                     laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
@@ -759,12 +1081,58 @@
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
                     laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.
                 </p>
+                <!-- CONTAINER TECNOLOGIAS LOGOS -->
                 <div class="footer-info_logos">
-                    <a href="#"><img src="./assets/icons/bottom/encrypt.svg" alt="Logo da Let's Encrypt"></a>
-                    <a href="#"><img src="./assets/icons/bottom/vtexcertified.svg" alt="Logo da VTex Certified"></a>
+                    <a href="#">
+                        <svg width="39" height="30" viewBox="0 0 39 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M33.8015 10.0525H31.5754V8.90433C31.5754 7.99049 30.8256 7.24067 29.9118 7.24067C28.9979 7.24067 28.2481 7.99049 28.2481 8.90433V10.0525H26.0221V8.90433C26.0221 6.7486 27.7795 5.01465 29.9118 5.01465C32.0675 5.01465 33.8015 6.77204 33.8015 8.90433V10.0525Z" fill="#FFA400"/>
+                            <path d="M34.7151 10.0527H25.108C24.6863 10.0527 24.3582 10.3808 24.3582 10.8026V17.9024C24.3582 18.3242 24.6863 18.6522 25.108 18.6522H34.7151C35.1369 18.6522 35.4649 18.3242 35.4649 17.9024V10.8026C35.4415 10.3808 35.1134 10.0527 34.7151 10.0527ZM30.3802 14.7157V15.6764C30.3802 15.9341 30.1693 16.1684 29.8881 16.1684C29.6304 16.1684 29.3961 15.9576 29.3961 15.6764V14.7157C29.0914 14.5516 28.904 14.2236 28.904 13.8487C28.904 13.3098 29.3492 12.8646 29.8881 12.8646C30.4271 12.8646 30.8723 13.3098 30.8723 13.8487C30.8957 14.2236 30.6848 14.5516 30.3802 14.7157Z" fill="#003A70"/>
+                            <path d="M24.1241 8.99772H21.8043C21.4294 8.99772 21.1248 8.6931 21.1248 8.3182C21.1248 7.94329 21.4294 7.63867 21.8043 7.63867H24.1241C24.499 7.63867 24.8036 7.94329 24.8036 8.3182C24.8036 8.6931 24.499 8.99772 24.1241 8.99772Z" fill="#FFA400"/>
+                            <path d="M25.7645 5.34273C25.6239 5.34273 25.4599 5.29587 25.3427 5.17871L23.5151 3.67907C23.2339 3.44475 23.187 3.02298 23.4213 2.71837C23.6556 2.43718 24.0774 2.39032 24.382 2.62464L26.2097 4.12428C26.4909 4.35859 26.5378 4.78037 26.3034 5.08498C26.1394 5.249 25.952 5.34273 25.7645 5.34273Z" fill="#FFA400"/>
+                            <path d="M29.9118 3.7491C29.5369 3.7491 29.2322 3.44449 29.2322 3.06958V0.726398C29.2322 0.351489 29.5369 0.046875 29.9118 0.046875C30.2867 0.046875 30.5913 0.351489 30.5913 0.726398V3.06958C30.5913 3.44449 30.2867 3.7491 29.9118 3.7491Z" fill="#FFA400"/>
+                            <path d="M34.0355 5.34273C33.848 5.34273 33.6371 5.249 33.52 5.08498C33.2856 4.8038 33.3325 4.35859 33.6137 4.12428L35.4414 2.62464C35.7226 2.39032 36.1678 2.43718 36.4021 2.71837C36.6364 2.99955 36.5895 3.44475 36.3084 3.67907L34.4807 5.17871C34.3401 5.29587 34.1995 5.34273 34.0355 5.34273Z" fill="#FFA400"/>
+                            <path d="M37.9962 8.99772H35.653C35.2781 8.99772 34.9734 8.6931 34.9734 8.3182C34.9734 7.94329 35.2781 7.63867 35.653 7.63867H37.9962C38.3711 7.63867 38.6757 7.94329 38.6757 8.3182C38.6757 8.6931 38.3711 8.99772 37.9962 8.99772Z" fill="#FFA400"/>
+                            <path d="M0.176758 18.5577V10.9892H2.00444V16.9643H4.93342V18.5577H0.176758ZM10.9788 15.9568V16.1677V16.3785H7.11258C7.13601 16.5191 7.18288 16.6597 7.25317 16.7769C7.32347 16.894 7.41719 17.0112 7.53435 17.0815C7.65151 17.1752 7.7921 17.2455 7.9327 17.2924C8.07329 17.3393 8.23731 17.3627 8.3779 17.3627C8.65908 17.3627 8.8934 17.3158 9.08086 17.1987C9.26831 17.1049 9.43233 16.9643 9.54949 16.8003L10.7679 17.5736C10.5102 17.9485 10.1822 18.2062 9.78381 18.4171C9.38547 18.6046 8.8934 18.7217 8.35447 18.7217C7.95613 18.7217 7.58122 18.6514 7.22974 18.5343C6.87826 18.4171 6.57365 18.2297 6.29247 17.9953C6.03472 17.761 5.82383 17.4564 5.65981 17.1049C5.49578 16.7535 5.42549 16.3551 5.42549 15.9099C5.42549 15.4647 5.49578 15.0898 5.65981 14.7383C5.8004 14.3868 6.01128 14.0822 6.26903 13.8479C6.52678 13.6136 6.8314 13.4027 7.18288 13.2855C7.53435 13.145 7.90926 13.0747 8.3076 13.0747C8.70595 13.0747 9.05742 13.145 9.38547 13.2621C9.71351 13.4027 9.9947 13.5902 10.229 13.8245C10.4633 14.0822 10.6508 14.3868 10.7679 14.7383C10.9085 15.1132 10.9788 15.5116 10.9788 15.9568ZM9.36204 15.3007C9.36204 15.0195 9.26831 14.7852 9.10429 14.5743C8.94026 14.3634 8.65908 14.2697 8.3076 14.2697C8.14358 14.2697 7.97956 14.2931 7.83897 14.34C7.69838 14.3868 7.58122 14.4571 7.46406 14.5509C7.3469 14.6446 7.2766 14.7617 7.20631 14.8789C7.13601 14.9961 7.11258 15.1367 7.08915 15.2773H9.36204V15.3007ZM13.7907 14.5509V16.5894C13.7907 16.8472 13.8375 17.0346 13.9312 17.1518C14.025 17.269 14.189 17.3393 14.4467 17.3393C14.5405 17.3393 14.6342 17.3393 14.7279 17.3158C14.8217 17.2924 14.9154 17.269 14.9622 17.2455L14.9857 18.5343C14.8685 18.5811 14.7045 18.6046 14.517 18.6514C14.3296 18.6749 14.1421 18.6983 13.9547 18.6983C13.6032 18.6983 13.2986 18.6514 13.0643 18.5577C12.8299 18.464 12.6191 18.3468 12.4785 18.1828C12.3379 18.0188 12.2207 17.8079 12.1739 17.5736C12.127 17.3393 12.0801 17.0815 12.0801 16.8003V14.5509H11.2132V13.2387H12.0567V11.8328H13.7907V13.2387H15.0325V14.5509H13.7907ZM16.6493 10.8486C16.1338 10.8486 15.7121 11.2235 15.7121 11.7156C15.7121 12.2311 16.0635 12.5592 16.579 12.5592C16.6259 12.5592 16.6728 12.5592 16.6962 12.5357C16.6025 12.9106 16.251 13.1918 15.8995 13.2387H15.8292V14.0588H15.923C16.3447 14.0119 16.7431 13.8245 17.0477 13.5433C17.446 13.1684 17.6569 12.606 17.6569 11.9499C17.6569 11.3173 17.2351 10.8486 16.6493 10.8486ZM20.703 14.8086C20.5625 14.668 20.3984 14.5509 20.211 14.4571C20.0235 14.3634 19.8126 14.3165 19.6017 14.3165C19.4377 14.3165 19.2971 14.34 19.1565 14.4103C19.016 14.4806 18.9457 14.5743 18.9457 14.7383C18.9457 14.8789 19.016 14.9961 19.18 15.0664C19.344 15.1367 19.5783 15.207 19.9298 15.2773C20.1407 15.3241 20.3281 15.371 20.539 15.4647C20.7499 15.5584 20.9139 15.6522 21.078 15.7693C21.242 15.8865 21.3826 16.0505 21.4763 16.238C21.57 16.4254 21.6169 16.6363 21.6169 16.894C21.6169 17.2221 21.5466 17.5033 21.406 17.7376C21.2654 17.9719 21.1014 18.1594 20.8671 18.3C20.6562 18.4405 20.3984 18.5343 20.1407 18.6046C19.8595 18.6749 19.6017 18.6983 19.3206 18.6983C18.8754 18.6983 18.4536 18.628 18.0552 18.4874C17.6335 18.3468 17.282 18.1359 17.0242 17.8782L18.0084 16.8472C18.1724 17.0112 18.3599 17.1518 18.5942 17.269C18.8285 17.3861 19.0628 17.433 19.3206 17.433C19.4612 17.433 19.6017 17.4095 19.7423 17.3393C19.8829 17.269 19.9532 17.1518 19.9532 16.9878C19.9532 16.8238 19.8595 16.7066 19.6955 16.6129C19.5315 16.5426 19.2503 16.4488 18.8988 16.3785C18.7113 16.3317 18.5239 16.2848 18.3364 16.2145C18.149 16.1442 17.985 16.0505 17.8444 15.9333C17.7038 15.8162 17.5866 15.6522 17.4929 15.4881C17.3992 15.3007 17.3523 15.0898 17.3523 14.8555C17.3523 14.5274 17.4226 14.2697 17.5632 14.0354C17.7038 13.801 17.8678 13.637 18.0787 13.4964C18.2896 13.3558 18.5239 13.2387 18.7816 13.1918C19.0394 13.1215 19.2971 13.0981 19.5549 13.0981C19.9532 13.0981 20.3516 13.1684 20.7265 13.2855C21.1014 13.4027 21.4294 13.5902 21.6872 13.8479L20.703 14.8086ZM0.176758 27.3212V19.7527H5.26147V21.2992H1.93415V22.7286H5.07401V24.1813H1.93415V25.7513H5.44892V27.3212H0.176758ZM10.065 27.3212V24.4157C10.065 24.2751 10.0416 24.1345 10.0181 23.9939C9.9947 23.8533 9.94783 23.7361 9.90097 23.6424C9.85411 23.5487 9.76038 23.455 9.66665 23.4081C9.57292 23.3378 9.43233 23.3144 9.26831 23.3144C9.10429 23.3144 8.9637 23.3378 8.84654 23.4081C8.72938 23.4784 8.63565 23.5487 8.54192 23.6658C8.47163 23.783 8.40133 23.9002 8.35447 24.0408C8.3076 24.1813 8.28417 24.3219 8.28417 24.4625V27.3446H6.52679V22.0256H8.21388V22.752H8.23731C8.3076 22.6348 8.3779 22.5177 8.49506 22.424C8.58879 22.3068 8.72938 22.2131 8.84654 22.1428C8.98713 22.0725 9.12772 22.0022 9.29174 21.9553C9.45576 21.9085 9.61979 21.885 9.80724 21.885C10.1587 21.885 10.4633 21.9553 10.7211 22.0725C10.9788 22.1896 11.1663 22.3771 11.3303 22.5646C11.4943 22.7754 11.5881 23.0098 11.6584 23.2675C11.7287 23.5253 11.7521 23.783 11.7521 24.0642V27.3446H10.065V27.3212ZM16.3447 23.7127C16.251 23.5956 16.1104 23.4784 15.9464 23.4081C15.7824 23.3378 15.5949 23.2909 15.4309 23.2909C15.2434 23.2909 15.0794 23.3378 14.9388 23.4081C14.7982 23.4784 14.6576 23.5721 14.5639 23.7127C14.4702 23.8533 14.3764 23.9705 14.3062 24.1345C14.2359 24.2985 14.2124 24.4625 14.2124 24.65C14.2124 24.8374 14.2359 25.0015 14.3062 25.1655C14.353 25.3295 14.4467 25.4701 14.5639 25.5873C14.6811 25.7044 14.7982 25.8216 14.9622 25.8919C15.1263 25.9622 15.2903 26.009 15.4777 26.009C15.6652 26.009 15.8292 25.9856 16.0167 25.9153C16.1807 25.845 16.3213 25.7513 16.4385 25.6107L17.3992 26.8057C17.1883 27.0166 16.8837 27.1806 16.5556 27.2978C16.2041 27.4149 15.8292 27.4852 15.4543 27.4852C15.0325 27.4852 14.6342 27.4149 14.2827 27.2978C13.9078 27.1806 13.6032 26.9932 13.322 26.7354C13.0643 26.5011 12.8534 26.1965 12.6894 25.845C12.5253 25.4935 12.455 25.0952 12.455 24.65C12.455 24.2048 12.5253 23.8299 12.6894 23.4784C12.8534 23.1269 13.0643 22.8223 13.322 22.588C13.5798 22.3537 13.9078 22.1428 14.2827 22.0256C14.6576 21.885 15.0325 21.8382 15.4543 21.8382C15.6418 21.8382 15.8292 21.8616 16.0167 21.885C16.2041 21.9319 16.3916 21.9788 16.5556 22.0256C16.7196 22.0959 16.8837 22.1662 17.0477 22.2599C17.1883 22.3537 17.3289 22.4474 17.4226 22.5646L16.3447 23.7127ZM21.4529 23.455C21.3826 23.4315 21.2888 23.4081 21.2185 23.4081H21.0077C20.7733 23.4081 20.5859 23.455 20.4219 23.5253C20.2578 23.619 20.1407 23.7127 20.047 23.8299C19.9532 23.947 19.8829 24.0876 19.8361 24.2282C19.7892 24.3688 19.7658 24.486 19.7658 24.6031V27.3212H18.0084V22.0022H19.6955V22.7754H19.7189C19.8595 22.4943 20.047 22.2834 20.3047 22.1193C20.5625 21.9553 20.8436 21.8616 21.1717 21.8616H21.3826C21.4529 21.8616 21.4997 21.885 21.5466 21.885L21.4529 23.455ZM25.5769 28.1179C25.4597 28.3991 25.3425 28.6334 25.2254 28.8677C25.0848 29.0786 24.9442 29.2661 24.7568 29.4301C24.5693 29.5941 24.3584 29.6878 24.1241 29.7816C23.8898 29.8519 23.5852 29.8987 23.2571 29.8987C23.0931 29.8987 22.9291 29.8987 22.7416 29.8753C22.5776 29.8519 22.4136 29.8284 22.2964 29.7816L22.4839 28.3054C22.5776 28.3288 22.6713 28.3522 22.765 28.3756C22.8588 28.3991 22.9525 28.3991 23.0462 28.3991C23.3274 28.3991 23.5149 28.3288 23.632 28.2116C23.7492 28.0945 23.8663 27.907 23.9366 27.6727L24.1007 27.2275L21.8746 22.0022H23.8195L25.0145 25.4232H25.0379L26.0924 22.0022H27.9435L25.5769 28.1179ZM34.3404 24.65C34.3404 25.0249 34.2935 25.3764 34.1763 25.7278C34.0592 26.0793 33.8952 26.3605 33.6843 26.6417C33.4734 26.8994 33.1922 27.1103 32.8876 27.2743C32.583 27.4384 32.2081 27.5087 31.8097 27.5087C31.4817 27.5087 31.1771 27.4384 30.8725 27.3212C30.5913 27.1806 30.357 27.0166 30.1929 26.7823H30.1695V29.9456H28.4121V22.0725H30.0758V22.7286H30.0992C30.2632 22.5177 30.4976 22.3302 30.7787 22.1662C31.0599 22.0022 31.4114 21.9319 31.8097 21.9319C32.1846 21.9319 32.5361 22.0022 32.8642 22.1662C33.1688 22.3068 33.45 22.5177 33.6609 22.7754C33.8717 23.0332 34.0358 23.3378 34.1529 23.6658C34.2701 23.9236 34.3404 24.2751 34.3404 24.65ZM32.6298 24.65C32.6298 24.486 32.6064 24.3219 32.5596 24.1579C32.5127 23.9939 32.419 23.8533 32.3252 23.7361C32.2315 23.619 32.0909 23.5018 31.9269 23.4315C31.7629 23.3612 31.5988 23.3144 31.388 23.3144C31.1771 23.3144 31.0131 23.3612 30.849 23.4315C30.685 23.5018 30.5678 23.619 30.4507 23.7361C30.3335 23.8533 30.2632 24.0173 30.1929 24.1813C30.1226 24.3454 30.0992 24.5094 30.0992 24.6734C30.0992 24.8374 30.1226 25.0015 30.1929 25.1655C30.2632 25.3295 30.3335 25.4701 30.4507 25.6107C30.5678 25.7278 30.685 25.845 30.849 25.9153C31.0131 25.9856 31.1771 26.0325 31.388 26.0325C31.5988 26.0325 31.7863 25.9856 31.9269 25.9153C32.0909 25.845 32.2081 25.7278 32.3252 25.6107C32.419 25.4935 32.5127 25.3295 32.5596 25.1655C32.6064 24.978 32.6298 24.814 32.6298 24.65ZM37.1288 23.3144V25.3529C37.1288 25.6107 37.1756 25.7981 37.2694 25.9153C37.3631 26.0325 37.5271 26.1028 37.7849 26.1028C37.8786 26.1028 37.9723 26.1028 38.066 26.0793C38.1598 26.0559 38.2535 26.0325 38.3004 26.009L38.3238 27.2978C38.2066 27.3446 38.0426 27.3681 37.8551 27.4149C37.6677 27.4384 37.4802 27.4618 37.2928 27.4618C36.9413 27.4618 36.6367 27.4149 36.4024 27.3212C36.1681 27.2275 35.9572 27.1103 35.8166 26.9463C35.676 26.7823 35.5588 26.5714 35.512 26.3371C35.4651 26.1028 35.4182 25.845 35.4182 25.5638V23.3144H34.5747V22.0022H35.4182V20.5963H37.1288V22.0022H38.3706V23.3144H37.1288Z" fill="#003A70"/>
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg width="52" height="32" viewBox="0 0 52 32" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect x="0.711121" width="50.7937" height="32" fill="url(#pattern0_19002_99)"/>
+                            <defs>
+                                <pattern id="pattern0_19002_99" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0_19002_99" transform="scale(0.005 0.00793651)"/>
+                                </pattern>
+                                <image id="image0_19002_99" width="200" height="126" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAAB+CAMAAABWFa7EAAACr1BMVEUAAAAiP3MiP3MiP3MiP3MiP3MiP3MiP3MiP3MiP3MiP3MiP3MiP3P///8iP3P2GWMNa3F6jKvi5ezEzNry9Pd9jq34Q4AObHL+4usAYWj9xdhdcpgAY2n2HmYddXr3NXYJaW8FZmwbrz/T2eP4UooOaHEHZ273J2z5b50xTHwLanAAYGb//v7w8/fX5uj2HGU/WYYgQ3MhQXP2I2r/+fv/8fb+2eURYnECZWv2IGinssf5Z5hOZY8eR3P3LHAYrT3+5O390uD9w9agxcd3rLD4TIYTX3IXVnIaUHIPZXH//P3/9vn+7fP+6PD+3+mawcNUlpr5ZJb5YJT5WY4Ub3UUXHIcSnIAV14mskkjsUbz/PP91OL9zd38sMmZpr/7l7l/sbSJmbR8r7L6jLH6ha36fadsf6JHX4sfsEP7/v34+/rx9vfn8PHc6evg9uP9ydrH7NC1v9Cpy82kyMr7krVtpqn6gKn5cJ5keZ2G1ZlQlJj3OXgnRHf3MHMVWXIbTXIeRXISUW8wtlEps0v0+fjp7fL+7PLj7e/m9+n+3OfS4+X8qMT7nr36daJbm59LkZVGjJP5XJH4RoL4QH1hyHobcnkYU3IQY3FTw24stU7u9fbq8vPf6+zW8ty61te30tX8u9GvztCvucyUvsCPur2h3rCa3Ktzhac9iI34VYsygob4SYP4SIMlen9Kv2YAXWP+5u7a8uDI1N/9z9+/x9b8vtP8vdL8t86ewMj8qsW15cGSorqDtLdxp6xkoaX6eKOM1p75aZo5goc1T4AuW333PHohUXZYxHIKXG0FW2REvWI8u1sOqjXc4enE29zC2tux0NG86MahrsSy5byr5LV/kK59kK36eqRkl6KN2Z1YdZdWbJRUa5N70JFRaJF0zooxb4M8VoMfY3gXX3QMY285bkN9AAAADXRSTlMAZvBppEc7YBbPzIqHXR2KhAAACBxJREFUeNrs2M9r2mAcx/H97hj77MtgE+kIOUyIB8GDURBBVPBStaAeVTy0nnuR9iBeBdEe2v4DZZdR2kOhtKOnUkb/hh0G+1v2jabJYxKMh5E+jrygJQQPz5vHPM8Tn4VCodW83Xi+jt44O97//P5xHf1+tZiy8ecT1tO3Vwsh775iXX15LYa8WNcJAT6/DEPkEobIJgyRTRhiydwfR5Y5vxvBg3QhUY38POhwky5kn/x14CZdSIP8deEmXcgO+duDm3QhtSz5KcODdCHokZ8SPMgXUkvRcjF4kS8EuxI8If8kpLp8SprwJFdIem+T1SkfESkkamMFtVarVdt6spCSuWKd6xBlSNDA3A1R8hIskSfqIy+uaaUIGZIlNIiUKwBFhT8UXEiT5nKOeUqSrSjcvAUrztYx+2ATwfbjFP5Ahi+Pt5AoE6mVYELEXV0pQNQn5mrkscXBukRZHWVVNSZlqKq52WpxEmNXmF1Pccv/TxFcyB6ZDiFIa2TLiEeAoTmNRzBsElEUrC6sCBWVKDXmxgaCChG/W8o2vA8tcVjaRDQG9BRRdzEkJn7ulO9qHFMINKRtDdh7NU4KgVs8vOl8FjOukHqUFWDOD+sGvI8ciSN2748HEOR4vOY3zBkifg8LKeOR0QMOKdoPtXhi8VwEJkRaAmUrzx3SAktc8FUv8J294Xyqe2S7g+jSWIwrClHHHTKIs4MRWIeYMg46JOOYkkKWLNkaFpwQda/5fhUeD7u4bLGzoEOQW9z5DsnWc78VN/nvGI6QMzFkh6fDePI6QYdkkuJZJKqQJTXCohKPUSPadYbkiCI65qI8o71qnmiYDjgEcXFK4mTbhYOeJcOmM6TPF0mNlWZRWhoTvvMr6JDtxylpCtdMq8LpgNhgyxkyyltnLePeFLOzVrIYcAgPz3SqH5FtBy7peyUZs3aclqoO5rHjumZ8FR/aiKtqzAhtDVT1MOiQgmLtG2TLp+EhocNbJZ148jdEe6XKkq2P5eR6Q1zcO9SOMCEVLCdjyONuPklcrP7jopQhtay5HF2Taeg7IVKGYJ/MvbhMc1P4kTPEeAc5Scw27xlVhx85Q3BzcZaBfSSfwJekIZa2QrPfQXzJHoJ2/Xw/DX/Sh6woDAlD1kUYIpswRDb/a8iH9RWG/G3nTF7aiMIA3kILLeV9jBOKDA4ymZCBxKYkuSSIIYeGLCdziFk8lJqDRlvFBUGluEVRPKgHrdqVLloRVFp6KN0obem+b7Slpesf0vdmxsYkkiIzDLGd32VeHh/k+8173/ceBFJs6CLFhi5SbOgixYYuUmzoIsXGfy7iJDj6PdFoXzB4LNBbU+N3uUIuB2iDchGSvEdOvrfG73fNzIRCZrOZwlg5rg80QKFIgLz0mZAZQ22I0U0JD0EDFIqEqMIYyy+c7piMgkI0WBFzQQ+OOo0QOv4NNECZiMdVyKOUXRpCGF8/aIAiEWegoIh7+QTCdA6AxFGLBdRAfRHwmMWM16Bk8MhqpUop96HDCJ2e/uUBTEPJOZPpvSoq6ouAn7RYpkKEcVvl2mArWDfLMBxVcWd8QjCWHsORF+lT81Pzw12gBuqLBHHakc4bhzC+8SWBxSocE+m5caC94/z4tLvH13mzM8LNOGHv4dtzT1dOnWsAEXulDdEleIAkyoBGGFubXZyS5xANeF6kHg/ywk11qok4QrjHnkQijUNnFllKEG7tb0SEoXCsHT8OlwvC/a6mL96nD0ZfH5U9sIbBhg6SzAyEKqDJgEY2C+CnDZE5SUQKIKlDTjgOM1lUEoFeLLIfp9t0HGFOLDLWakTYtw+h8dgBPDpSzlVMDt/mvQ9GD4IMjfBqWAzyS5enAFOJ5TAG8YMssi4gP9yglkifLHL2TucR/GiPJRHm5KFwOHkmLIswy81vUvzj0cqjIFGPKgFjKcvLzI5MmxEBEypTScThkkTOx2JkKV6IH0YWV3HtRyKMKBJhz7QM8nOtV7CHRFvm63MzQ/SmRErQQZVEICCJVD8qf05WZLKJWFUIuJkJnCgyItxsnPXyC/R3gHVZbCxShQybErEjg1oiUUmkuaMZYSZ6EMbHSI1YFGmetHXz3qnaLsjLPlO9FikzuwnV5YpkyjsnXA5RSwQeYhGZE77VnkayPAyXETmyvzXBD566DhuLSNjX2mwb5IpkGm5WuPoiA6LI8bGxl8klllk+STruBDkR3cIqEUG1Kzz/cfgewF+2lsGAyHpov7Vk+qeJSDtHCaybszIXEDG5EJ641XF1WmzF3d7Ek9rko36AvxV7HWrbpEi9asWO+UFEOhiB1EWpMXIWyewbHSF10xqP828v/xxwAiar/VbVWXIyo1EVaN1+M9wfIecIi8tCNCn1jUkHffdgdy3eWLMpfrbpE4hkH4im3AMRGxpA6wMxg+ODz5fswQsimzDl4WR19VhLwuudvYQW+ETq2hVYo8AVRX7DBUSUX1EKM8CyrJH6g9XIsu5YuHaKT3tXrj1OeaeGPkMOG10aAVNW8GTPvzRaQE2RqJnKgzNebXnCpxPxeCLeiu8mGqBcxOnK8zD7B+5dfpVOpONp/utwA2iBchEI5FjUBD1OgAZ6gU/FU4Mt10EblIt41u2tUE3QARJdTd2Dc3Pzz+6CNigXAb+8FK7ePgdkKKFbWi/RXaAVykWCFMYfiDogm4b6dxc1LBDlIo6Q65jHAUXHf/6zQhGiixQbukixoYsUG/+myG7YuuxcL7Idtiw7tmWxB7Yo+G9ys9m1fUuyc5uOjo6Ojo4K/AbFAa9esd0XkgAAAABJRU5ErkJggg=="/>
+                            </defs>
+                        </svg>
+                    </a>
                     <span>|</span>
-                    <a href="https://www.penseavanti.com.br"><img src="./assets/icons/bottom/avanti.svg" alt="Logo da Avanti"></a>
-                    <a href="#"><img src="./assets/icons/bottom/vtex.svg" alt="Logo da VTex"></a>
+                    <a href="https://www.penseavanti.com.br">
+                        <svg width="58" height="12" viewBox="0 0 58 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M57.1558 0.90952C56.7892 0.940815 56.5091 1.25035 56.5146 1.61831V10.3814C56.509 10.7495 56.7891 11.0591 57.1558 11.0904C57.3441 11.1021 57.5288 11.0354 57.6662 10.9063C57.8036 10.7771 57.8816 10.5969 57.8817 10.4083V1.5917C57.8817 1.40307 57.8037 1.22282 57.6663 1.09364C57.5288 0.964453 57.3441 0.897822 57.1558 0.90952Z" fill="black"/>
+                            <path d="M19.9475 0.981479C19.6061 0.810576 19.1908 0.948807 19.02 1.29021L15.2008 8.9219C15.2002 8.92318 15.1989 8.92398 15.1975 8.92398C15.1961 8.92398 15.1948 8.92318 15.1941 8.9219L11.375 1.29021C11.1991 0.958495 10.7905 0.827853 10.4548 0.995963C10.1191 1.16407 9.97901 1.56944 10.1393 1.90898L14.5433 10.71C14.6604 10.9443 14.9 11.0922 15.1619 11.092C15.1737 11.092 15.1856 11.0906 15.1974 11.09C15.2093 11.0895 15.2212 11.092 15.233 11.092C15.495 11.0922 15.7345 10.9443 15.8517 10.71L20.2562 1.90898C20.4271 1.5676 20.2889 1.15237 19.9475 0.981479Z" fill="black"/>
+                            <path d="M41.945 0.978031C41.5775 1.00965 41.297 1.31983 41.3023 1.68858V8.37733L41.2999 8.38098L41.2957 8.37963L35.7724 1.17637C35.5558 0.894436 35.1598 0.824656 34.8599 1.0156C34.6592 1.14757 34.54 1.37306 34.5439 1.61323V10.3801C34.5385 10.7488 34.819 11.0589 35.1864 11.0905C35.375 11.1022 35.5602 11.0354 35.6979 10.9059C35.8357 10.7765 35.9138 10.5958 35.9138 10.4068V3.62287L35.9162 3.61945L35.9203 3.62057L41.4439 10.8236C41.664 11.1105 42.069 11.1772 42.3695 10.976C42.5625 10.8426 42.6762 10.6217 42.6725 10.3871V1.66175C42.6725 1.47281 42.5944 1.29216 42.4567 1.16267C42.3188 1.03313 42.1337 0.966336 41.945 0.978031Z" fill="black"/>
+                            <path d="M53.7809 0.908285H45.5034C45.1353 0.902697 44.8256 1.18275 44.7943 1.54951C44.7827 1.73773 44.8494 1.92239 44.9786 2.05979C45.1077 2.19719 45.2879 2.27513 45.4765 2.27517L48.9416 2.27517C48.9436 2.27522 48.9453 2.27686 48.9454 2.27889L48.9453 10.3815C48.9397 10.7495 49.2197 11.0591 49.5864 11.0905C49.7746 11.1021 49.9592 11.0355 50.0966 10.9063C50.2341 10.7771 50.312 10.5969 50.312 10.4083V2.27889L50.3155 2.27517L53.7543 2.27517C54.1224 2.28064 54.4319 2.00061 54.4631 1.63395C54.4747 1.4457 54.4081 1.26102 54.2789 1.12362C54.1497 0.986215 53.9695 0.90829 53.7809 0.908285Z" fill="black"/>
+                            <path d="M6.29108 1.28987C6.16798 1.04401 5.91084 0.894521 5.63628 0.909193C5.3622 0.895142 5.10576 1.04453 4.98279 1.28987L0.578017 10.0912C0.407148 10.4326 0.545371 10.8478 0.886746 11.0187C1.22812 11.1896 1.64338 11.0514 1.81425 10.71L2.89627 8.54801C2.89687 8.54673 2.89815 8.54592 2.89956 8.54593H8.37432C8.37572 8.54592 8.37701 8.54673 8.3776 8.54801L9.45963 10.71C9.6305 11.0513 10.0457 11.1895 10.3871 11.0187C10.7284 10.8478 10.8666 10.4326 10.6958 10.0912L6.29108 1.28987ZM3.41878 7.50376L5.63365 3.07818C5.63424 3.07689 5.63553 3.07607 5.63694 3.07607C5.63835 3.07607 5.63964 3.07689 5.64022 3.07818L7.85521 7.50376C7.85578 7.50489 7.85573 7.50624 7.85505 7.50732C7.85438 7.5084 7.85319 7.50904 7.85192 7.50902H3.42207C3.4208 7.50904 3.41961 7.5084 3.41893 7.50732C3.41826 7.50624 3.4182 7.50489 3.41878 7.50376Z" fill="black"/>
+                            <path d="M32.4657 10.156C32.4575 10.1328 32.448 10.1101 32.4371 10.088L28.381 1.8924C28.1726 1.41077 27.7387 1.06403 27.223 0.96705C26.7072 0.870071 26.177 1.03551 25.8079 1.40855L24.8113 3.30605L22.4196 8.34383C22.0247 9.10498 21.4019 9.60897 20.6601 9.78541L24.3223 2.4114C24.3297 2.3964 24.3364 2.38118 24.3427 2.36573C24.4025 2.23117 24.5361 2.14453 24.6834 2.14473C24.6972 2.14496 24.7111 2.14599 24.7248 2.1478L25.3271 1.07639C24.9412 0.904319 24.5025 0.894005 24.1089 1.04775C23.7154 1.2015 23.3998 1.5065 23.2327 1.89459L19.1724 10.0714C19.1661 10.0831 19.1603 10.095 19.1549 10.1074C19.0646 10.3071 19.0783 10.5384 19.1913 10.7262C19.3044 10.914 19.5024 11.0342 19.7212 11.0479C19.8317 11.0571 19.9435 11.0617 20.054 11.0617C21.5076 11.0617 22.7942 10.2494 23.4952 8.88846C23.4982 8.88266 23.5012 8.87685 23.5039 8.87083L25.786 4.06336L25.7867 4.06182L25.8069 4.01933L26.475 2.61587L26.474 2.61379L26.5745 2.40198C26.5788 2.39308 26.5827 2.38413 26.5865 2.37515C26.6443 2.23566 26.7804 2.14472 26.9314 2.14472C27.0825 2.14472 27.2186 2.23566 27.2764 2.37515C27.2814 2.38731 27.2874 2.39936 27.2927 2.41118L30.9421 9.78508C30.2055 9.6081 29.5858 9.10443 29.1915 8.34405L26.7897 3.27889L26.1266 4.69341L28.1069 8.86995C28.1097 8.87587 28.1127 8.88189 28.1157 8.8878C28.8275 10.269 30.0778 11.0611 31.5469 11.0611C31.6629 11.0611 31.7803 11.0559 31.8959 11.0458C31.969 11.0396 32.0404 11.0199 32.1065 10.9878C32.4277 10.8493 32.5854 10.4848 32.4657 10.156Z" fill="black"/>
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg width="54" height="20" viewBox="0 0 54 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_19002_109)">
+                                <path d="M39.1895 7.61582H37.2894V14.1C37.2886 14.2222 37.1893 14.3211 37.0667 14.322H35.6034C35.4808 14.3211 35.3816 14.2222 35.3807 14.1V7.61582H33.4667C33.4088 7.61817 33.3524 7.59697 33.3104 7.55708C33.2684 7.51718 33.2444 7.46201 33.244 7.40419V6.25584C33.2444 6.19802 33.2684 6.14284 33.3104 6.10295C33.3524 6.06305 33.4088 6.04186 33.4667 6.04421H39.186C39.3094 6.03831 39.4143 6.13288 39.4209 6.25584V7.40419C39.4143 7.52574 39.3115 7.61977 39.1895 7.61582Z" fill="#FF3366"/>
+                                <path d="M45.2826 14.278C44.5335 14.3849 43.7773 14.4336 43.0207 14.4238C41.5782 14.4238 40.3046 14.056 40.3046 12.0282V8.32814C40.3046 6.30032 41.5904 5.94471 43.0311 5.94471C43.7819 5.93446 44.5324 5.98259 45.2756 6.08869C45.4322 6.11124 45.4984 6.16675 45.4984 6.31072V7.35153C45.4975 7.47376 45.3983 7.57262 45.2756 7.57356H42.9267C42.4047 7.57356 42.2116 7.74703 42.2116 8.33161V9.34466H45.1939C45.3165 9.34559 45.4156 9.44446 45.4166 9.56669V10.6248C45.4157 10.7471 45.3165 10.8459 45.1939 10.8469H42.2116V12.0282C42.2116 12.6076 42.4012 12.7862 42.9267 12.7862H45.2826C45.4052 12.7872 45.5044 12.886 45.5053 13.0083V14.0491C45.5071 14.1878 45.4392 14.2555 45.2826 14.278Z" fill="#FF3366"/>
+                                <path d="M53.7147 14.3221H51.9382C51.8143 14.3313 51.698 14.2618 51.6476 14.1486L50.106 11.7201L48.714 14.1035C48.6357 14.2371 48.5574 14.3255 48.4339 14.3255H46.7844C46.7412 14.3333 46.6968 14.3215 46.6632 14.2933C46.6296 14.2652 46.6102 14.2236 46.6104 14.1798C46.6127 14.1526 46.6204 14.126 46.633 14.1018L49.0568 10.0791L46.6104 6.25588C46.5978 6.23534 46.59 6.2122 46.5878 6.18822C46.5961 6.1004 46.6736 6.03549 46.7618 6.04251H48.5609C48.6844 6.04251 48.7732 6.15353 48.841 6.25414L50.2713 8.50921L51.6632 6.25414C51.7137 6.1401 51.8196 6.06008 51.9434 6.04251H53.5981C53.6863 6.03549 53.7638 6.1004 53.7721 6.18822C53.7698 6.2122 53.7621 6.23534 53.7495 6.25588L51.3135 10.1016L53.8486 14.0914C53.8682 14.1253 53.8796 14.1633 53.8817 14.2024C53.8608 14.2787 53.8034 14.3221 53.7147 14.3221Z" fill="#FF3366"/>
+                                <path d="M30.568 6.06646C30.4845 6.06461 30.4115 6.12212 30.394 6.2035L28.7706 12.1916C28.7479 12.3147 28.7149 12.365 28.614 12.365C28.5131 12.365 28.48 12.3199 28.4574 12.1916L26.8392 6.2035C26.8217 6.12212 26.7487 6.06461 26.6652 6.06646H25.0679C25.0143 6.06514 24.9631 6.08856 24.9291 6.12991C24.8951 6.17126 24.8821 6.22593 24.8939 6.27809C24.8939 6.27809 26.8757 13.1422 26.8966 13.2168C27.1611 14.0355 27.8031 14.431 28.6192 14.431C29.4021 14.459 30.1072 13.962 30.3418 13.2168C30.3731 13.1231 32.3114 6.27809 32.3114 6.27809C32.3226 6.22619 32.3093 6.17203 32.2754 6.13111C32.2415 6.09019 32.1906 6.06701 32.1374 6.06819L30.568 6.06646Z" fill="#FF3366"/>
+                                <path d="M21.5149 0.500071H4.85995C4.25728 0.505564 3.70094 0.823439 3.39154 1.33908C3.08213 1.85472 3.06429 2.49375 3.34444 3.02575L5.01133 6.18978H1.99075C1.60485 6.18278 1.24405 6.3799 1.04232 6.70795C0.840597 7.03601 0.828076 7.44599 1.00941 7.78567L6.3685 17.8814C6.56081 18.244 6.93846 18.4708 7.34984 18.4708C7.76122 18.4708 8.13887 18.244 8.33118 17.8814L9.78579 15.1459L11.6128 18.5909C11.9098 19.1502 12.4926 19.5 13.1274 19.5C13.7622 19.5 14.345 19.1502 14.642 18.5909L22.9939 2.93554C23.2704 2.42025 23.2538 1.79775 22.9502 1.29782C22.6466 0.797891 22.1011 0.494666 21.5149 0.500071ZM14.0731 7.11436L10.4191 13.9455C10.2936 14.1814 10.0476 14.3289 9.7797 14.3289C9.5118 14.3289 9.2658 14.1814 9.14026 13.9455L5.53332 7.18027C5.42203 6.97208 5.42853 6.72093 5.55043 6.51873C5.67234 6.31653 5.89175 6.19296 6.12839 6.19325H13.5093C13.7317 6.18984 13.9393 6.30393 14.0552 6.49322C14.171 6.6825 14.1778 6.91875 14.0731 7.11436Z" fill="#FF3366"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_19002_109">
+                                    <rect width="53" height="19" fill="white" transform="translate(0.881714 0.5)"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </footer>

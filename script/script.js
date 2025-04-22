@@ -1,5 +1,6 @@
-// Carrossel
-
+// ======================
+// CARROSSEL
+// ======================
 document.addEventListener('DOMContentLoaded', () => {
   const carrosseis = document.querySelectorAll('.container-carrossel');
 
@@ -17,9 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const getProductWidth = () => products[0].getBoundingClientRect().width + 17;
 
     const getMaxPosition = () => {
-      const productWidth = getProductWidth();
       const visibleProducts = 5;
-      return -(products.length - visibleProducts) * productWidth;
+      return -(products.length - visibleProducts) * getProductWidth();
     };
 
     const updateTransform = () => {
@@ -34,15 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const updateIndicators = () => {
       const maxPosition = getMaxPosition();
-      const totalIndicators = indicators.length;
       const progress = Math.abs(position / maxPosition);
-      const currentIndicatorIndex = Math.round(progress * (totalIndicators - 1));
+      const current = Math.round(progress * (indicators.length - 1));
 
       indicators.forEach((indicator, index) => {
-        indicator.classList.toggle('active', index === currentIndicatorIndex);
+        indicator.classList.toggle('active', index === current);
       });
     };
 
+    // Evento: botão anterior do carrossel
     prevButton.addEventListener('click', () => {
       position = Math.min(position + getProductWidth(), 0);
       updateTransform();
@@ -50,9 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
       updateIndicators();
     });
 
+    // Evento: botão próximo do carrossel
     nextButton.addEventListener('click', () => {
-      const maxPosition = getMaxPosition();
-      position = Math.max(position - getProductWidth(), maxPosition);
+      position = Math.max(position - getProductWidth(), getMaxPosition());
       updateTransform();
       updateButtons();
       updateIndicators();
@@ -66,31 +66,35 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-// Busca
-
+// ======================
+// BUSCA
+// ======================
 document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('search');
   const containerResult = document.getElementById('search-result');
 
+  // Alterna classe se há conteúdo
   const toggleContentClass = () => {
     searchInput.classList.toggle('has-content', searchInput.value.trim() !== '');
   };
 
+  //Mostra resultado da busca no container
   const showSearchContent = () => {
     const searchContent = searchInput.value.trim();
     if (searchContent) {
-      console.log(searchContent);
       containerResult.innerHTML = `Você pesquisou por:<br><b>${searchContent}</b>`;
     }
   };
 
+  //Remove o conteúdo da busca
   const removeSearchContent = () => {
     containerResult.innerHTML = '';
   };
 
+  //Evento: digitação no campo de busca
   searchInput.addEventListener('input', toggleContentClass);
 
+  //Evento: tecla "Enter" no campo de busca
   searchInput.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
@@ -102,6 +106,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+
+// ======================
+// MENU
+// ======================
 document.addEventListener('DOMContentLoaded', () => {
   const menuNav = document.querySelector('.header-nav_menu');
   const menuList = document.querySelector('.nav-menu_list');
@@ -125,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navMenuTitle.classList.remove('active');
   }
 
+  // Renderiza as categorias do menu lateral
   const renderCategories = (departmentName, data) => {
     const departmentData = data.find(dep => dep.department === departmentName);
 
@@ -158,10 +167,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  //Carrega o JSON e define os eventos de interaação do menu
   fetch(dataPath)
     .then(response => response.json())
     .then(data => {
-      // Clique em "Todas as categorias"
+
+      //Evento: clique no menu hamburguer lateral
       menuNav.addEventListener('click', () => {
         const isHidden = menuList.classList.contains('hidden');
 
@@ -178,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      // Hover nos departamentos laterais (continua funcionando)
+      //Evento: Hover nos departamentos
       departments.forEach(department => {
         department.addEventListener('mouseover', () => {
           const departmentName = department.getAttribute('data-department');
@@ -188,14 +199,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
 
-      // Clique nos departamentos do header
+      //Evento: Clique nos departamentos
       headerNavDepartments.forEach(headerItem => {
         headerItem.addEventListener('click', (e) => {
           e.stopPropagation(); // Impede conflito com clique fora
 
           const departmentName = headerItem.getAttribute('data-department');
 
-          // Se clicou em algo sem data-department (ex: "Todas as categorias"), não faz nada
           if (!departmentName) return;
 
           const isHidden = menuList.classList.contains('hidden');
@@ -221,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
 
-      // Fechar ao clicar fora
+      //Evento: Fechar ao clicar fora
       document.addEventListener('click', (e) => {
         const isClickInsideMenu =
           menuList.contains(e.target) ||
