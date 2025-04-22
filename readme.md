@@ -1,12 +1,14 @@
 # 🎯 Programa de Estágio Innovation Class | Avanti - Renan Fochetto
+
+<br>
+
+### 💻 Projeto Front-End (HTML, CSS e Javascript)
+
 Este projeto foi desenvolvido para a participação no processo seletivo do **Programa de Estágio Innovation Class** da empresa **Avanti**.
 
 <br>
 
 ---
-
-## 💻 Projeto Front-End (HTML, CSS e Javascript)
-
 
 ### 📝 Descrição
 
@@ -18,7 +20,8 @@ O projeto busca demonstrar habilidades práticas em **JavaScript**, **HTML** e *
 
 ---
 
-## ✨ Funcionalidades
+### ✨ Funcionalidades
+
 
 ### 🎠 Carrossel de Produtos
 - Carrossel horizontal com botões de navegação.
@@ -43,7 +46,7 @@ O projeto busca demonstrar habilidades práticas em **JavaScript**, **HTML** e *
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+### 🛠️ Tecnologias Utilizadas
 
 - **HTML5**
 - **CSS3**
@@ -56,7 +59,7 @@ O projeto busca demonstrar habilidades práticas em **JavaScript**, **HTML** e *
 
 ---
 
-## 🚀 Como Executar
+### 🚀 Como Executar
 
 1. Clone o repositório:
    ```
@@ -69,7 +72,7 @@ O projeto busca demonstrar habilidades práticas em **JavaScript**, **HTML** e *
 
 ---
 
-## 📫 Contato
+### 📫 Contato
 
 **LinkedIn:** linkedin.com/in/renanfochetto
 
