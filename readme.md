@@ -63,7 +63,7 @@ O projeto busca demonstrar habilidades práticas em **JavaScript**, **HTML** e *
 
 1. Clone o repositório:
    ```
-   git clone https://github.com/renanfochetto/projeto-ecommerce.git
+   git clone https://github.com/renanfochetto/avanti_store-renanfochetto
    ```
    
 2. Navegue até a pasta do projeto e abra o arquivo index.html em seu navegador.
@@ -77,3 +77,5 @@ O projeto busca demonstrar habilidades práticas em **JavaScript**, **HTML** e *
 **LinkedIn:** linkedin.com/in/renanfochetto
 
 **Email:** renanfochetto@gmail.com
+
+**Portifolio:** portifolio-renanfochetto.vercel.app/
